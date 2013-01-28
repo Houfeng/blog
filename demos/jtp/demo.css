@@ -1,0 +1,25 @@
+body{ background-color: #e3e3e5;}
+h1{ text-align: center; font-weight: bold; font-style: italic;}
+#demoWrap{
+        width: 860px;
+        margin: auto auto;
+}
+#demoBox{
+        border-collapse: collapse;
+        border: 0px;
+        width: 100%;
+}
+.CodeMirror{
+        outline: none;
+        border: 1px solid #ccc;
+        resize: none;
+        background-color: #fff;
+}
+.dataWrap .CodeMirror{
+        width: 856px;
+        height:40px;
+}
+.dstWrap .CodeMirror, .srcWrap .CodeMirror{
+        width: 425px;
+}
+

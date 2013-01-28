@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<title>{{ page.title }} | {% include name.html %}</title>
+		{% assign page_keywords = page.title.gsub("-",",") %}
+		<meta name="keywords" content="{{ page_keywords }},{{ page.title }},侯锋博客">
+		<meta name="description" content="{{ page.title }}">
+		<link rel="stylesheet" type="text/css" href="/styles/style.css" />
+		<link rel="stylesheet" type="text/css" href="/styles/syntax.css" />
+		<link rel="alternate" type="application/rss+xml" title="{% include name.html %}" href="/atom.xml" />
+	</head>
+
+	<body>
+		<div id="logo">
+			<span id="tags">{% include description.html %}</span>
+			<h1><a href="/">{% include name.html %}</a></h1>
+		</div>
+		<div id="wrapper">
+			<div id="content">
+				<h2>{{ page.title }}</h2>
+				<div class="cnt">
+					{{ content }}
+					<br />
+					<br/>
+				</div>
+		<!--comment-->
+{% include comment.html %}
+        <!--/comment-->
+			</div>
+
+			<div id="footer">
+				{% include foot.html %}
+			</div>	
+
+			<!--stat-->
+			{% include stat.html %}	
+			<!--/stat-->
+		</div>
+		{% include copyright.html %}
+	</body>
+</html>
+
