@@ -12,7 +12,7 @@ layout: about   # 添加使用 about 模版
 参加工作以来，多数时间在做企业级应用或项目，诸如「中航信移动差旅 App - 差旅随行」、「银河证券企业门户/OA/移动办公」、「东风汽车移动精益营销」、「天津港数据统计分析平台」、「首都机场虚拟实验室」、「京东搜索广告投放平台-新搜客」等
 接触编程以来，对编程始终有极浓厚的兴趣，写过一些开源的 library、framework、工具。
 
-# My introduction (Automatic translation)
+# About me (Automatic translation)
 
 Houfeng, born in 1987, a night owl, game programming, love me all kinds of interesting things, more than and 10 years of programming experience.
 
