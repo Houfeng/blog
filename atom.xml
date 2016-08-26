@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Houfeng&#39;s Blog</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://blog.houfeng.net/"/>
+  <updated>2016-08-26T18:24:24.000Z</updated>
+  <id>http://blog.houfeng.net/</id>
+  
+  <author>
+    <name>Houfeng</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>House moving</title>
+    <link href="http://blog.houfeng.net/2016/08/27/house-moving/"/>
+    <id>http://blog.houfeng.net/2016/08/27/house-moving/</id>
+    <published>2016-08-26T17:47:46.000Z</published>
+    <updated>2016-08-26T18:24:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>博客搬家中，请稍候…</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;博客搬家中，请稍候…&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
