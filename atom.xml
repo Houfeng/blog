@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.houfeng.net/"/>
-  <updated>2016-08-27T04:20:08.000Z</updated>
+  <updated>2016-08-27T04:28:38.000Z</updated>
   <id>http://blog.houfeng.net/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>JavaScript 之 “包装器对象”</title>
-    <link href="http://blog.houfeng.net/2014/12/15/2014-12-15-javascript-wraper/"/>
-    <id>http://blog.houfeng.net/2014/12/15/2014-12-15-javascript-wraper/</id>
+    <link href="http://blog.houfeng.net/2014/12/15/javascript-wraper/"/>
+    <id>http://blog.houfeng.net/2014/12/15/javascript-wraper/</id>
     <published>2014-12-14T16:00:00.000Z</published>
-    <updated>2016-08-27T04:20:08.000Z</updated>
+    <updated>2016-08-27T04:28:38.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="包装对象"><a href="#包装对象" class="headerlink" title="包装对象"></a>包装对象</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>在JavaScript中，“一切皆对象”，数组和函数本质上都是对象，就连三种原始类型的值——数值、字符串、布尔值——在一定条件下，也会自动转为对象，也就是原始类型的“包装对象”。</p>
 <p>所谓“包装对象”，就是分别与数值、字符串、布尔值相对应的Number、String、Boolean三个原生对象。这三个原生对象可以把原始类型的值变成（包装成）对象。</p>
@@ -89,10 +89,10 @@
   
   <entry>
     <title>JavaScript 之 “Array对象”</title>
-    <link href="http://blog.houfeng.net/2014/11/15/2014-11-15-javascript-array/"/>
-    <id>http://blog.houfeng.net/2014/11/15/2014-11-15-javascript-array/</id>
+    <link href="http://blog.houfeng.net/2014/11/15/javascript-array/"/>
+    <id>http://blog.houfeng.net/2014/11/15/javascript-array/</id>
     <published>2014-11-14T16:00:00.000Z</published>
-    <updated>2016-08-27T04:20:20.000Z</updated>
+    <updated>2016-08-27T04:28:53.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Array是JavaScript的内置对象，同时也是一个构造函数，可以用它生成新的数组。</p>
 <p>作为构造函数时，Array可以接受参数，但是不同的参数，会使得Array产生不同的行为。</p>
@@ -255,10 +255,10 @@
   
   <entry>
     <title>JavaScript 之 “ArrayBuffer对象”</title>
-    <link href="http://blog.houfeng.net/2014/10/15/2014-10-15-javascript-arraybuffer/"/>
-    <id>http://blog.houfeng.net/2014/10/15/2014-10-15-javascript-arraybuffer/</id>
+    <link href="http://blog.houfeng.net/2014/10/15/javascript-arraybuffer/"/>
+    <id>http://blog.houfeng.net/2014/10/15/javascript-arraybuffer/</id>
     <published>2014-10-14T16:00:00.000Z</published>
-    <updated>2016-08-27T04:19:17.000Z</updated>
+    <updated>2016-08-27T04:28:45.000Z</updated>
     
     <content type="html"><![CDATA[<p>类型化数组是JavaScript操作二进制数据的一个接口。<br>这要从WebGL项目的诞生说起，所谓WebGL，就是指浏览器与显卡之间的通信接口，为了满足JavaScript与显卡之间大量的、实时的数据交换，它们之间的数据通信必须是二进制的，而不能是传统的文本格式。<br>比如，以文本格式传递一个32位整数，两端的JavaScript脚本与显卡都要进行格式转化，将非常耗时。这时要是存在一种机制，可以像C语言那样，直接操作字节，然后将4个字节的32位整数，以二进制形式原封不动地送入显卡，脚本的性能就会大幅提升。<br>类型化数组（Typed Array）就是在这种背景下诞生的。它很像C语言的数组，允许开发者以数组下标的形式，直接操作内存。有了类型化数组以后，JavaScript的二进制数据处理功能增强了很多，接口之间完全可以用二进制数据通信。</p>
 <a id="more"></a>
@@ -431,10 +431,10 @@
   
   <entry>
     <title>JavaScript 之 “Math对象”</title>
-    <link href="http://blog.houfeng.net/2014/07/15/2014-07-15-javascript-math/"/>
-    <id>http://blog.houfeng.net/2014/07/15/2014-07-15-javascript-math/</id>
+    <link href="http://blog.houfeng.net/2014/07/15/javascript-math/"/>
+    <id>http://blog.houfeng.net/2014/07/15/javascript-math/</id>
     <published>2014-07-14T16:00:00.000Z</published>
-    <updated>2016-08-27T04:19:04.000Z</updated>
+    <updated>2016-08-27T04:29:24.000Z</updated>
     
     <content type="html"><![CDATA[<p>Math对象是JavaScript的内置对象，提供一系列数学常数和数学方法。</p>
 <p>该对象不是构造函数，所以不能生成实例，所有的属性和方法都必须在Math对象上调用。</p>
@@ -498,10 +498,10 @@
   
   <entry>
     <title>MongoDB 高可用群集简单配置</title>
-    <link href="http://blog.houfeng.net/2013/10/26/2013-10-26-mongodb-replica-set/"/>
-    <id>http://blog.houfeng.net/2013/10/26/2013-10-26-mongodb-replica-set/</id>
+    <link href="http://blog.houfeng.net/2013/10/26/mongodb-replica-set/"/>
+    <id>http://blog.houfeng.net/2013/10/26/mongodb-replica-set/</id>
     <published>2013-10-25T16:00:00.000Z</published>
-    <updated>2016-08-27T04:24:57.000Z</updated>
+    <updated>2016-08-27T04:29:02.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Replica-Set-节点类型分为三种："><a href="#Replica-Set-节点类型分为三种：" class="headerlink" title="Replica Set 节点类型分为三种："></a>Replica Set 节点类型分为三种：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">standard：常规节点，它存储一份完整的数据副本，参与选举投票，有可能成为primary节点。</div><div class="line">passive：存储了完整的数据副本，参与投票，不能成为primary节点。 </div><div class="line">arbiter：仲裁节点，只参与投票，不接收复制的数据，也不能成为primary节点。</div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -539,10 +539,10 @@
   
   <entry>
     <title>模块的封装与解耦</title>
-    <link href="http://blog.houfeng.net/2013/03/16/2013-03-16-module-encapsulation-decoupling/"/>
-    <id>http://blog.houfeng.net/2013/03/16/2013-03-16-module-encapsulation-decoupling/</id>
+    <link href="http://blog.houfeng.net/2013/03/16/module-encapsulation-decoupling/"/>
+    <id>http://blog.houfeng.net/2013/03/16/module-encapsulation-decoupling/</id>
     <published>2013-03-15T16:00:00.000Z</published>
-    <updated>2016-08-27T04:18:30.000Z</updated>
+    <updated>2016-08-27T04:29:36.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="话题起因"><a href="#话题起因" class="headerlink" title="话题起因"></a>话题起因</h3><p>回头看自已写过东西，常会感觉到不满意，总有重构冲动（其实这种冲动通常是好事，因为只有发现了不足才有重构想法，只有重构才能改进，只有改进才能完善）。</p>
 <a id="more"></a>
@@ -598,10 +598,10 @@
   
   <entry>
     <title>回忆“Adobe　Web创意训练营第一期”</title>
-    <link href="http://blog.houfeng.net/2013/01/24/2013-01-24-adobe-web-html5/"/>
-    <id>http://blog.houfeng.net/2013/01/24/2013-01-24-adobe-web-html5/</id>
+    <link href="http://blog.houfeng.net/2013/01/24/adobe-web-html5/"/>
+    <id>http://blog.houfeng.net/2013/01/24/adobe-web-html5/</id>
     <published>2013-01-23T16:00:00.000Z</published>
-    <updated>2016-08-27T04:17:54.000Z</updated>
+    <updated>2016-08-27T04:29:18.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="回忆“Adobe-Web创意训练营第一期”"><a href="#回忆“Adobe-Web创意训练营第一期”" class="headerlink" title="回忆“Adobe　Web创意训练营第一期”"></a>回忆“Adobe　Web创意训练营第一期”</h3><p>说是回忆，其实也就是昨天的事儿。</p>
 <p>过去一年，才是回忆，我、我所在的团队主要的工作，就是基于HTML5的移动App开发，我们为我们的两家客户基于HTML5分别开发两个完整的“差旅类”的App。</p>
@@ -638,10 +638,10 @@
   
   <entry>
     <title>浏览器页面渲染之“reflow”</title>
-    <link href="http://blog.houfeng.net/2012/12/27/2012-12-27-browser-page-reflow/"/>
-    <id>http://blog.houfeng.net/2012/12/27/2012-12-27-browser-page-reflow/</id>
+    <link href="http://blog.houfeng.net/2012/12/27/browser-page-reflow/"/>
+    <id>http://blog.houfeng.net/2012/12/27/browser-page-reflow/</id>
     <published>2012-12-26T16:00:00.000Z</published>
-    <updated>2016-08-27T04:25:28.000Z</updated>
+    <updated>2016-08-27T04:29:30.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>浏览器为了重新渲染部分或整个页面，重新计算页面元素位置和几何结构（geometries）的进程叫做 reflow（回流）。有时 reflow 页面中的一个元素会 reflow 它的祖先元素以及所有子元素。<br>由于 reflow 的开销非常之大，因此要尽可能的避免 reflow 的发生。</p>
 <a id="more"></a>
@@ -680,10 +680,10 @@
   
   <entry>
     <title>mac系统如何显示和隐藏文件</title>
-    <link href="http://blog.houfeng.net/2012/12/06/2012-12-06-mac-show-all-files/"/>
-    <id>http://blog.houfeng.net/2012/12/06/2012-12-06-mac-show-all-files/</id>
+    <link href="http://blog.houfeng.net/2012/12/06/mac-show-all-files/"/>
+    <id>http://blog.houfeng.net/2012/12/06/mac-show-all-files/</id>
     <published>2012-12-05T16:00:00.000Z</published>
-    <updated>2016-08-27T04:16:49.000Z</updated>
+    <updated>2016-08-27T04:30:06.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="mac系统如何显示和隐藏文件"><a href="#mac系统如何显示和隐藏文件" class="headerlink" title="mac系统如何显示和隐藏文件"></a>mac系统如何显示和隐藏文件</h3><p>苹果Mac OS X操作系统下，隐藏文件是否显示有很多种设置方法，最简单的要算在Mac终端输入命令。显示/隐藏Mac隐藏文件命令如下(注意其中的空格并且区分大小写)：   </p>
 <a id="more"></a>
@@ -709,10 +709,10 @@
   
   <entry>
     <title>如何制作越狱版本iOS软件</title>
-    <link href="http://blog.houfeng.net/2012/10/20/2012-10-20-How-to-make-escape-version-IOS-software/"/>
-    <id>http://blog.houfeng.net/2012/10/20/2012-10-20-How-to-make-escape-version-IOS-software/</id>
+    <link href="http://blog.houfeng.net/2012/10/20/How-to-make-escape-version-IOS-software/"/>
+    <id>http://blog.houfeng.net/2012/10/20/How-to-make-escape-version-IOS-software/</id>
     <published>2012-10-19T16:00:00.000Z</published>
-    <updated>2016-08-27T04:16:53.000Z</updated>
+    <updated>2016-08-27T04:30:00.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="如何制作一个越狱版本的ios应用？"><a href="#如何制作一个越狱版本的ios应用？" class="headerlink" title="如何制作一个越狱版本的ios应用？"></a>如何制作一个越狱版本的ios应用？</h3><ol>
 <li>编译生成Distribution版本的程序</li>
@@ -740,10 +740,10 @@
   
   <entry>
     <title>最快,最简洁的javascript模板引擎jtp</title>
-    <link href="http://blog.houfeng.net/2012/10/13/2012-10-13-fast-javascript-template-engine-jtp/"/>
-    <id>http://blog.houfeng.net/2012/10/13/2012-10-13-fast-javascript-template-engine-jtp/</id>
+    <link href="http://blog.houfeng.net/2012/10/13/fast-javascript-template-engine-jtp/"/>
+    <id>http://blog.houfeng.net/2012/10/13/fast-javascript-template-engine-jtp/</id>
     <published>2012-10-12T16:00:00.000Z</published>
-    <updated>2016-08-27T04:16:56.000Z</updated>
+    <updated>2016-08-27T04:30:38.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="欢迎来到jtp的世界"><a href="#欢迎来到jtp的世界" class="headerlink" title="欢迎来到jtp的世界"></a>欢迎来到jtp的世界</h3><blockquote>
 <p>欢迎使用jtp! 最轻量，简洁，高效的javascript模板引擎！<br>如同“jtp”的名字，“轻量、简洁、高效”是jtp的哲学！</p>
@@ -786,10 +786,10 @@ var rs=fn({name:&apos;jtp&apos;});
   
   <entry>
     <title>移动web开发局部区域滚动问题</title>
-    <link href="http://blog.houfeng.net/2012/09/29/2012-09-29-mobile-dev-overflow-scroll/"/>
-    <id>http://blog.houfeng.net/2012/09/29/2012-09-29-mobile-dev-overflow-scroll/</id>
+    <link href="http://blog.houfeng.net/2012/09/29/mobile-dev-overflow-scroll/"/>
+    <id>http://blog.houfeng.net/2012/09/29/mobile-dev-overflow-scroll/</id>
     <published>2012-09-28T16:00:00.000Z</published>
-    <updated>2016-08-27T04:17:00.000Z</updated>
+    <updated>2016-08-27T04:30:45.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>开发一个针对pc的web应用时，在需要不随内容滚动的页头或面页脚时，通常的做法是如下样式：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.ui-head</span>&#123; <span class="attribute">position</span>:fixed; &#125;</div></pre></td></tr></table></figure></p>
 <p>但是如上的样式放到手机上，我测试过android2.x、android4.x、ios4.x皆不支持position:fixed;</p>
@@ -823,10 +823,10 @@ var rs=fn({name:&apos;jtp&apos;});
   
   <entry>
     <title>linux系统防火墙简单设置</title>
-    <link href="http://blog.houfeng.net/2012/09/16/2012-09-15-linux-firewall/"/>
-    <id>http://blog.houfeng.net/2012/09/16/2012-09-15-linux-firewall/</id>
+    <link href="http://blog.houfeng.net/2012/09/16/linux-firewall/"/>
+    <id>http://blog.houfeng.net/2012/09/16/linux-firewall/</id>
     <published>2012-09-15T16:00:00.000Z</published>
-    <updated>2016-08-27T04:15:37.000Z</updated>
+    <updated>2016-08-27T04:30:53.000Z</updated>
     
     <content type="html"><![CDATA[<p>Linux还是比较常用的，于是我研究了一下Linux关闭防火墙命令，在这里拿出来和大家分享一下，希望你能学会Linux关闭防火墙命令 。</p>
 <a id="more"></a>
@@ -853,10 +853,10 @@ var rs=fn({name:&apos;jtp&apos;});
   
   <entry>
     <title>禁用CentOS Linux系统的图形界面</title>
-    <link href="http://blog.houfeng.net/2012/09/15/2012-09-15-linux-centos-disabled-gui-start/"/>
-    <id>http://blog.houfeng.net/2012/09/15/2012-09-15-linux-centos-disabled-gui-start/</id>
+    <link href="http://blog.houfeng.net/2012/09/15/linux-centos-disabled-gui-start/"/>
+    <id>http://blog.houfeng.net/2012/09/15/linux-centos-disabled-gui-start/</id>
     <published>2012-09-14T16:00:00.000Z</published>
-    <updated>2016-08-27T04:15:17.000Z</updated>
+    <updated>2016-08-27T04:31:03.000Z</updated>
     
     <content type="html"><![CDATA[<p>如何禁用Centos GUI图形界面？</p>
 <a id="more"></a>
@@ -881,10 +881,10 @@ var rs=fn({name:&apos;jtp&apos;});
   
   <entry>
     <title>eclipse+tomcat web工程引用其它工程</title>
-    <link href="http://blog.houfeng.net/2012/09/11/2012-09-11-eclipse-tomcat-webproject/"/>
-    <id>http://blog.houfeng.net/2012/09/11/2012-09-11-eclipse-tomcat-webproject/</id>
+    <link href="http://blog.houfeng.net/2012/09/11/eclipse-tomcat-webproject/"/>
+    <id>http://blog.houfeng.net/2012/09/11/eclipse-tomcat-webproject/</id>
     <published>2012-09-10T16:00:00.000Z</published>
-    <updated>2016-08-27T04:14:58.000Z</updated>
+    <updated>2016-08-27T04:31:12.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>之前用eclipse做android开发的时候，一个工程项目引用的方式引用另一个工程，一直没有问题。今天为一个web工程引用另一个工程的时候，编译运行发生找不到“类”的错误。</p>
@@ -913,10 +913,10 @@ var rs=fn({name:&apos;jtp&apos;});
   
   <entry>
     <title>新博客第一篇文章</title>
-    <link href="http://blog.houfeng.net/2012/09/10/2012-09-10-first-blog/"/>
-    <id>http://blog.houfeng.net/2012/09/10/2012-09-10-first-blog/</id>
+    <link href="http://blog.houfeng.net/2012/09/10/first-blog/"/>
+    <id>http://blog.houfeng.net/2012/09/10/first-blog/</id>
     <published>2012-09-09T16:00:00.000Z</published>
-    <updated>2016-08-27T04:21:17.000Z</updated>
+    <updated>2016-08-27T04:29:52.000Z</updated>
     
     <content type="html"><![CDATA[<a id="more"></a>
 <h3 id="基于Github-Pages搭建的轻型博客"><a href="#基于Github-Pages搭建的轻型博客" class="headerlink" title="基于Github Pages搭建的轻型博客"></a>基于Github Pages搭建的轻型博客</h3><p>最近一直在找一个简洁高效的博客程序，也想动手写一个符合自己的博客程序，实话说：不只是想了，已经基于node.js开始写了，但因为最近工作较忙，一直没有时间将其完全开发完成。</p>
@@ -938,10 +938,10 @@ var rs=fn({name:&apos;jtp&apos;});
   
   <entry>
     <title>.net编写的外挂式绿色五笔</title>
-    <link href="http://blog.houfeng.net/2009/10/29/2009-10-29-input-green-wubi/"/>
-    <id>http://blog.houfeng.net/2009/10/29/2009-10-29-input-green-wubi/</id>
+    <link href="http://blog.houfeng.net/2009/10/29/input-green-wubi/"/>
+    <id>http://blog.houfeng.net/2009/10/29/input-green-wubi/</id>
     <published>2009-10-28T16:00:00.000Z</published>
-    <updated>2016-08-27T04:13:29.000Z</updated>
+    <updated>2016-08-27T04:29:11.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="绿色五笔概述"><a href="#绿色五笔概述" class="headerlink" title="绿色五笔概述:"></a>绿色五笔概述:</h3><p>绿色五笔,名字瞎起的.采用.net开发(不知道是不是第一个,呵呵),目前仅一个beta版,好几个月前这样了,最近没有更新.<br>其中部分词库来自万能五笔.<br>无需安装,只需运行GreenWb.exe即可.第一次运行会自动加入自启动.可在设置中取消自启动.</p>
 <a id="more"></a>
@@ -979,10 +979,10 @@ var rs=fn({name:&apos;jtp&apos;});
   
   <entry>
     <title>图象处理常用特效算法</title>
-    <link href="http://blog.houfeng.net/2009/07/23/2009-07-23-image-handle/"/>
-    <id>http://blog.houfeng.net/2009/07/23/2009-07-23-image-handle/</id>
+    <link href="http://blog.houfeng.net/2009/07/23/image-handle/"/>
+    <id>http://blog.houfeng.net/2009/07/23/image-handle/</id>
     <published>2009-07-22T16:00:00.000Z</published>
-    <updated>2016-08-27T04:12:23.000Z</updated>
+    <updated>2016-08-27T04:28:29.000Z</updated>
     
     <content type="html"><![CDATA[<p>介绍几个图像处理常用算法</p>
 <a id="more"></a>
@@ -1009,10 +1009,10 @@ var rs=fn({name:&apos;jtp&apos;});
   
   <entry>
     <title>最易于使用的asp.net ajax框架</title>
-    <link href="http://blog.houfeng.net/2009/02/10/2012-02-10-ajaxengine-dotnet/"/>
-    <id>http://blog.houfeng.net/2009/02/10/2012-02-10-ajaxengine-dotnet/</id>
+    <link href="http://blog.houfeng.net/2009/02/10/ajaxengine-dotnet/"/>
+    <id>http://blog.houfeng.net/2009/02/10/ajaxengine-dotnet/</id>
     <published>2009-02-09T16:00:00.000Z</published>
-    <updated>2016-08-27T04:14:08.000Z</updated>
+    <updated>2016-08-27T04:30:17.000Z</updated>
     
     <content type="html"><![CDATA[<p>项目地址: <a href="http://www.houfeng.net/page/AjaxEngine.aspx" target="_blank" rel="external">http://www.houfeng.net/page/AjaxEngine.aspx</a></p>
 <a id="more"></a>
