@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.houfeng.net/2016/07/29/confman/</loc>
+    
+    <lastmod>2016-08-27T04:45:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.houfeng.net/2016/04/13/using-nokitjs-to-solve-the-problem-of-cross-domain/</loc>
+    
+    <lastmod>2016-08-27T04:44:09.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.houfeng.net/2016/07/21/cize/</loc>
+    
+    <lastmod>2016-08-27T04:43:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.houfeng.net/2015/10/18/iweb/</loc>
+    
+    <lastmod>2016-08-27T04:40:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.houfeng.net/2015/10/09/mditor/</loc>
+    
+    <lastmod>2016-08-27T04:39:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.houfeng.net/2015/12/07/nokitjs/</loc>
+    
+    <lastmod>2016-08-27T04:39:39.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.houfeng.net/2012/09/11/eclipse-tomcat-webproject/</loc>
     
     <lastmod>2016-08-27T04:31:12.000Z</lastmod>
@@ -149,14 +191,14 @@
   </url>
   
   <url>
-    <loc>http://blog.houfeng.net/categories/index.html</loc>
+    <loc>http://blog.houfeng.net/tags/index.html</loc>
     
     <lastmod>2016-08-27T03:53:40.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.houfeng.net/tags/index.html</loc>
+    <loc>http://blog.houfeng.net/categories/index.html</loc>
     
     <lastmod>2016-08-27T03:53:40.000Z</lastmod>
     
