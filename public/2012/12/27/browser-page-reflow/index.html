@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Houfeng"><meta name="description" content="基本概念浏览器为了重新渲染部分或整个页面，重新计算页面元素位置和几何结构（geometries）的进程叫做reflow（回流）。有时reflow页面中的一个元素会reflow它的祖先元素以及所有子元素。由于reflow的开销非常之大，因此要尽可能的避免reflow"><meta name="keywords" content=""><title>浏览器页面渲染之“reflow” · Houfeng's Blog</title><link rel="icon" href="/favicon.ico"><link rel="canonical" href="http://blog.houfeng.net/2012/12/27/browser-page-reflow/"><link rel="stylesheet" href="/fonts/iconfont/iconfont.css"><link rel="stylesheet" href="/css/style.css"><script type="text/javascript">var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?3F16290d6dfe4977c6ba2d32fb7a483731";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></head><body><div id="main"><header><a href="/." class="logo">Houfeng's Blog</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">Home</a></li><li class="nav-link"><a href="/archives/" target="_self">Archives</a></li><li class="nav-link"><a href="/about/" target="_self">About</a></li></ul></header><section id="container"><article class="post"><h1 class="post-title">浏览器页面渲染之“reflow”</h1><span class="post-time">Dec 27, 2012</span><div id="sidebar" class="post-sidebar"><h3 class="heading">Contents</h3><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本概念"><span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#产生-reflow-的原因"><span class="toc-text">产生 reflow 的原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何减少-reflow"><span class="toc-text">如何减少 reflow</span></a></li></ol></div><div class="post-content"><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>浏览器为了重新渲染部分或整个页面，重新计算页面元素位置和几何结构（geometries）的进程叫做 reflow（回流）。有时 reflow 页面中的一个元素会 reflow 它的祖先元素以及所有子元素。<br>由于 reflow 的开销非常之大，因此要尽可能的避免 reflow 的发生。</p>
+<a id="more"></a>
+<h3 id="产生-reflow-的原因"><a href="#产生-reflow-的原因" class="headerlink" title="产生 reflow 的原因"></a>产生 reflow 的原因</h3><ol>
+<li>调整窗口大小；</li>
+<li>改变字体；</li>
+<li>增加或者移除样式表；</li>
+<li>内容变化，比如用户在 input 框中输入文字；</li>
+<li>激活 CSS 伪类，比如 :hover (IE 中为兄弟结点伪类的激活)；</li>
+<li>操作 class 属性；</li>
+<li>脚本操作 DOM；</li>
+<li>计算 offsetWidth 和 offsetHeight 属性；</li>
+<li>设置 style 属性的值。</li>
+</ol>
+<h3 id="如何减少-reflow"><a href="#如何减少-reflow" class="headerlink" title="如何减少 reflow"></a>如何减少 reflow</h3><ol>
+<li>如果想设定元素的样式，通过改变元素的 class 名 (尽可能在 DOM 树的最里层)；</li>
+<li>避免设置多项内联样式；</li>
+<li>用于表现动画的元素，使用 position 属性的 fixed 值或 absolute 值（脱离文档流）；</li>
+<li>权衡平滑和速度（调大每帧间隔，减少 reflow 次数）；</li>
+<li>避免使用 table 布局；</li>
+<li>避免使用CSS的 JavaScript 表达式 (仅 IE 浏览器)；</li>
+<li>减少不必要的 DOM 层级，改变 DOM 树中的一级会导致所有层级的改变，上至根部，下至被改变节点的子节点；</li>
+</ol>
+</div></article><div class="tags"></div><div class="paginator"><a href="/2013/01/24/adobe-web-html5/" class="prev"><i class="iconfont icon-left"></i><span> Prev</span></a><a href="/2012/12/06/mac-show-all-files/" class="next"><span>Next</span><i class="iconfont icon-right"></i></a></div><section id="comments"><div data-thread-key="http://blog.houfeng.net/2012/12/27/browser-page-reflow/index.html" data-title="浏览器页面渲染之“reflow”" data-url="http://blog.houfeng.net/2012/12/27/browser-page-reflow/index.html" class="ds-thread"></div><script type="text/javascript">var duoshuoQuery = {short_name: "houfeng" };
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();</script></section></section><footer><div class="copyright"><p class="power">Powered by <a href="https://hexo.io/">Hexo</a> and Theme by <a href="https://github.com/ahonn/hexo-theme-even"> Even</a></p><p class="since">&copy;2009-2016<span class="heart"><i class="iconfont icon-heart"></i></span><span class="author">Houfeng</span></p></div><label id="back2top"><i class="iconfont icon-up"></i></label></footer></div><script src="/js/zepto.min.js"></script><script src="/js/theme.js"></script></body></html>
