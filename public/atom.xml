@@ -93,6 +93,36 @@
   </entry>
   
   <entry>
+    <title>图象处理常用特效算法</title>
+    <link href="http://blog.houfeng.net/2016/08/27/2009-07-23-image-handle/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2009-07-23-image-handle/</id>
+    <published>2016-08-27T03:53:40.000Z</published>
+    <updated>2016-08-27T03:53:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>介绍几个图像处理常用算法</p>
+<a id="more"></a>
+<p>###图像的逆反处理算法<br>逆反处理的算法如下：<br>设r，g，b分别为源图像像素f（i，j）的红，绿，蓝分量值，rr，gg，bb分别为处理后像素g（i，j）的红，绿，蓝分量值。则<br>rr=255-r<br>gg=255-g<br>bb=255-b</p>
+<p>###图像的平滑处理<br>算法如下：<br>平滑处理是指将源图像的每一个像素的颜色值由其相邻n X n个像素的平均值来代替。<br>例如，对于3*3点阵而言，设原图像某像素的值为f（i，j），平滑处理后该像素的值为g（i，j），则：<br>g(i,j)=(f(i,j)+f(i-1,j)+f(i+1,j)+f(i-1,j-1)+f(i,j-1)+f(i+1,j-1)+<br>f(i-1,j+1)+f(i,j+1)+f(i+1,j+1))/9<br>注意：该算法不能平滑图像边界的像素。</p>
+<p>###图象的霓虹处理<br>算法：<br>对于3 X 3点阵，首先计算原图象像素f(i,j)的红，绿，蓝分量与相同行f（i+1，j）及同列f(i,j+1)相邻象素的梯度，即差的平方之和的平方根，然后将梯度值作为处理后的象素g(i,j)的红，绿，蓝分量值。<br>设 r1,g1,b1分别为原图象象素f(i,j)的红，绿，蓝分量值，r2,g2,b2分别为相同行相邻象素f(i+1,j)的红，绿，蓝分量值，r3,g3,b3分别为同列相邻象素f(i,j+1)的红，绿，蓝分量值，rr,gg,bb为处理后象素g(i,j)的红，绿，蓝分量值，则：<br>rr1=(r1-r2)^2  rr2=(r1-r3)^2<br>gg1=(g1-g2)^2  gg2=(g1-g3)^2<br>bb1=(b1-b2)^2  bb2(b1-b3)^2<br>rr=2 X (rr1+rr2)^0.5<br>gg=2 X (gg1+gg2)^0.5<br>bb=2 X (bb1+bb2)^0.5</p>
+<p>###图象的锐化处理<br>锐化处理的算法：<br>计算原图像像素f(i,j)的像素值与该像素与相邻像素f(i-1,j-1)像素值之差的绝对值得百分比之和，作为处理后图像像素g(i,j)的像素值。例如，设r1,g1,b1分别为f(i,j)的红、绿、蓝分量值，r2,g2,b2分别为f(i-1,j-1)的红、绿、蓝分量值，rr,gg,bb分别为g(i,j)的红、绿、蓝分量值，则：<br>rr=r1+0.25 X abs(r1-r2)<br>gg=g1+0.25 Ｘ abs(g1-g2)<br>bb=b1+0.25 Ｘabs(b1-b2)</p>
+<p>###图像的浮雕处理<br>算法：<br>位图图像的浮雕处理的算法是：<br>g(i,j)=f(i,j)-f(i-1,j)+常数<br>式中，g(i,j)为处理后图像的像素值，f(i,j)为原图像的像素值，f(i-1,j)为前一个相邻像素的值。常数一般取128，即<br>rr=r1-r2+128<br>gg=g1-g2+128<br>bb=b1-b2+128<br>式中，r1,g1,b1分别为原图像的像素f(i,j)的红、绿、蓝分量值；r2,g2,b2分别为前一个相邻像素f(i-1,j)的红、绿、蓝分量值，rr,gg,bb,分别为处理后图像的像素g(i,j)的红、绿、蓝分量值.<br>６.图像的镶嵌处理<br>镶嵌处理算法如下：<br>镶嵌处理后的图像每一小矩阵内的所有像素值都取此矩阵内原图像各像素值之和的平均值。例如，对于3*3的子域：<br>g(i,j)=(f(i,j)+f(i-1,j)+f(i+1,j)+f(i-1,j-1)+f(i+1,j-1)+f(i-1,j+1)+f(i,j+1)+f(i+1,j+1))/9<br>则取：<br>g(i-1,j)=g(i,j)<br>g(i+1,j)=g(i,j)<br>g（i,j-1）=g(i,j)<br>g(i,j+1)=g(i,j)<br>g(i,j+1)=g(i,j)<br>g(i-1,j-1)=g(i,j)<br>g(i-1,j+1)=g(i,j)<br>g(i+1,j-1)=g(i,j)<br>g(i+1,j+1)=g(i,j)</p>
+<p>###图像的灰度处理<br>彩色图像灰度处理的算法如下：<br>c=tuxing.GetPixel(i,j)<br>r=c.R<br>g=c.G<br>b=c.B<br>rr=g(r 64)X64<br>gg=(g 64)X64<br>bb=(b 64)X64</p>
+<p>###图像缩小处理<br>以坐标原点为中心，将图像个像素坐标的X分量和Y分量分别乘以Sx，Sy，则可使图像进行整体放大和缩小。这时，<br>X’=X x Sx<br>Y’=Y x Sy<br>当Sx=Sy时，作相似变换;<br>当Sx!=Sy时，产生变形。<br>９.图像的平移处理<br>图像的平移变换是将图形上的点（x,y)在x方向（水平方向）和y方向（垂直方向）<br>分别移动dx和dy,则变换后点(x’,y’)坐标值为：<br>x’=x+dx<br>y’=y+dy</p>
+<p>###图像的旋转变换<br>二维图像的旋转变换是以原点为中心，将点（x,y）旋转a角度而得到新的坐标（x’,y’）的变换称为旋转变换。其数学表达式为：<br>x’=x x cosa-y x sina<br>y’=x x sina+y x cosa<br>１１.二维图像的对称变换<br>二维图像对称变换有以下几种情况.<br>1.以x轴为对称得对称变换。<br>以x轴为对称得点(x,y)的对称点(x’,y’)坐标为：<br>x’=x<br>y’=-y<br>2.以y轴为对称得对称变换。<br>以y轴为对称的点（x,y）的对称点(x’,y’)坐标为：<br>x’=-x<br>y’=y<br>3.以原点为对称的对称变换。<br>以原点为对称得点（x,y）的对称点（x’,y’）坐标为：<br>x’=-x<br>y’=-y<br>对图像的每一个像素依据二维图形几何变换公式进行计算后，在进行图像显示，则可得到图像的几何变换。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;介绍几个图像处理常用算法&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://blog.houfeng.net/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>新博客第一篇文章</title>
     <link href="http://blog.houfeng.net/2016/08/27/2012-09-10-first-blog/"/>
     <id>http://blog.houfeng.net/2016/08/27/2012-09-10-first-blog/</id>
@@ -114,74 +144,6 @@
     </summary>
     
       <category term="闲谈" scheme="http://blog.houfeng.net/categories/%E9%97%B2%E8%B0%88/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>禁用CentOS Linux系统的图形界面</title>
-    <link href="http://blog.houfeng.net/2016/08/27/2012-09-15-linux-centos-disabled-gui-start/"/>
-    <id>http://blog.houfeng.net/2016/08/27/2012-09-15-linux-centos-disabled-gui-start/</id>
-    <published>2016-08-27T03:53:40.000Z</published>
-    <updated>2016-08-27T03:53:40.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>如何禁用Centos GUI图形界面？</p>
-<a id="more"></a>
-<p>vi /etc/inittab</p>
-<p>把默认的</p>
-<p>id:5:initdefault:</p>
-<p>改成</p>
-<p>id:3:initdefault:</p>
-<p>这样登录的默认界面就是字符界面了， 需要gui时， startx 即可。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;如何禁用Centos GUI图形界面？&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://blog.houfeng.net/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>最易于使用的asp.net ajax框架</title>
-    <link href="http://blog.houfeng.net/2016/08/27/2012-02-10-ajaxengine-dotnet/"/>
-    <id>http://blog.houfeng.net/2016/08/27/2012-02-10-ajaxengine-dotnet/</id>
-    <published>2016-08-27T03:53:40.000Z</published>
-    <updated>2016-08-27T03:53:40.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>项目地址: <a href="http://www.houfeng.net/page/AjaxEngine.aspx" target="_blank" rel="external">http://www.houfeng.net/page/AjaxEngine.aspx</a></p>
-<a id="more"></a>
-<p>###2009年中<br>工作之余写了一个简单非常方便使用Ajax框架（应该还称不是框架）！并用一个小仓库管理项目<br>2009年末，确实是年末2009-12-29，写了一篇文章，介如年中所写的“框架”;<br>文章地址：<a href="http://www.cnblogs.com/houfeng/archive/2009/12/29/1635350.html" target="_blank" rel="external">http://www.cnblogs.com/houfeng/archive/2009/12/29/1635350.html</a></p>
-<p>###2010年初<br>移植了一个java版本，并送于一个朋友，java版本之后我没维护，java版本被朋友用于了几个政府项目！具说现在他还在用着，但我已不知道“它”长成什么样了！<br>还是2010年，用于了当时参与的一个OA项目，及一个短信平台项目，此时AjaxEngine已添加很多功能：<br>可以让所有微软官方asp.net控件具备Ajax能力。<br>可以轻松在前端页面调用页面中服务端方法，并异步更新页面呈现。<br>可以在服务端轻松调用客户端脚本。</p>
-<p>###2011年<br>AjaxEngine被用于国内某大型证券企业OA的部分模块！<br>还是2011年，优化了性能，增加了快速编写JsonHandler相关功能！</p>
-<p>###2012年<br>正式开源！</p>
-<p>###为什么开源？<br>本来不是什么高深的东西，为什么如数家珍呢？不如分享！<br>因为AjaxEngine虽实现了相关功能，使用也非常简单方便！但也一直想着好好优化一下，但总不知是真没时间还是偷懒，以致于到现在AjaxEngine中还有09年我刚毕业时写的较为拙劣的代码！希望更多的人参于，优化AjaxEngine<br>AjaxEngine的思路还是较为巧妙的！<br>希望让更多的coder快速完成ajax开发！<br>希望更多的人提出议见以改进AjaxEngine！</p>
-<p>###AjaxEngine的使用不用任何配置，使用步骤如下：</p>
-<ol>
-<li>添加对AjaxEngine的引用</li>
-<li>页面继承AjaxPageBase，或实现IAjaxPage 即可</li>
-<li>JsonHandler继承JsonHandlerBase即可</li>
-<li>用AjaxMethod标记相关法！</li>
-</ol>
-<p>###DEMO</p>
-<p>页面使用Demo:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">using System;</div><div class="line">using AjaxEngines;</div><div class="line">namespace AjaxEngine.Demo</div><div class="line">&#123;</div><div class="line">   	public partial class _Default : AjaxPageBase</div><div class="line">   	&#123;</div><div class="line">       	protected void Page_Load(object sender, EventArgs e)</div><div class="line">       	&#123;</div><div class="line">       	&#125;</div><div class="line">       	protected void Button1_Click(object sender, EventArgs e)</div><div class="line">       	&#123;</div><div class="line">           	this.AjaxEngine.ShowMessageBox("houfeng");</div><div class="line">       	&#125;</div><div class="line">       	/// &lt;summary&gt;</div><div class="line">       	/// 参数和返回值都必须是string类型</div><div class="line">       	/// &lt;/summary&gt;</div><div class="line">       	/// &lt;param name="x"&gt;&lt;/param&gt;</div><div class="line">       	/// &lt;param name="y"&gt;&lt;/param&gt;</div><div class="line">       	/// &lt;returns&gt;&lt;/returns&gt;</div><div class="line">       	[AjaxMethod]</div><div class="line">       	public string  Add(string x, string y)</div><div class="line">       	&#123;</div><div class="line">           	return (x + y).ToString();</div><div class="line">       	&#125;</div><div class="line">   	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Handler使用Demo:</p>
-<p>服务端:<br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">using</span> AjaxEngines;</div><div class="line"><span class="keyword">using</span> AjaxEngines.JsonHandlers;</div><div class="line"><span class="keyword">namespace</span> <span class="title">AjaxEngine.Demo</span></div><div class="line">&#123;</div><div class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></div><div class="line">    <span class="comment"><span class="doctag">///</span> Handler1 的摘要说明</span></div><div class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></div><div class="line">  <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Handler1</span> : <span class="title">JsonHandlerBase</span></div><div class="line">  &#123;</div><div class="line">      [AjaxMethod]</div><div class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">add</span>(<span class="params"><span class="keyword">int</span> x, <span class="keyword">int</span> y</span>)</span></div><div class="line">      &#123;</div><div class="line">          <span class="keyword">return</span> x + y;</div><div class="line">      &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>客户端:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$.getJSON(<span class="string">"Handler1.ashx"</span>, &#123; method: <span class="string">"add"</span>, x: <span class="number">1</span>, y: <span class="number">2</span> &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">dt</span>) </span>&#123;</div><div class="line">      alert(dt);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;项目地址: &lt;a href=&quot;http://www.houfeng.net/page/AjaxEngine.aspx&quot;&gt;http://www.houfeng.net/page/AjaxEngine.aspx&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="编程" scheme="http://blog.houfeng.net/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
   </entry>
@@ -211,6 +173,34 @@
       &lt;blockquote&gt;
 &lt;p&gt;之前用eclipse做android开发的时候，一个工程项目引用的方式引用另一个工程，一直没有问题。今天为一个web工程引用另一个工程的时候，编译运行发生找不到“类”的错误。&lt;/p&gt;
 &lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://blog.houfeng.net/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>禁用CentOS Linux系统的图形界面</title>
+    <link href="http://blog.houfeng.net/2016/08/27/2012-09-15-linux-centos-disabled-gui-start/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2012-09-15-linux-centos-disabled-gui-start/</id>
+    <published>2016-08-27T03:53:40.000Z</published>
+    <updated>2016-08-27T03:53:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>如何禁用Centos GUI图形界面？</p>
+<a id="more"></a>
+<p>vi /etc/inittab</p>
+<p>把默认的</p>
+<p>id:5:initdefault:</p>
+<p>改成</p>
+<p>id:3:initdefault:</p>
+<p>这样登录的默认界面就是字符界面了， 需要gui时， startx 即可。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如何禁用Centos GUI图形界面？&lt;/p&gt;
     
     </summary>
     
@@ -335,31 +325,41 @@ var rs=fn({name:&apos;jtp&apos;});
   </entry>
   
   <entry>
-    <title>图象处理常用特效算法</title>
-    <link href="http://blog.houfeng.net/2016/08/27/2009-07-23-image-handle/"/>
-    <id>http://blog.houfeng.net/2016/08/27/2009-07-23-image-handle/</id>
+    <title>最易于使用的asp.net ajax框架</title>
+    <link href="http://blog.houfeng.net/2016/08/27/2012-02-10-ajaxengine-dotnet/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2012-02-10-ajaxengine-dotnet/</id>
     <published>2016-08-27T03:53:40.000Z</published>
     <updated>2016-08-27T03:53:40.000Z</updated>
     
-    <content type="html"><![CDATA[<p>介绍几个图像处理常用算法</p>
+    <content type="html"><![CDATA[<p>项目地址: <a href="http://www.houfeng.net/page/AjaxEngine.aspx" target="_blank" rel="external">http://www.houfeng.net/page/AjaxEngine.aspx</a></p>
 <a id="more"></a>
-<p>###图像的逆反处理算法<br>逆反处理的算法如下：<br>设r，g，b分别为源图像像素f（i，j）的红，绿，蓝分量值，rr，gg，bb分别为处理后像素g（i，j）的红，绿，蓝分量值。则<br>rr=255-r<br>gg=255-g<br>bb=255-b</p>
-<p>###图像的平滑处理<br>算法如下：<br>平滑处理是指将源图像的每一个像素的颜色值由其相邻n X n个像素的平均值来代替。<br>例如，对于3*3点阵而言，设原图像某像素的值为f（i，j），平滑处理后该像素的值为g（i，j），则：<br>g(i,j)=(f(i,j)+f(i-1,j)+f(i+1,j)+f(i-1,j-1)+f(i,j-1)+f(i+1,j-1)+<br>f(i-1,j+1)+f(i,j+1)+f(i+1,j+1))/9<br>注意：该算法不能平滑图像边界的像素。</p>
-<p>###图象的霓虹处理<br>算法：<br>对于3 X 3点阵，首先计算原图象像素f(i,j)的红，绿，蓝分量与相同行f（i+1，j）及同列f(i,j+1)相邻象素的梯度，即差的平方之和的平方根，然后将梯度值作为处理后的象素g(i,j)的红，绿，蓝分量值。<br>设 r1,g1,b1分别为原图象象素f(i,j)的红，绿，蓝分量值，r2,g2,b2分别为相同行相邻象素f(i+1,j)的红，绿，蓝分量值，r3,g3,b3分别为同列相邻象素f(i,j+1)的红，绿，蓝分量值，rr,gg,bb为处理后象素g(i,j)的红，绿，蓝分量值，则：<br>rr1=(r1-r2)^2  rr2=(r1-r3)^2<br>gg1=(g1-g2)^2  gg2=(g1-g3)^2<br>bb1=(b1-b2)^2  bb2(b1-b3)^2<br>rr=2 X (rr1+rr2)^0.5<br>gg=2 X (gg1+gg2)^0.5<br>bb=2 X (bb1+bb2)^0.5</p>
-<p>###图象的锐化处理<br>锐化处理的算法：<br>计算原图像像素f(i,j)的像素值与该像素与相邻像素f(i-1,j-1)像素值之差的绝对值得百分比之和，作为处理后图像像素g(i,j)的像素值。例如，设r1,g1,b1分别为f(i,j)的红、绿、蓝分量值，r2,g2,b2分别为f(i-1,j-1)的红、绿、蓝分量值，rr,gg,bb分别为g(i,j)的红、绿、蓝分量值，则：<br>rr=r1+0.25 X abs(r1-r2)<br>gg=g1+0.25 Ｘ abs(g1-g2)<br>bb=b1+0.25 Ｘabs(b1-b2)</p>
-<p>###图像的浮雕处理<br>算法：<br>位图图像的浮雕处理的算法是：<br>g(i,j)=f(i,j)-f(i-1,j)+常数<br>式中，g(i,j)为处理后图像的像素值，f(i,j)为原图像的像素值，f(i-1,j)为前一个相邻像素的值。常数一般取128，即<br>rr=r1-r2+128<br>gg=g1-g2+128<br>bb=b1-b2+128<br>式中，r1,g1,b1分别为原图像的像素f(i,j)的红、绿、蓝分量值；r2,g2,b2分别为前一个相邻像素f(i-1,j)的红、绿、蓝分量值，rr,gg,bb,分别为处理后图像的像素g(i,j)的红、绿、蓝分量值.<br>６.图像的镶嵌处理<br>镶嵌处理算法如下：<br>镶嵌处理后的图像每一小矩阵内的所有像素值都取此矩阵内原图像各像素值之和的平均值。例如，对于3*3的子域：<br>g(i,j)=(f(i,j)+f(i-1,j)+f(i+1,j)+f(i-1,j-1)+f(i+1,j-1)+f(i-1,j+1)+f(i,j+1)+f(i+1,j+1))/9<br>则取：<br>g(i-1,j)=g(i,j)<br>g(i+1,j)=g(i,j)<br>g（i,j-1）=g(i,j)<br>g(i,j+1)=g(i,j)<br>g(i,j+1)=g(i,j)<br>g(i-1,j-1)=g(i,j)<br>g(i-1,j+1)=g(i,j)<br>g(i+1,j-1)=g(i,j)<br>g(i+1,j+1)=g(i,j)</p>
-<p>###图像的灰度处理<br>彩色图像灰度处理的算法如下：<br>c=tuxing.GetPixel(i,j)<br>r=c.R<br>g=c.G<br>b=c.B<br>rr=g(r 64)X64<br>gg=(g 64)X64<br>bb=(b 64)X64</p>
-<p>###图像缩小处理<br>以坐标原点为中心，将图像个像素坐标的X分量和Y分量分别乘以Sx，Sy，则可使图像进行整体放大和缩小。这时，<br>X’=X x Sx<br>Y’=Y x Sy<br>当Sx=Sy时，作相似变换;<br>当Sx!=Sy时，产生变形。<br>９.图像的平移处理<br>图像的平移变换是将图形上的点（x,y)在x方向（水平方向）和y方向（垂直方向）<br>分别移动dx和dy,则变换后点(x’,y’)坐标值为：<br>x’=x+dx<br>y’=y+dy</p>
-<p>###图像的旋转变换<br>二维图像的旋转变换是以原点为中心，将点（x,y）旋转a角度而得到新的坐标（x’,y’）的变换称为旋转变换。其数学表达式为：<br>x’=x x cosa-y x sina<br>y’=x x sina+y x cosa<br>１１.二维图像的对称变换<br>二维图像对称变换有以下几种情况.<br>1.以x轴为对称得对称变换。<br>以x轴为对称得点(x,y)的对称点(x’,y’)坐标为：<br>x’=x<br>y’=-y<br>2.以y轴为对称得对称变换。<br>以y轴为对称的点（x,y）的对称点(x’,y’)坐标为：<br>x’=-x<br>y’=y<br>3.以原点为对称的对称变换。<br>以原点为对称得点（x,y）的对称点（x’,y’）坐标为：<br>x’=-x<br>y’=-y<br>对图像的每一个像素依据二维图形几何变换公式进行计算后，在进行图像显示，则可得到图像的几何变换。</p>
+<p>###2009年中<br>工作之余写了一个简单非常方便使用Ajax框架（应该还称不是框架）！并用一个小仓库管理项目<br>2009年末，确实是年末2009-12-29，写了一篇文章，介如年中所写的“框架”;<br>文章地址：<a href="http://www.cnblogs.com/houfeng/archive/2009/12/29/1635350.html" target="_blank" rel="external">http://www.cnblogs.com/houfeng/archive/2009/12/29/1635350.html</a></p>
+<p>###2010年初<br>移植了一个java版本，并送于一个朋友，java版本之后我没维护，java版本被朋友用于了几个政府项目！具说现在他还在用着，但我已不知道“它”长成什么样了！<br>还是2010年，用于了当时参与的一个OA项目，及一个短信平台项目，此时AjaxEngine已添加很多功能：<br>可以让所有微软官方asp.net控件具备Ajax能力。<br>可以轻松在前端页面调用页面中服务端方法，并异步更新页面呈现。<br>可以在服务端轻松调用客户端脚本。</p>
+<p>###2011年<br>AjaxEngine被用于国内某大型证券企业OA的部分模块！<br>还是2011年，优化了性能，增加了快速编写JsonHandler相关功能！</p>
+<p>###2012年<br>正式开源！</p>
+<p>###为什么开源？<br>本来不是什么高深的东西，为什么如数家珍呢？不如分享！<br>因为AjaxEngine虽实现了相关功能，使用也非常简单方便！但也一直想着好好优化一下，但总不知是真没时间还是偷懒，以致于到现在AjaxEngine中还有09年我刚毕业时写的较为拙劣的代码！希望更多的人参于，优化AjaxEngine<br>AjaxEngine的思路还是较为巧妙的！<br>希望让更多的coder快速完成ajax开发！<br>希望更多的人提出议见以改进AjaxEngine！</p>
+<p>###AjaxEngine的使用不用任何配置，使用步骤如下：</p>
+<ol>
+<li>添加对AjaxEngine的引用</li>
+<li>页面继承AjaxPageBase，或实现IAjaxPage 即可</li>
+<li>JsonHandler继承JsonHandlerBase即可</li>
+<li>用AjaxMethod标记相关法！</li>
+</ol>
+<p>###DEMO</p>
+<p>页面使用Demo:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">using System;</div><div class="line">using AjaxEngines;</div><div class="line">namespace AjaxEngine.Demo</div><div class="line">&#123;</div><div class="line">   	public partial class _Default : AjaxPageBase</div><div class="line">   	&#123;</div><div class="line">       	protected void Page_Load(object sender, EventArgs e)</div><div class="line">       	&#123;</div><div class="line">       	&#125;</div><div class="line">       	protected void Button1_Click(object sender, EventArgs e)</div><div class="line">       	&#123;</div><div class="line">           	this.AjaxEngine.ShowMessageBox("houfeng");</div><div class="line">       	&#125;</div><div class="line">       	/// &lt;summary&gt;</div><div class="line">       	/// 参数和返回值都必须是string类型</div><div class="line">       	/// &lt;/summary&gt;</div><div class="line">       	/// &lt;param name="x"&gt;&lt;/param&gt;</div><div class="line">       	/// &lt;param name="y"&gt;&lt;/param&gt;</div><div class="line">       	/// &lt;returns&gt;&lt;/returns&gt;</div><div class="line">       	[AjaxMethod]</div><div class="line">       	public string  Add(string x, string y)</div><div class="line">       	&#123;</div><div class="line">           	return (x + y).ToString();</div><div class="line">       	&#125;</div><div class="line">   	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Handler使用Demo:</p>
+<p>服务端:<br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">using</span> AjaxEngines;</div><div class="line"><span class="keyword">using</span> AjaxEngines.JsonHandlers;</div><div class="line"><span class="keyword">namespace</span> <span class="title">AjaxEngine.Demo</span></div><div class="line">&#123;</div><div class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></div><div class="line">    <span class="comment"><span class="doctag">///</span> Handler1 的摘要说明</span></div><div class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></div><div class="line">  <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Handler1</span> : <span class="title">JsonHandlerBase</span></div><div class="line">  &#123;</div><div class="line">      [AjaxMethod]</div><div class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">add</span>(<span class="params"><span class="keyword">int</span> x, <span class="keyword">int</span> y</span>)</span></div><div class="line">      &#123;</div><div class="line">          <span class="keyword">return</span> x + y;</div><div class="line">      &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>客户端:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$.getJSON(<span class="string">"Handler1.ashx"</span>, &#123; method: <span class="string">"add"</span>, x: <span class="number">1</span>, y: <span class="number">2</span> &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">dt</span>) </span>&#123;</div><div class="line">      alert(dt);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;介绍几个图像处理常用算法&lt;/p&gt;
+      &lt;p&gt;项目地址: &lt;a href=&quot;http://www.houfeng.net/page/AjaxEngine.aspx&quot;&gt;http://www.houfeng.net/page/AjaxEngine.aspx&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
-      <category term="算法" scheme="http://blog.houfeng.net/categories/%E7%AE%97%E6%B3%95/"/>
+      <category term="编程" scheme="http://blog.houfeng.net/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
   </entry>
@@ -589,6 +589,73 @@ arbiter：仲裁节点，只参与投票，不接收复制的数据，也不能�
   </entry>
   
   <entry>
+    <title>JavaScript 之 “Math对象”</title>
+    <link href="http://blog.houfeng.net/2016/08/27/2014-07-15-javascript-math/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2014-07-15-javascript-math/</id>
+    <published>2016-08-27T03:53:40.000Z</published>
+    <updated>2016-08-27T03:53:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Math对象是JavaScript的内置对象，提供一系列数学常数和数学方法。</p>
+<p>该对象不是构造函数，所以不能生成实例，所有的属性和方法都必须在Math对象上调用。</p>
+<a id="more"></a>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">new</span> <span class="built_in">Math</span>()</div><div class="line"><span class="comment">// TypeError: object is not a function</span></div></pre></td></tr></table></figure>
+<p>上面代码表示，Math不能当作构造函数用。</p>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>Math对象提供以下一些只读的数学常数。</p>
+<ul>
+<li>E：常数e。</li>
+<li>LN2：2的自然对数。</li>
+<li>LN10：10的自然对数。</li>
+<li>LOG2E：以2为底的e的对数。</li>
+<li>LOG10E：以10为底的e的对数。</li>
+<li>PI：常数Pi。</li>
+<li>SQRT1_2：0.5的平方根。</li>
+<li>SQRT2：2的平方根。</li>
+</ul>
+<p>这些常数的值如下。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.E <span class="comment">// 2.718281828459045</span></div><div class="line"><span class="built_in">Math</span>.LN2 <span class="comment">// 0.6931471805599453</span></div><div class="line"><span class="built_in">Math</span>.LN10 <span class="comment">// 2.302585092994046</span></div><div class="line"><span class="built_in">Math</span>.LOG2E <span class="comment">// 1.4426950408889634</span></div><div class="line"><span class="built_in">Math</span>.LOG10E <span class="comment">// 0.4342944819032518</span></div><div class="line"><span class="built_in">Math</span>.PI <span class="comment">// 3.141592653589793</span></div><div class="line"><span class="built_in">Math</span>.SQRT1_2 <span class="comment">// 0.7071067811865476</span></div><div class="line"><span class="built_in">Math</span>.SQRT2 <span class="comment">// 1.4142135623730951</span></div></pre></td></tr></table></figure>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>Math对象提供以下一些数学方法。</p>
+<h3 id="round方法"><a href="#round方法" class="headerlink" title="round方法"></a>round方法</h3><p>round方法用于四舍五入。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">0.1</span>) <span class="comment">// 0</span></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">0.5</span>) <span class="comment">// 1</span></div></pre></td></tr></table></figure>
+<p>它对于负值的运算结果与正值略有不同，主要体现在对.5的处理。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">-1.1</span>) <span class="comment">// -1</span></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">-1.5</span>) <span class="comment">// -1</span></div></pre></td></tr></table></figure>
+<h3 id="abs方法，max方法，min方法"><a href="#abs方法，max方法，min方法" class="headerlink" title="abs方法，max方法，min方法"></a>abs方法，max方法，min方法</h3><p>abs方法返回参数值的绝对值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.abs(<span class="number">1</span>) <span class="comment">// 1</span></div><div class="line"><span class="built_in">Math</span>.abs(<span class="number">-1</span>) <span class="comment">// 1</span></div></pre></td></tr></table></figure>
+<p>max方法返回最大的参数，min方法返回最小的参数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.max(<span class="number">2</span>, <span class="number">-1</span>, <span class="number">5</span>) <span class="comment">// 5</span></div><div class="line"><span class="built_in">Math</span>.min(<span class="number">2</span>, <span class="number">-1</span>, <span class="number">5</span>) <span class="comment">// -1</span></div></pre></td></tr></table></figure>
+<h3 id="floor方法，ceil方法"><a href="#floor方法，ceil方法" class="headerlink" title="floor方法，ceil方法"></a>floor方法，ceil方法</h3><p>floor方法返回小于参数值的最大整数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.floor(<span class="number">3.2</span>) <span class="comment">// 3</span></div><div class="line"><span class="built_in">Math</span>.floor(<span class="number">-3.2</span>) <span class="comment">// -4</span></div></pre></td></tr></table></figure>
+<p>ceil方法返回大于参数值的最小整数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.ceil(<span class="number">3.2</span>) <span class="comment">// 4</span></div><div class="line"><span class="built_in">Math</span>.ceil(<span class="number">-3.2</span>) <span class="comment">// -3</span></div></pre></td></tr></table></figure>
+<h3 id="pow方法，sqrt方法"><a href="#pow方法，sqrt方法" class="headerlink" title="pow方法，sqrt方法"></a>pow方法，sqrt方法</h3><p>power方法返回以第一个参数为底数、第二个参数为幂的指数值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">2</span>) <span class="comment">// 4</span></div><div class="line"><span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">3</span>) <span class="comment">// 8</span></div></pre></td></tr></table></figure>
+<p>sqrt方法法返回参数值的平方根。如果参数是一个负值，则返回NaN。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.sqrt(<span class="number">4</span>) <span class="comment">// 2</span></div><div class="line"><span class="built_in">Math</span>.sqrt(<span class="number">-4</span>) <span class="comment">// NaN</span></div></pre></td></tr></table></figure>
+<h3 id="log方法，exp方法"><a href="#log方法，exp方法" class="headerlink" title="log方法，exp方法"></a>log方法，exp方法</h3><p>log方法返回以e为底的自然对数值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.log(<span class="built_in">Math</span>.E) <span class="comment">// 1</span></div><div class="line"><span class="built_in">Math</span>.log(<span class="number">10</span>) <span class="comment">// 2.302585092994046</span></div></pre></td></tr></table></figure>
+<p>求以10为底的对数，可以除以Math.LN10；求以2为底的对数，可以除以Math.LN2。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.log(<span class="number">100</span>)/<span class="built_in">Math</span>.LN10 <span class="comment">// 2</span></div><div class="line"><span class="built_in">Math</span>.log(<span class="number">8</span>)/<span class="built_in">Math</span>.LN2 <span class="comment">// 3</span></div></pre></td></tr></table></figure>
+<p>exp方法返回常数e的参数次方。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.exp(<span class="number">1</span>) <span class="comment">// 2.718281828459045</span></div><div class="line"><span class="built_in">Math</span>.exp(<span class="number">3</span>) <span class="comment">// 20.085536923187668</span></div></pre></td></tr></table></figure>
+<h3 id="random方法"><a href="#random方法" class="headerlink" title="random方法"></a>random方法</h3><p>该方法返回0到1之间的一个伪随机数，可能等于0，但是一定小于1。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.random() <span class="comment">// 0.7151307314634323</span></div><div class="line"></div><div class="line"><span class="comment">// 返回给定范围内的随机数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRandomArbitrary</span>(<span class="params">min, max</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.random() * (max - min) + min;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 返回给定范围内的随机整数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRandomInt</span>(<span class="params">min, max</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (max - min + <span class="number">1</span>)) + min;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="三角函数方法"><a href="#三角函数方法" class="headerlink" title="三角函数方法"></a>三角函数方法</h3><p>sin方法返回参数的正弦，cos方法返回参数的余弦，tan方法返回参数的正切。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.sin(<span class="number">0</span>) <span class="comment">// 0</span></div><div class="line"><span class="built_in">Math</span>.cos(<span class="number">0</span>) <span class="comment">// 1</span></div><div class="line"><span class="built_in">Math</span>.tan(<span class="number">0</span>) <span class="comment">// 0</span></div></pre></td></tr></table></figure>
+<p>asin方法返回参数的反正弦，acos方法返回参数的反余弦，atan方法返回参数的反正切。这个三个方法的返回值都是弧度值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.asin(<span class="number">1</span>) <span class="comment">// 1.5707963267948966</span></div><div class="line"><span class="built_in">Math</span>.acos(<span class="number">1</span>) <span class="comment">// 0</span></div><div class="line"><span class="built_in">Math</span>.atan(<span class="number">1</span>) <span class="comment">// 0.7853981633974483</span></div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Math对象是JavaScript的内置对象，提供一系列数学常数和数学方法。&lt;/p&gt;
+&lt;p&gt;该对象不是构造函数，所以不能生成实例，所有的属性和方法都必须在Math对象上调用。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://blog.houfeng.net/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>JavaScript 之 “ArrayBuffer对象”</title>
     <link href="http://blog.houfeng.net/2016/08/27/2014-10-15-javascript-arraybuffer/"/>
     <id>http://blog.houfeng.net/2016/08/27/2014-10-15-javascript-arraybuffer/</id>
@@ -756,73 +823,6 @@ arbiter：仲裁节点，只参与投票，不接收复制的数据，也不能�
     <summary type="html">
     
       &lt;p&gt;类型化数组是JavaScript操作二进制数据的一个接口。&lt;br&gt;这要从WebGL项目的诞生说起，所谓WebGL，就是指浏览器与显卡之间的通信接口，为了满足JavaScript与显卡之间大量的、实时的数据交换，它们之间的数据通信必须是二进制的，而不能是传统的文本格式。&lt;br&gt;比如，以文本格式传递一个32位整数，两端的JavaScript脚本与显卡都要进行格式转化，将非常耗时。这时要是存在一种机制，可以像C语言那样，直接操作字节，然后将4个字节的32位整数，以二进制形式原封不动地送入显卡，脚本的性能就会大幅提升。&lt;br&gt;类型化数组（Typed Array）就是在这种背景下诞生的。它很像C语言的数组，允许开发者以数组下标的形式，直接操作内存。有了类型化数组以后，JavaScript的二进制数据处理功能增强了很多，接口之间完全可以用二进制数据通信。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="http://blog.houfeng.net/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript 之 “Math对象”</title>
-    <link href="http://blog.houfeng.net/2016/08/27/2014-07-15-javascript-math/"/>
-    <id>http://blog.houfeng.net/2016/08/27/2014-07-15-javascript-math/</id>
-    <published>2016-08-27T03:53:40.000Z</published>
-    <updated>2016-08-27T03:53:40.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Math对象是JavaScript的内置对象，提供一系列数学常数和数学方法。</p>
-<p>该对象不是构造函数，所以不能生成实例，所有的属性和方法都必须在Math对象上调用。</p>
-<a id="more"></a>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">new</span> <span class="built_in">Math</span>()</div><div class="line"><span class="comment">// TypeError: object is not a function</span></div></pre></td></tr></table></figure>
-<p>上面代码表示，Math不能当作构造函数用。</p>
-<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>Math对象提供以下一些只读的数学常数。</p>
-<ul>
-<li>E：常数e。</li>
-<li>LN2：2的自然对数。</li>
-<li>LN10：10的自然对数。</li>
-<li>LOG2E：以2为底的e的对数。</li>
-<li>LOG10E：以10为底的e的对数。</li>
-<li>PI：常数Pi。</li>
-<li>SQRT1_2：0.5的平方根。</li>
-<li>SQRT2：2的平方根。</li>
-</ul>
-<p>这些常数的值如下。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.E <span class="comment">// 2.718281828459045</span></div><div class="line"><span class="built_in">Math</span>.LN2 <span class="comment">// 0.6931471805599453</span></div><div class="line"><span class="built_in">Math</span>.LN10 <span class="comment">// 2.302585092994046</span></div><div class="line"><span class="built_in">Math</span>.LOG2E <span class="comment">// 1.4426950408889634</span></div><div class="line"><span class="built_in">Math</span>.LOG10E <span class="comment">// 0.4342944819032518</span></div><div class="line"><span class="built_in">Math</span>.PI <span class="comment">// 3.141592653589793</span></div><div class="line"><span class="built_in">Math</span>.SQRT1_2 <span class="comment">// 0.7071067811865476</span></div><div class="line"><span class="built_in">Math</span>.SQRT2 <span class="comment">// 1.4142135623730951</span></div></pre></td></tr></table></figure>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>Math对象提供以下一些数学方法。</p>
-<h3 id="round方法"><a href="#round方法" class="headerlink" title="round方法"></a>round方法</h3><p>round方法用于四舍五入。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">0.1</span>) <span class="comment">// 0</span></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">0.5</span>) <span class="comment">// 1</span></div></pre></td></tr></table></figure>
-<p>它对于负值的运算结果与正值略有不同，主要体现在对.5的处理。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">-1.1</span>) <span class="comment">// -1</span></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">-1.5</span>) <span class="comment">// -1</span></div></pre></td></tr></table></figure>
-<h3 id="abs方法，max方法，min方法"><a href="#abs方法，max方法，min方法" class="headerlink" title="abs方法，max方法，min方法"></a>abs方法，max方法，min方法</h3><p>abs方法返回参数值的绝对值。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.abs(<span class="number">1</span>) <span class="comment">// 1</span></div><div class="line"><span class="built_in">Math</span>.abs(<span class="number">-1</span>) <span class="comment">// 1</span></div></pre></td></tr></table></figure>
-<p>max方法返回最大的参数，min方法返回最小的参数。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.max(<span class="number">2</span>, <span class="number">-1</span>, <span class="number">5</span>) <span class="comment">// 5</span></div><div class="line"><span class="built_in">Math</span>.min(<span class="number">2</span>, <span class="number">-1</span>, <span class="number">5</span>) <span class="comment">// -1</span></div></pre></td></tr></table></figure>
-<h3 id="floor方法，ceil方法"><a href="#floor方法，ceil方法" class="headerlink" title="floor方法，ceil方法"></a>floor方法，ceil方法</h3><p>floor方法返回小于参数值的最大整数。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.floor(<span class="number">3.2</span>) <span class="comment">// 3</span></div><div class="line"><span class="built_in">Math</span>.floor(<span class="number">-3.2</span>) <span class="comment">// -4</span></div></pre></td></tr></table></figure>
-<p>ceil方法返回大于参数值的最小整数。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.ceil(<span class="number">3.2</span>) <span class="comment">// 4</span></div><div class="line"><span class="built_in">Math</span>.ceil(<span class="number">-3.2</span>) <span class="comment">// -3</span></div></pre></td></tr></table></figure>
-<h3 id="pow方法，sqrt方法"><a href="#pow方法，sqrt方法" class="headerlink" title="pow方法，sqrt方法"></a>pow方法，sqrt方法</h3><p>power方法返回以第一个参数为底数、第二个参数为幂的指数值。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">2</span>) <span class="comment">// 4</span></div><div class="line"><span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">3</span>) <span class="comment">// 8</span></div></pre></td></tr></table></figure>
-<p>sqrt方法法返回参数值的平方根。如果参数是一个负值，则返回NaN。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.sqrt(<span class="number">4</span>) <span class="comment">// 2</span></div><div class="line"><span class="built_in">Math</span>.sqrt(<span class="number">-4</span>) <span class="comment">// NaN</span></div></pre></td></tr></table></figure>
-<h3 id="log方法，exp方法"><a href="#log方法，exp方法" class="headerlink" title="log方法，exp方法"></a>log方法，exp方法</h3><p>log方法返回以e为底的自然对数值。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.log(<span class="built_in">Math</span>.E) <span class="comment">// 1</span></div><div class="line"><span class="built_in">Math</span>.log(<span class="number">10</span>) <span class="comment">// 2.302585092994046</span></div></pre></td></tr></table></figure>
-<p>求以10为底的对数，可以除以Math.LN10；求以2为底的对数，可以除以Math.LN2。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.log(<span class="number">100</span>)/<span class="built_in">Math</span>.LN10 <span class="comment">// 2</span></div><div class="line"><span class="built_in">Math</span>.log(<span class="number">8</span>)/<span class="built_in">Math</span>.LN2 <span class="comment">// 3</span></div></pre></td></tr></table></figure>
-<p>exp方法返回常数e的参数次方。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.exp(<span class="number">1</span>) <span class="comment">// 2.718281828459045</span></div><div class="line"><span class="built_in">Math</span>.exp(<span class="number">3</span>) <span class="comment">// 20.085536923187668</span></div></pre></td></tr></table></figure>
-<h3 id="random方法"><a href="#random方法" class="headerlink" title="random方法"></a>random方法</h3><p>该方法返回0到1之间的一个伪随机数，可能等于0，但是一定小于1。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.random() <span class="comment">// 0.7151307314634323</span></div><div class="line"></div><div class="line"><span class="comment">// 返回给定范围内的随机数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRandomArbitrary</span>(<span class="params">min, max</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.random() * (max - min) + min;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 返回给定范围内的随机整数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRandomInt</span>(<span class="params">min, max</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (max - min + <span class="number">1</span>)) + min;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="三角函数方法"><a href="#三角函数方法" class="headerlink" title="三角函数方法"></a>三角函数方法</h3><p>sin方法返回参数的正弦，cos方法返回参数的余弦，tan方法返回参数的正切。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.sin(<span class="number">0</span>) <span class="comment">// 0</span></div><div class="line"><span class="built_in">Math</span>.cos(<span class="number">0</span>) <span class="comment">// 1</span></div><div class="line"><span class="built_in">Math</span>.tan(<span class="number">0</span>) <span class="comment">// 0</span></div></pre></td></tr></table></figure>
-<p>asin方法返回参数的反正弦，acos方法返回参数的反余弦，atan方法返回参数的反正切。这个三个方法的返回值都是弧度值。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.asin(<span class="number">1</span>) <span class="comment">// 1.5707963267948966</span></div><div class="line"><span class="built_in">Math</span>.acos(<span class="number">1</span>) <span class="comment">// 0</span></div><div class="line"><span class="built_in">Math</span>.atan(<span class="number">1</span>) <span class="comment">// 0.7853981633974483</span></div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Math对象是JavaScript的内置对象，提供一系列数学常数和数学方法。&lt;/p&gt;
-&lt;p&gt;该对象不是构造函数，所以不能生成实例，所有的属性和方法都必须在Math对象上调用。&lt;/p&gt;
     
     </summary>
     
