@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.houfeng.net/"/>
-  <updated>2016-08-27T03:30:16.000Z</updated>
+  <updated>2016-08-27T03:53:40.000Z</updated>
   <id>http://blog.houfeng.net/</id>
   
   <author>
@@ -16,11 +16,584 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>如何制作越狱版本iOS软件</title>
+    <link href="http://blog.houfeng.net/2016/08/27/2012-10-20-How-to-make-escape-version-IOS-software/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2012-10-20-How-to-make-escape-version-IOS-software/</id>
+    <published>2016-08-27T03:53:40.000Z</published>
+    <updated>2016-08-27T03:53:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>###如何制作一个越狱版本的ios应用？</p>
+<ol>
+<li>编译生成Distribution版本的程序</li>
+<li>右击生成的程序，选择显示包内容，选择Info.plist文件添加字段：SigerIdentity，字段值：Apple OS Application Signing</li>
+<li>创建Payload文件夹，将程序拖进，压缩并更改压缩后缀为*.ipa</li>
+<li>拖进生成的ipa文件于iTurns或通过同步工具安装即可</li>
+</ol>
+<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###如何制作一个越狱版本的ios应用？&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;编译生成Distribution版本的程序&lt;/li&gt;
+&lt;li&gt;右击生成的程序，选择显示包内容，选择Info.plist文件添加字段：SigerIdentity，字段值：Apple OS Application Signing&lt;/li&gt;
+&lt;li&gt;创建Payload文件夹，将程序拖进，压缩并更改压缩后缀为*.ipa&lt;/li&gt;
+&lt;li&gt;拖进生成的ipa文件于iTurns或通过同步工具安装即可&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://blog.houfeng.net/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>.net编写的外挂式绿色五笔</title>
+    <link href="http://blog.houfeng.net/2016/08/27/2009-10-29-input-green-wubi/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2009-10-29-input-green-wubi/</id>
+    <published>2016-08-27T03:53:40.000Z</published>
+    <updated>2016-08-27T03:53:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="绿色五笔概述"><a href="#绿色五笔概述" class="headerlink" title="绿色五笔概述:"></a>绿色五笔概述:</h3><p>绿色五笔,名字瞎起的.采用.net开发(不知道是不是第一个,呵呵),目前仅一个beta版,好几个月前这样了,最近没有更新.<br>其中部分词库来自万能五笔.<br>无需安装,只需运行GreenWb.exe即可.第一次运行会自动加入自启动.可在设置中取消自启动.</p>
+<a id="more"></a>
+<p>###截图</p>
+<p>输入窗口:</p>
+<p><img src="http://images.cnblogs.com/cnblogs_com/houfeng/20091029122614_1.jpg" alt=""></p>
+<p>设置窗口:</p>
+<p><img src="http://images.cnblogs.com/cnblogs_com/houfeng/20091029122615_2.jpg" alt=""></p>
+<p>字词编辑器:</p>
+<p><img src="http://images.cnblogs.com/cnblogs_com/houfeng/20091029122615_3.jpg" alt=""></p>
+<p>###一些设置:</p>
+<ol>
+<li>单击输入法窗口 中/英 按钮,切换中英文(Shift 中英文切换).</li>
+<li>单击输入法窗口 半/全 按钮,切换全半角.</li>
+<li>单击输入法窗口 简/繁 按钮,切换简繁输入.</li>
+<li>单击输入法窗口 词 按钮,将当前选中文字加入新词.</li>
+<li>单击输入法窗口 关 按钮,最小化输入窗口.</li>
+<li>单击输入法窗口 ./。 按钮,切换中英文标点(暂不输入中文标点).</li>
+<li>右击任务栏图标，字词库 管理用户词库.</li>
+<li>右击任务栏图标，设置 进行软件基本设置.</li>
+</ol>
+<p>###下载:</p>
+<p>单击这里下载试用</p>
+<hr>
+<p>欢迎各位建义.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;绿色五笔概述&quot;&gt;&lt;a href=&quot;#绿色五笔概述&quot; class=&quot;headerlink&quot; title=&quot;绿色五笔概述:&quot;&gt;&lt;/a&gt;绿色五笔概述:&lt;/h3&gt;&lt;p&gt;绿色五笔,名字瞎起的.采用.net开发(不知道是不是第一个,呵呵),目前仅一个beta版,好几个月前这样了,最近没有更新.&lt;br&gt;其中部分词库来自万能五笔.&lt;br&gt;无需安装,只需运行GreenWb.exe即可.第一次运行会自动加入自启动.可在设置中取消自启动.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="编程" scheme="http://blog.houfeng.net/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>新博客第一篇文章</title>
+    <link href="http://blog.houfeng.net/2016/08/27/2012-09-10-first-blog/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2012-09-10-first-blog/</id>
+    <published>2016-08-27T03:53:40.000Z</published>
+    <updated>2016-08-27T03:53:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<p>###基于Github Pages搭建的轻型博客<br>最近一直在找一个简洁高效的博客程序，也想动手写一个符合自己的博客程序，实话说：不只是想了，已经基于node.js开始写了，但因为最近工作较忙，一直没有时间将其完全开发完成。</p>
+<p>Githab Pages一直以来也在用，比如我的几个开源项目的相关页面，今天开始用Githab Pages构建我的静态博客。特记！</p>
+<p>###在此之前的博文<br>在些之前的文章一直发表在博客园，之前文章将不会特意导入到在的博客中，部分导过来文章，因为日期早于此篇文章，将在出现在“新博客第一篇文章”之前的时间。阅读以前的文章请访问:<a href="http://houfeng.cnblogs.com" target="_blank" rel="external">http://houfeng.cnblogs.com</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;###基于Github Pages搭建的轻型博客&lt;br&gt;最近一直在找一个简洁高效的博客程序，也想动手写一个符合自己的博客程序，实话说：不只是想了，已经基于node.js开始写了，但因为最近工作较忙，一直没有时间将其完全开发完成。&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="闲谈" scheme="http://blog.houfeng.net/categories/%E9%97%B2%E8%B0%88/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>禁用CentOS Linux系统的图形界面</title>
+    <link href="http://blog.houfeng.net/2016/08/27/2012-09-15-linux-centos-disabled-gui-start/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2012-09-15-linux-centos-disabled-gui-start/</id>
+    <published>2016-08-27T03:53:40.000Z</published>
+    <updated>2016-08-27T03:53:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>如何禁用Centos GUI图形界面？</p>
+<a id="more"></a>
+<p>vi /etc/inittab</p>
+<p>把默认的</p>
+<p>id:5:initdefault:</p>
+<p>改成</p>
+<p>id:3:initdefault:</p>
+<p>这样登录的默认界面就是字符界面了， 需要gui时， startx 即可。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如何禁用Centos GUI图形界面？&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://blog.houfeng.net/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>最易于使用的asp.net ajax框架</title>
+    <link href="http://blog.houfeng.net/2016/08/27/2012-02-10-ajaxengine-dotnet/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2012-02-10-ajaxengine-dotnet/</id>
+    <published>2016-08-27T03:53:40.000Z</published>
+    <updated>2016-08-27T03:53:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>项目地址: <a href="http://www.houfeng.net/page/AjaxEngine.aspx" target="_blank" rel="external">http://www.houfeng.net/page/AjaxEngine.aspx</a></p>
+<a id="more"></a>
+<p>###2009年中<br>工作之余写了一个简单非常方便使用Ajax框架（应该还称不是框架）！并用一个小仓库管理项目<br>2009年末，确实是年末2009-12-29，写了一篇文章，介如年中所写的“框架”;<br>文章地址：<a href="http://www.cnblogs.com/houfeng/archive/2009/12/29/1635350.html" target="_blank" rel="external">http://www.cnblogs.com/houfeng/archive/2009/12/29/1635350.html</a></p>
+<p>###2010年初<br>移植了一个java版本，并送于一个朋友，java版本之后我没维护，java版本被朋友用于了几个政府项目！具说现在他还在用着，但我已不知道“它”长成什么样了！<br>还是2010年，用于了当时参与的一个OA项目，及一个短信平台项目，此时AjaxEngine已添加很多功能：<br>可以让所有微软官方asp.net控件具备Ajax能力。<br>可以轻松在前端页面调用页面中服务端方法，并异步更新页面呈现。<br>可以在服务端轻松调用客户端脚本。</p>
+<p>###2011年<br>AjaxEngine被用于国内某大型证券企业OA的部分模块！<br>还是2011年，优化了性能，增加了快速编写JsonHandler相关功能！</p>
+<p>###2012年<br>正式开源！</p>
+<p>###为什么开源？<br>本来不是什么高深的东西，为什么如数家珍呢？不如分享！<br>因为AjaxEngine虽实现了相关功能，使用也非常简单方便！但也一直想着好好优化一下，但总不知是真没时间还是偷懒，以致于到现在AjaxEngine中还有09年我刚毕业时写的较为拙劣的代码！希望更多的人参于，优化AjaxEngine<br>AjaxEngine的思路还是较为巧妙的！<br>希望让更多的coder快速完成ajax开发！<br>希望更多的人提出议见以改进AjaxEngine！</p>
+<p>###AjaxEngine的使用不用任何配置，使用步骤如下：</p>
+<ol>
+<li>添加对AjaxEngine的引用</li>
+<li>页面继承AjaxPageBase，或实现IAjaxPage 即可</li>
+<li>JsonHandler继承JsonHandlerBase即可</li>
+<li>用AjaxMethod标记相关法！</li>
+</ol>
+<p>###DEMO</p>
+<p>页面使用Demo:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">using System;</div><div class="line">using AjaxEngines;</div><div class="line">namespace AjaxEngine.Demo</div><div class="line">&#123;</div><div class="line">   	public partial class _Default : AjaxPageBase</div><div class="line">   	&#123;</div><div class="line">       	protected void Page_Load(object sender, EventArgs e)</div><div class="line">       	&#123;</div><div class="line">       	&#125;</div><div class="line">       	protected void Button1_Click(object sender, EventArgs e)</div><div class="line">       	&#123;</div><div class="line">           	this.AjaxEngine.ShowMessageBox("houfeng");</div><div class="line">       	&#125;</div><div class="line">       	/// &lt;summary&gt;</div><div class="line">       	/// 参数和返回值都必须是string类型</div><div class="line">       	/// &lt;/summary&gt;</div><div class="line">       	/// &lt;param name="x"&gt;&lt;/param&gt;</div><div class="line">       	/// &lt;param name="y"&gt;&lt;/param&gt;</div><div class="line">       	/// &lt;returns&gt;&lt;/returns&gt;</div><div class="line">       	[AjaxMethod]</div><div class="line">       	public string  Add(string x, string y)</div><div class="line">       	&#123;</div><div class="line">           	return (x + y).ToString();</div><div class="line">       	&#125;</div><div class="line">   	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Handler使用Demo:</p>
+<p>服务端:<br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">using</span> AjaxEngines;</div><div class="line"><span class="keyword">using</span> AjaxEngines.JsonHandlers;</div><div class="line"><span class="keyword">namespace</span> <span class="title">AjaxEngine.Demo</span></div><div class="line">&#123;</div><div class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></div><div class="line">    <span class="comment"><span class="doctag">///</span> Handler1 的摘要说明</span></div><div class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></div><div class="line">  <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Handler1</span> : <span class="title">JsonHandlerBase</span></div><div class="line">  &#123;</div><div class="line">      [AjaxMethod]</div><div class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">add</span>(<span class="params"><span class="keyword">int</span> x, <span class="keyword">int</span> y</span>)</span></div><div class="line">      &#123;</div><div class="line">          <span class="keyword">return</span> x + y;</div><div class="line">      &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>客户端:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$.getJSON(<span class="string">"Handler1.ashx"</span>, &#123; method: <span class="string">"add"</span>, x: <span class="number">1</span>, y: <span class="number">2</span> &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">dt</span>) </span>&#123;</div><div class="line">      alert(dt);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;项目地址: &lt;a href=&quot;http://www.houfeng.net/page/AjaxEngine.aspx&quot;&gt;http://www.houfeng.net/page/AjaxEngine.aspx&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="编程" scheme="http://blog.houfeng.net/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>eclipse+tomcat web工程引用其它工程</title>
+    <link href="http://blog.houfeng.net/2016/08/27/2012-09-11-eclipse-tomcat-webproject/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2012-09-11-eclipse-tomcat-webproject/</id>
+    <published>2016-08-27T03:53:40.000Z</published>
+    <updated>2016-08-27T03:53:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>之前用eclipse做android开发的时候，一个工程项目引用的方式引用另一个工程，一直没有问题。今天为一个web工程引用另一个工程的时候，编译运行发生找不到“类”的错误。</p>
+</blockquote>
+<a id="more"></a>
+<p>###解决方法</p>
+<ol>
+<li>选中web工程</li>
+<li>按下alt键</li>
+<li>按下enter键</li>
+<li>在Deployment Assembly中添加要引用的项目即可。</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;之前用eclipse做android开发的时候，一个工程项目引用的方式引用另一个工程，一直没有问题。今天为一个web工程引用另一个工程的时候，编译运行发生找不到“类”的错误。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://blog.houfeng.net/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>linux系统防火墙简单设置</title>
+    <link href="http://blog.houfeng.net/2016/08/27/2012-09-15-linux-firewall/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2012-09-15-linux-firewall/</id>
+    <published>2016-08-27T03:53:40.000Z</published>
+    <updated>2016-08-27T03:53:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Linux还是比较常用的，于是我研究了一下Linux关闭防火墙命令，在这里拿出来和大家分享一下，希望你能学会Linux关闭防火墙命令 。</p>
+<a id="more"></a>
+<p>###永久性生效，重启后不会复原</p>
+<p>开启： chkconfig iptables on</p>
+<p>关闭： chkconfig iptables off</p>
+<p>###即时生效，重启后复原</p>
+<p>开启： service iptables start</p>
+<p>关闭： service iptables stop</p>
+<hr>
+<p>需要说明的是对于Linux下的其它服务都可以用以上命令执行开启和关闭操作。</p>
+<p>在开启了防火墙时，做如下设置，开启相关端口，</p>
+<p>修改/etc/sysconfig/iptables 文件，添加以下内容：<br>-A RH-Firewall-1-INPUT -m state –state NEW -m tcp -p tcp –dport 80 -j ACCEPT<br>-A RH-Firewall-1-INPUT -m state –state NEW -m tcp -p tcp –dport 22 -j ACCEPT</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Linux还是比较常用的，于是我研究了一下Linux关闭防火墙命令，在这里拿出来和大家分享一下，希望你能学会Linux关闭防火墙命令 。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://blog.houfeng.net/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>移动web开发局部区域滚动问题</title>
+    <link href="http://blog.houfeng.net/2016/08/27/2012-09-29-mobile-dev-overflow-scroll/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2012-09-29-mobile-dev-overflow-scroll/</id>
+    <published>2016-08-27T03:53:40.000Z</published>
+    <updated>2016-08-27T03:53:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>###问题<br>开发一个针对pc的web应用时，在需要不随内容滚动的页头或面页脚时，通常的做法是如下样式：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.ui-head</span>&#123; <span class="attribute">position</span>:fixed; &#125;</div></pre></td></tr></table></figure></p>
+<p>但是如上的样式放到手机上，我测试过android2.x、android4.x、ios4.x皆不支持position:fixed;</p>
+<a id="more"></a>
+<p>但经过测试，发现ios5.x已经支持position:fiexd,但通过position:fiexd一般只能实现页整的整体滚动时页头或页脚的固定，在实现页面某一小区域的滚动效果还是不太方便。</p>
+<p>另外一种方式，是指定一个元素（通常是DIV）的高度或宽度，然后使定义如下样式：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.ui-content</span> &#123;<span class="attribute">height</span>:<span class="number">300px</span>;<span class="attribute">overflow</span>:auto;&#125;</div></pre></td></tr></table></figure></p>
+<p>但经过测试，目前的主流的设备均不支持 overflow 样式。</p>
+<p>###通过webkit特有的样式实现<br>经测试ios5.1已支持如下样式定义：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">-webkit-overflow-scrolling</span>: <span class="selector-tag">touch</span>;</div></pre></td></tr></table></figure></p>
+<p>通过如上定义，ios5.x可以样式（不用js）实现局部区域滚动；但目前我试过android2.x及android4.x发现依然不支持些样式。</p>
+<p>###通过javascript实现<br>为了实现兼容主流平台及浏览器，常见的做法（很多web开发框架就是依赖javascript实现），如轻量易用的优秀开源组件 iScroll 4 </p>
+<p>而通过js实现局部滚动，一般如下几种方式：</p>
+<ol>
+<li>定义样式 overflow:hidden， 然后处理touchstart、touchmove、touchend事件，控制scrollTop完成滚动功能，此种方式较为简洁，并易于实现。</li>
+<li>定义样式 overflow:hidden，并且要求容器内的元素必须有一个内层嵌套外层单一元素比如：<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui-scroll"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui-scroll-inner"</span>&gt;</span> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>然后去控制内层元素的margin-top或margin-left。此种方式稍现麻烦，但可以使用css3的transform2d 控制内层元素translate来实现（此种方法在某些设备上能获得较好的性能）。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###问题&lt;br&gt;开发一个针对pc的web应用时，在需要不随内容滚动的页头或面页脚时，通常的做法是如下样式：&lt;br&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.ui-head&lt;/span&gt;&amp;#123; &lt;span class=&quot;attribute&quot;&gt;position&lt;/span&gt;:fixed; &amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;但是如上的样式放到手机上，我测试过android2.x、android4.x、ios4.x皆不支持position:fixed;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="编程" scheme="http://blog.houfeng.net/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>最快,最简洁的javascript模板引擎jtp</title>
+    <link href="http://blog.houfeng.net/2016/08/27/2012-10-13-fast-javascript-template-engine-jtp/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2012-10-13-fast-javascript-template-engine-jtp/</id>
+    <published>2016-08-27T03:53:40.000Z</published>
+    <updated>2016-08-27T03:53:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="欢迎来到jtp的世界"><a href="#欢迎来到jtp的世界" class="headerlink" title="欢迎来到jtp的世界"></a>欢迎来到jtp的世界</h3><blockquote>
+<p>欢迎使用jtp! 最轻量，简洁，高效的javascript模板引擎！<br>如同“jtp”的名字，“轻量、简洁、高效”是jtp的哲学！</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">+ 轻量，jtp是目前能见到最轻量的javascript模板引擎，只有一个不足1.5k的文件。</div><div class="line">+ 简洁，jtp的语法非常简单，对于一个熟悉html、js的开发人员来说学习难度为0。</div><div class="line">+ 高效，jtp支持模板预编译，快于任何一个你所见过的javascript模板引擎。</div><div class="line">+ 另外，jtp同时支持在浏览器环境使用及服务端javascript环境(Node.js)使用。</div></pre></td></tr></table></figure>
+<h3 id="许可协议"><a href="#许可协议" class="headerlink" title="许可协议"></a>许可协议</h3><blockquote>
+<p><a href="http://www.gnu.org/licenses/lgpl.html" target="_blank" rel="external">使用jtp请您遵守LGPL协议，否则您将会被起诉。（点击可查看LGPL协议）</a></p>
+</blockquote>
+<h3 id="在线demo"><a href="#在线demo" class="headerlink" title="在线demo"></a>在线demo</h3><blockquote>
+<p><a href="http://code.houfeng.net/demos/jtp/" target="_blank" rel="external">体验在线demo</a></p>
+</blockquote>
+<h3 id="支持"><a href="#支持" class="headerlink" title="支持"></a>支持</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">+ 您可以发邮件到 admin@xhou.net</div><div class="line">+ 或者访问 http://www.houfeng.net</div><div class="line">+ 关注微博 http://weibo.com/houfeng</div></pre></td></tr></table></figure>
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><h5 id="如何使用？"><a href="#如何使用？" class="headerlink" title="如何使用？"></a>如何使用？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">+ 下载jtp</div><div class="line">+ 将jtp.js或jtp-min.js放到项目中合适的位置。</div><div class="line">+ 在相关页面用&lt;script src=&apos;jtp的url&apos;&gt;&lt;/script&gt;引入jtp。</div></pre></td></tr></table></figure>
+<h4 id="解析-jtp-parse"><a href="#解析-jtp-parse" class="headerlink" title="解析(jtp.parse)"></a>解析(jtp.parse)</h4><p>代码:</p>
+<pre><code>var html=&apos;&lt;div&gt;My name is &lt;@$(this.name)@&gt;&lt;/div&gt;&apos;;
+var rs=jtp.parse(html,{name:&apos;jtp&apos;});
+</code></pre><p>结果: </p>
+<pre><code>&lt;div&gt;My name is jtp&lt;/div&gt;
+</code></pre><h4 id="编译-jtp-complite"><a href="#编译-jtp-complite" class="headerlink" title="编译(jtp.complite)"></a>编译(jtp.complite)</h4><p>代码:</p>
+<pre><code>var html=&apos;&lt;div&gt;My name is &lt;@$(this.name)@&gt;&lt;/div&gt;&apos;;
+var fn=jtp.complite(html);
+var rs=fn({name:&apos;jtp&apos;});
+</code></pre><p>结果:</p>
+<pre><code>&lt;div&gt;My name is jtp&lt;/div&gt;
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;欢迎来到jtp的世界&quot;&gt;&lt;a href=&quot;#欢迎来到jtp的世界&quot; class=&quot;headerlink&quot; title=&quot;欢迎来到jtp的世界&quot;&gt;&lt;/a&gt;欢迎来到jtp的世界&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;欢迎使用jtp! 最轻量，简洁，高效的javascript模板引擎！&lt;br&gt;如同“jtp”的名字，“轻量、简洁、高效”是jtp的哲学！&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="编程" scheme="http://blog.houfeng.net/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>图象处理常用特效算法</title>
+    <link href="http://blog.houfeng.net/2016/08/27/2009-07-23-image-handle/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2009-07-23-image-handle/</id>
+    <published>2016-08-27T03:53:40.000Z</published>
+    <updated>2016-08-27T03:53:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>介绍几个图像处理常用算法</p>
+<a id="more"></a>
+<p>###图像的逆反处理算法<br>逆反处理的算法如下：<br>设r，g，b分别为源图像像素f（i，j）的红，绿，蓝分量值，rr，gg，bb分别为处理后像素g（i，j）的红，绿，蓝分量值。则<br>rr=255-r<br>gg=255-g<br>bb=255-b</p>
+<p>###图像的平滑处理<br>算法如下：<br>平滑处理是指将源图像的每一个像素的颜色值由其相邻n X n个像素的平均值来代替。<br>例如，对于3*3点阵而言，设原图像某像素的值为f（i，j），平滑处理后该像素的值为g（i，j），则：<br>g(i,j)=(f(i,j)+f(i-1,j)+f(i+1,j)+f(i-1,j-1)+f(i,j-1)+f(i+1,j-1)+<br>f(i-1,j+1)+f(i,j+1)+f(i+1,j+1))/9<br>注意：该算法不能平滑图像边界的像素。</p>
+<p>###图象的霓虹处理<br>算法：<br>对于3 X 3点阵，首先计算原图象像素f(i,j)的红，绿，蓝分量与相同行f（i+1，j）及同列f(i,j+1)相邻象素的梯度，即差的平方之和的平方根，然后将梯度值作为处理后的象素g(i,j)的红，绿，蓝分量值。<br>设 r1,g1,b1分别为原图象象素f(i,j)的红，绿，蓝分量值，r2,g2,b2分别为相同行相邻象素f(i+1,j)的红，绿，蓝分量值，r3,g3,b3分别为同列相邻象素f(i,j+1)的红，绿，蓝分量值，rr,gg,bb为处理后象素g(i,j)的红，绿，蓝分量值，则：<br>rr1=(r1-r2)^2  rr2=(r1-r3)^2<br>gg1=(g1-g2)^2  gg2=(g1-g3)^2<br>bb1=(b1-b2)^2  bb2(b1-b3)^2<br>rr=2 X (rr1+rr2)^0.5<br>gg=2 X (gg1+gg2)^0.5<br>bb=2 X (bb1+bb2)^0.5</p>
+<p>###图象的锐化处理<br>锐化处理的算法：<br>计算原图像像素f(i,j)的像素值与该像素与相邻像素f(i-1,j-1)像素值之差的绝对值得百分比之和，作为处理后图像像素g(i,j)的像素值。例如，设r1,g1,b1分别为f(i,j)的红、绿、蓝分量值，r2,g2,b2分别为f(i-1,j-1)的红、绿、蓝分量值，rr,gg,bb分别为g(i,j)的红、绿、蓝分量值，则：<br>rr=r1+0.25 X abs(r1-r2)<br>gg=g1+0.25 Ｘ abs(g1-g2)<br>bb=b1+0.25 Ｘabs(b1-b2)</p>
+<p>###图像的浮雕处理<br>算法：<br>位图图像的浮雕处理的算法是：<br>g(i,j)=f(i,j)-f(i-1,j)+常数<br>式中，g(i,j)为处理后图像的像素值，f(i,j)为原图像的像素值，f(i-1,j)为前一个相邻像素的值。常数一般取128，即<br>rr=r1-r2+128<br>gg=g1-g2+128<br>bb=b1-b2+128<br>式中，r1,g1,b1分别为原图像的像素f(i,j)的红、绿、蓝分量值；r2,g2,b2分别为前一个相邻像素f(i-1,j)的红、绿、蓝分量值，rr,gg,bb,分别为处理后图像的像素g(i,j)的红、绿、蓝分量值.<br>６.图像的镶嵌处理<br>镶嵌处理算法如下：<br>镶嵌处理后的图像每一小矩阵内的所有像素值都取此矩阵内原图像各像素值之和的平均值。例如，对于3*3的子域：<br>g(i,j)=(f(i,j)+f(i-1,j)+f(i+1,j)+f(i-1,j-1)+f(i+1,j-1)+f(i-1,j+1)+f(i,j+1)+f(i+1,j+1))/9<br>则取：<br>g(i-1,j)=g(i,j)<br>g(i+1,j)=g(i,j)<br>g（i,j-1）=g(i,j)<br>g(i,j+1)=g(i,j)<br>g(i,j+1)=g(i,j)<br>g(i-1,j-1)=g(i,j)<br>g(i-1,j+1)=g(i,j)<br>g(i+1,j-1)=g(i,j)<br>g(i+1,j+1)=g(i,j)</p>
+<p>###图像的灰度处理<br>彩色图像灰度处理的算法如下：<br>c=tuxing.GetPixel(i,j)<br>r=c.R<br>g=c.G<br>b=c.B<br>rr=g(r 64)X64<br>gg=(g 64)X64<br>bb=(b 64)X64</p>
+<p>###图像缩小处理<br>以坐标原点为中心，将图像个像素坐标的X分量和Y分量分别乘以Sx，Sy，则可使图像进行整体放大和缩小。这时，<br>X’=X x Sx<br>Y’=Y x Sy<br>当Sx=Sy时，作相似变换;<br>当Sx!=Sy时，产生变形。<br>９.图像的平移处理<br>图像的平移变换是将图形上的点（x,y)在x方向（水平方向）和y方向（垂直方向）<br>分别移动dx和dy,则变换后点(x’,y’)坐标值为：<br>x’=x+dx<br>y’=y+dy</p>
+<p>###图像的旋转变换<br>二维图像的旋转变换是以原点为中心，将点（x,y）旋转a角度而得到新的坐标（x’,y’）的变换称为旋转变换。其数学表达式为：<br>x’=x x cosa-y x sina<br>y’=x x sina+y x cosa<br>１１.二维图像的对称变换<br>二维图像对称变换有以下几种情况.<br>1.以x轴为对称得对称变换。<br>以x轴为对称得点(x,y)的对称点(x’,y’)坐标为：<br>x’=x<br>y’=-y<br>2.以y轴为对称得对称变换。<br>以y轴为对称的点（x,y）的对称点(x’,y’)坐标为：<br>x’=-x<br>y’=y<br>3.以原点为对称的对称变换。<br>以原点为对称得点（x,y）的对称点（x’,y’）坐标为：<br>x’=-x<br>y’=-y<br>对图像的每一个像素依据二维图形几何变换公式进行计算后，在进行图像显示，则可得到图像的几何变换。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;介绍几个图像处理常用算法&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://blog.houfeng.net/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>mac系统如何显示和隐藏文件</title>
+    <link href="http://blog.houfeng.net/2016/08/27/2012-12-06-mac-show-all-files/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2012-12-06-mac-show-all-files/</id>
+    <published>2016-08-27T03:53:40.000Z</published>
+    <updated>2016-08-27T03:53:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<p>###mac系统如何显示和隐藏文件<br>苹果Mac OS X操作系统下，隐藏文件是否显示有很多种设置方法，最简单的要算在Mac终端输入命令。显示/隐藏Mac隐藏文件命令如下(注意其中的空格并且区分大小写)：   </p>
+<a id="more"></a>
+<p>显示Mac隐藏文件的命令：defaults write com.apple.finder AppleShowAllFiles -bool true</p>
+<p>隐藏Mac隐藏文件的命令：defaults write com.apple.finder AppleShowAllFiles -bool false</p>
+<p>或者</p>
+<p>显示Mac隐藏文件的命令：defaults write com.apple.finder AppleShowAllFiles  YES</p>
+<p>隐藏Mac隐藏文件的命令：defaults write com.apple.finder AppleShowAllFiles  NO</p>
+<p>输完单击Enter键，退出终端，重新启动Finder就可以了</p>
+<p>重启Finder：鼠标单击窗口左上角的苹果标志–&gt;强制退出–&gt;Finder–&gt;重新启动</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;###mac系统如何显示和隐藏文件&lt;br&gt;苹果Mac OS X操作系统下，隐藏文件是否显示有很多种设置方法，最简单的要算在Mac终端输入命令。显示/隐藏Mac隐藏文件命令如下(注意其中的空格并且区分大小写)：   &lt;/p&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://blog.houfeng.net/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>浏览器页面渲染之“reflow”</title>
+    <link href="http://blog.houfeng.net/2016/08/27/2012-12-27-browser-page-reflow/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2012-12-27-browser-page-reflow/</id>
+    <published>2016-08-27T03:53:40.000Z</published>
+    <updated>2016-08-27T03:53:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<p>###基本概念<br>浏览器为了重新渲染部分或整个页面，重新计算页面元素位置和几何结构（geometries）的进程叫做 reflow（回流）。有时 reflow 页面中的一个元素会 reflow 它的祖先元素以及所有子元素。<br>由于 reflow 的开销非常之大，因此要尽可能的避免 reflow 的发生。</p>
+<p>###产生 reflow 的原因</p>
+<ol>
+<li>调整窗口大小；</li>
+<li>改变字体；</li>
+<li>增加或者移除样式表；</li>
+<li>内容变化，比如用户在 input 框中输入文字；</li>
+<li>激活 CSS 伪类，比如 :hover (IE 中为兄弟结点伪类的激活)；</li>
+<li>操作 class 属性；</li>
+<li>脚本操作 DOM；</li>
+<li>计算 offsetWidth 和 offsetHeight 属性；</li>
+<li>设置 style 属性的值。</li>
+</ol>
+<p>###如何减少 reflow</p>
+<ol>
+<li>如果想设定元素的样式，通过改变元素的 class 名 (尽可能在 DOM 树的最里层)；</li>
+<li>避免设置多项内联样式；</li>
+<li>用于表现动画的元素，使用 position 属性的 fixed 值或 absolute 值（脱离文档流）；</li>
+<li>权衡平滑和速度（调大每帧间隔，减少 reflow 次数）；</li>
+<li>避免使用 table 布局；</li>
+<li>避免使用CSS的 JavaScript 表达式 (仅 IE 浏览器)；</li>
+<li>减少不必要的 DOM 层级，改变 DOM 树中的一级会导致所有层级的改变，上至根部，下至被改变节点的子节点；</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;###基本概念&lt;br&gt;浏览器为了重新渲染部分或整个页面，重新计算页面元素位置和几何结构（geometries）的进程叫做 reflow（回流）。有时 reflow 页面中的一个元素会 reflow 它的祖先元素以及所有子元素。&lt;br&gt;由于
+    
+    </summary>
+    
+      <category term="前端" scheme="http://blog.houfeng.net/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>回忆“Adobe　Web创意训练营第一期”</title>
+    <link href="http://blog.houfeng.net/2016/08/27/2013-01-24-Adobe-Web-HTML5/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2013-01-24-Adobe-Web-HTML5/</id>
+    <published>2016-08-27T03:53:40.000Z</published>
+    <updated>2016-08-27T03:53:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>###回忆“Adobe　Web创意训练营第一期”</p>
+<p>说是回忆，其实也就是昨天的事儿。</p>
+<p>过去一年，才是回忆，我、我所在的团队主要的工作，就是基于HTML5的移动App开发，我们为我们的两家客户基于HTML5分别开发两个完整的“差旅类”的App。</p>
+<ol>
+<li>CWT Online China</li>
+<li>差旅随行</li>
+</ol>
+<a id="more"></a>
+<hr>
+<p>对于HTML5的Webapp的开发从简单了解到较为深入的理解，这个过程我们遇到了不少的问题；我们尝试用巧秒的当然也拙劣的方式去试图解决遇到的每一个问题，实现我们认为很有趣儿、好玩的小创意或常规功能；</p>
+<p>当然还会有些问题，在一定条件下似乎是无解的或真的无解的，比如“安卓系统的HTMML5的性能问题”；带着疑问和中霏同学去了”Adobe Web 创意训练营第一期”；</p>
+<p>实话说，昨儿的讲座，并没有解决我的问题；</p>
+<p>但是，之前我现在所在的这团队，可以称之为”闭门造车”（不表示我们造的”车“不好，相反或许还挺棒）；但总有一种疑虑，去怀疑我们的做法是否正确？是否有更好的做法？</p>
+<p>所以，想去看看，别的团队是如何做的；去和其它做同样事儿的一群人，去交流，去切磋，去学习；</p>
+<p>我们或者我，也很乐于和对前端、前沿技术有兴趣的同志们，一道高讨论有趣、好玩的东西；</p>
+<p>这是本此活动对我来说比较重要的一个意义；也是我们继续参加接下来活动的重要的理由；</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###回忆“Adobe　Web创意训练营第一期”&lt;/p&gt;
+&lt;p&gt;说是回忆，其实也就是昨天的事儿。&lt;/p&gt;
+&lt;p&gt;过去一年，才是回忆，我、我所在的团队主要的工作，就是基于HTML5的移动App开发，我们为我们的两家客户基于HTML5分别开发两个完整的“差旅类”的App。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;CWT Online China&lt;/li&gt;
+&lt;li&gt;差旅随行&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="闲谈" scheme="http://blog.houfeng.net/categories/%E9%97%B2%E8%B0%88/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>模块的封装与解耦</title>
+    <link href="http://blog.houfeng.net/2016/08/27/2013-03-16-module-encapsulation-decoupling/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2013-03-16-module-encapsulation-decoupling/</id>
+    <published>2016-08-27T03:53:40.000Z</published>
+    <updated>2016-08-27T03:53:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>###话题起因<br>回头看自已写过东西，常会感觉到不满意，总有重构冲动（其实这种冲动通常是好事，因为只有发现了不足才有重构想法，只有重构才能改进，只有改进才能完善）。</p>
+<a id="more"></a>
+<p>最近，准备重构<a href="http://houfeng/mokit" target="_blank" rel="external">mokit</a>，因为这前的mokit虽然有将不同的“模块”分离在不同的文件中，并有“命名空间”概念，但其实现在版本的mokit模块甚至不能称为真正的模块，因为它没有完整“封装”的概念，并且虽有“命名空间”，但还是会创建一部分全局变量，只能依靠开发人员制定好的“契约”，既“非强制约束”的开发规范。</p>
+<p>因为现有mokit存在的各种不足，在重构之前一直在思考mokit更合适的结构：</p>
+<ol>
+<li>更加清析的、真正的模块化的结构；</li>
+<li>模块的真正封装；</li>
+<li>模块间的最大化解耦；</li>
+<li>更加清析的MVC或MVP模式；</li>
+</ol>
+<p>第一步先实现真的模块封装，及模块中的解耦，第二步实现简洁易用的MVC或MVP的架构及开框架。MVC稍后再谈，这篇博文将就模块化、封装、解耦做一些控讨。</p>
+<p>###模块的封装</p>
+<p>#####百度百科:<br>模块化是指解决一个复杂问题时自顶向下逐层把系统划分成若干模块的过程，有多种属性，分别反映其内部特性<br>模块化是一种处理复杂系统分解为更好的可管理模块的方式。</p>
+<p>模块化用来分割，组织和打包软件。每个模块完成一个特定的子功能，所有的模块按某种方法组装起来，成为一个整体，完成整个系统所要求的功能。<br>模块具有以下几种基本属性：接口、功能、逻辑、状态，功能、状态与接口反映模块的外部特性，逻辑反映它的内部特性。<br>在系统的结构中，模块是可组合、分解和更换的单元。模块化是一种处理复杂系统分解成为更好的可管理模块的方式。它可以通过在不同组件设定不同的功能，把一个问题分解成多个小的独立、互相作用的组件，来处理复杂、大型的软件。</p>
+<p>#####实现模块封装:<br>在完整面向对象的语言中可能是一个类，封装作为OOP三大特性：封装、多态、继承之一，在这些有完整OOP机制的语言实现模块的封装非常容易</p>
+<p>如在C#中</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">User</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">string</span> Ident&#123;<span class="keyword">get</span>;<span class="keyword">set</span>;&#125;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">string</span> Name&#123;<span class="keyword">get</span>;<span class="keyword">set</span>;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在C#中，一个类（模块）可以方便的声明“私有成员”，实现封装特性；</p>
+<p>而在JavaScript中实现就稍显“麻烦”，而且写法是各种各样，如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Module1=(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> ident=<span class="string">""</span>;</div><div class="line">	<span class="keyword">var</span> name=<span class="string">""</span>;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">    	getName:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        	<span class="keyword">return</span> name;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<p>上边在JavaScript的自执行函数中，通过var定议的变量，在函数外部不能被访问也实现了封装。<br>事实上，JavaScript的有很多模块化的库，能够实现更加完整的模块定义，如RequireJS、EmsJs。</p>
+<p>###模块的依赖<br>当程序采用模块化的结构后，不同的功能都分布在不同的模块中，必然存在模块相互调用的问题，这时就需要管理好模块之间的依赖关系；</p>
+<p>依赖常常表直观的表现为：</p>
+<ol>
+<li>在一个包中import另一个包；</li>
+<li>在一个类中调用另一个类或存在加一个类的引用；</li>
+<li>在一个js文件中用别一个js文件中定议的对象或函数；</li>
+</ol>
+<p>如在C#中：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> calss A</div><div class="line">&#123;</div><div class="line">	<span class="keyword">public</span> <span class="keyword">string</span> Name &#123;<span class="keyword">get</span>;<span class="keyword">set</span>;&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">B</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">private</span> A _a=<span class="keyword">new</span> A();</div><div class="line">	<span class="keyword">public</span> A a</div><div class="line">    &#123;</div><div class="line">    	<span class="keyword">get</span></div><div class="line">        &#123;</div><div class="line">        	<span class="keyword">return</span> _a;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">string</span> Name &#123;<span class="keyword">get</span>;<span class="keyword">set</span>;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如上代码类“B”事实上对类“A”存在“依赖”，在没有A的时候，B是不完整的，是无法使用的；当要替换A的时候需重新编写B，这样其实A、B之间的“耦合”非常高。</p>
+<p>这里是假设每一个类就是一个模块，其实，上有时模块的粒度不能到一个类一个模块，我们也不需要每一个类都要“解耦”，但是上边的示例代码，却能“高耦合”的代码带的的问题；</p>
+<p>我曾见过一定情况下很“二”的写法：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">IA</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">string</span> Name&#123;<span class="keyword">get</span>;<span class="keyword">set</span>;&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">A</span> : <span class="title">IA</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">string</span> Name&#123;<span class="keyword">get</span>;<span class="keyword">set</span>;&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">B</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">private</span> IA _a=<span class="keyword">new</span> A();</div><div class="line">	<span class="keyword">public</span> IA a</div><div class="line">    &#123;</div><div class="line">    	<span class="keyword">get</span></div><div class="line">        &#123;</div><div class="line">        	<span class="keyword">return</span> _a;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">set</span>&#123;</div><div class="line">        	_a=<span class="keyword">value</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">string</span> Name &#123;<span class="keyword">get</span>;<span class="keyword">set</span>;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如上，或许写代码的人一定是想用interface实现A、B间的“解耦”，实际上还不到位，B对A的依赖依然存在，没有任何意义；</p>
+<p>###模块间的解耦</p>
+<p>#####依赖反转:<br>在面向对象编程领域中，依赖反转原则（Dependency inversion principle）指代了一种特定的解耦（传统的依赖关系建立在高层次上，而具体的策略设置则应用在低层次的模块上）形式。在这种形势下，为了使得高层次的模块不依赖于低层次的模块的实现细节的目的，依赖模块被颠倒了（例如：反转）。该原则规定：<br>高层次的模块不应该依赖于低层次的模块，两者都应该依赖于抽象接口。<br>抽象接口不应该依赖于具体实现。而具体实现则应该依赖于抽象接口。<br>该原则颠倒了一部分人对于面向对象设计的认识方式，比如高层次和低层次对象都应该应该依赖于相同的抽象接口</p>
+<p>改掉这很“二”的写法，如下：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">IA</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">string</span> Name&#123;<span class="keyword">get</span>;<span class="keyword">set</span>;&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">A</span> : <span class="title">IA</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">string</span> Name&#123;<span class="keyword">get</span>;<span class="keyword">set</span>;&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">B</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">private</span> IA _a=<span class="literal">null</span>;</div><div class="line">	<span class="keyword">public</span> IA a</div><div class="line">    &#123;</div><div class="line">    	<span class="keyword">get</span></div><div class="line">        &#123;</div><div class="line">        	<span class="keyword">if</span>(_a==<span class="literal">null</span>)</div><div class="line">            &#123;</div><div class="line">            	<span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"IA没有找到"</span>);</div><div class="line">            &#125;</div><div class="line">        	<span class="keyword">return</span> _a;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">set</span>&#123;</div><div class="line">        	_a=<span class="keyword">value</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">string</span> Name &#123;<span class="keyword">get</span>;<span class="keyword">set</span>;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这B、A没有强制依赖了，在更换A的时间，也无须动B中的代码，或许我们是用B前的某一个地主将IA的一个实现类实例传给了B，也有可能是基于配置文件及“反射”完成的。</p>
+<p>比如，一个插件式的应用程序！</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###话题起因&lt;br&gt;回头看自已写过东西，常会感觉到不满意，总有重构冲动（其实这种冲动通常是好事，因为只有发现了不足才有重构想法，只有重构才能改进，只有改进才能完善）。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="编程" scheme="http://blog.houfeng.net/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>MongoDB 高可用群集简单配置</title>
+    <link href="http://blog.houfeng.net/2016/08/27/2013-10-26-mongodb-replica-set/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2013-10-26-mongodb-replica-set/</id>
+    <published>2016-08-27T03:53:40.000Z</published>
+    <updated>2016-08-27T03:53:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Replica-Set-节点类型分为三种："><a href="#Replica-Set-节点类型分为三种：" class="headerlink" title="Replica Set 节点类型分为三种："></a>Replica Set 节点类型分为三种：</h3><pre><code>standard：常规节点，它存储一份完整的数据副本，参与选举投票，有可能成为primary节点。
+passive：存储了完整的数据副本，参与投票，不能成为primary节点。 
+arbiter：仲裁节点，只参与投票，不接收复制的数据，也不能成为primary节点。
+</code></pre><a id="more"></a>
+<p>###节点规划<br>仅做的测试而已，所以所有节点仅是同一台服务器上的三个不同端口的 MongoDB 实例，本文配置使用2个常规节点和一个arbiter节点，arbiter节点由于不同步数据，所以负载会很小，部署对硬件没有太大的要求，<br>因为 MongoDB Replica Set 不允许添加两个 “本地（localhost或127.0.01）节点”，所有首先在系统的 hosts 文件中添加:</p>
+<p>  127.0.0.1 mongodb27021<br>  127.0.0.1 mongodb27022<br>    127.0.0.1 mongodb27023</p>
+<p>节点规划如下:</p>
+<pre><code>mongodb27021:27021 主节点(Primary)
+mongodb27022:27022  从节点(Secondary)
+mongodb27023:27023 仲裁节点(Arbiter)
+</code></pre><p>###启动三个节点<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongod.exe --port=27021 --replSet=rs_test --dbpath=&quot;..\27021\data&quot; --logpath=&quot;..\27021\log\mongodb.log&quot; --smallfiles</div></pre></td></tr></table></figure></p>
+<p>其它两个节点用同样的命令，将端口替换为指定的端口，及指定合适的数据库文件及日志存储目录，生产环境，可将 mongodb 安装到系统服务中（很简单 google 一下吧）。</p>
+<p>###配置群集<br>mongo -port 27021 连接到其中一个节点。</p>
+<p>#####初始化群集:<br>rs.initiate()<br>这个命令可以接收参数，直接配置群集中的各节点，这里简单点直接初始化，27021将成为 Primary 节点。</p>
+<p>#####添加从节点<br>rs.add(“mongodb27022:27022”)<br>默认从节点的数据不可 “读写” ，连接到从节点，执行 “rs.salveOk()” 可以使从节点只读，以减少主节点的读压力。</p>
+<p>####添加仲裁节点<br>rs.addArb(“mongodb27022:27023”)<br>仲裁节点，不存储数据，只在主节点发生故障时，参与主节点的 “推举”。</p>
+<p>至此一个最简单的 Replica Set 高可用群集配置完成。</p>
+<p>###检查群集</p>
+<ol>
+<li>在主节点接入数据，在从节点即可到刚刚接入的数据。</li>
+<li>结束到主节点，再连接到从节点用 “rs.isMaster()” 可以看到从节点，已被“推举”为主节点了。</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Replica-Set-节点类型分为三种：&quot;&gt;&lt;a href=&quot;#Replica-Set-节点类型分为三种：&quot; class=&quot;headerlink&quot; title=&quot;Replica Set 节点类型分为三种：&quot;&gt;&lt;/a&gt;Replica Set 节点类型分为三种：&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;standard：常规节点，它存储一份完整的数据副本，参与选举投票，有可能成为primary节点。
+passive：存储了完整的数据副本，参与投票，不能成为primary节点。 
+arbiter：仲裁节点，只参与投票，不接收复制的数据，也不能成为primary节点。
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://blog.houfeng.net/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>JavaScript 之 “ArrayBuffer对象”</title>
-    <link href="http://blog.houfeng.net/2015/07/15/2014-10-15-javascript-arraybuffer/"/>
-    <id>http://blog.houfeng.net/2015/07/15/2014-10-15-javascript-arraybuffer/</id>
-    <published>2015-07-15T07:32:08.000Z</published>
-    <updated>2016-08-27T03:30:16.000Z</updated>
+    <link href="http://blog.houfeng.net/2016/08/27/2014-10-15-javascript-arraybuffer/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2014-10-15-javascript-arraybuffer/</id>
+    <published>2016-08-27T03:53:40.000Z</published>
+    <updated>2016-08-27T03:53:40.000Z</updated>
     
     <content type="html"><![CDATA[<p>类型化数组是JavaScript操作二进制数据的一个接口。<br>这要从WebGL项目的诞生说起，所谓WebGL，就是指浏览器与显卡之间的通信接口，为了满足JavaScript与显卡之间大量的、实时的数据交换，它们之间的数据通信必须是二进制的，而不能是传统的文本格式。<br>比如，以文本格式传递一个32位整数，两端的JavaScript脚本与显卡都要进行格式转化，将非常耗时。这时要是存在一种机制，可以像C语言那样，直接操作字节，然后将4个字节的32位整数，以二进制形式原封不动地送入显卡，脚本的性能就会大幅提升。<br>类型化数组（Typed Array）就是在这种背景下诞生的。它很像C语言的数组，允许开发者以数组下标的形式，直接操作内存。有了类型化数组以后，JavaScript的二进制数据处理功能增强了很多，接口之间完全可以用二进制数据通信。</p>
 <a id="more"></a>
@@ -192,11 +765,78 @@
   </entry>
   
   <entry>
+    <title>JavaScript 之 “Math对象”</title>
+    <link href="http://blog.houfeng.net/2016/08/27/2014-07-15-javascript-math/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2014-07-15-javascript-math/</id>
+    <published>2016-08-27T03:53:40.000Z</published>
+    <updated>2016-08-27T03:53:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Math对象是JavaScript的内置对象，提供一系列数学常数和数学方法。</p>
+<p>该对象不是构造函数，所以不能生成实例，所有的属性和方法都必须在Math对象上调用。</p>
+<a id="more"></a>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">new</span> <span class="built_in">Math</span>()</div><div class="line"><span class="comment">// TypeError: object is not a function</span></div></pre></td></tr></table></figure>
+<p>上面代码表示，Math不能当作构造函数用。</p>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>Math对象提供以下一些只读的数学常数。</p>
+<ul>
+<li>E：常数e。</li>
+<li>LN2：2的自然对数。</li>
+<li>LN10：10的自然对数。</li>
+<li>LOG2E：以2为底的e的对数。</li>
+<li>LOG10E：以10为底的e的对数。</li>
+<li>PI：常数Pi。</li>
+<li>SQRT1_2：0.5的平方根。</li>
+<li>SQRT2：2的平方根。</li>
+</ul>
+<p>这些常数的值如下。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.E <span class="comment">// 2.718281828459045</span></div><div class="line"><span class="built_in">Math</span>.LN2 <span class="comment">// 0.6931471805599453</span></div><div class="line"><span class="built_in">Math</span>.LN10 <span class="comment">// 2.302585092994046</span></div><div class="line"><span class="built_in">Math</span>.LOG2E <span class="comment">// 1.4426950408889634</span></div><div class="line"><span class="built_in">Math</span>.LOG10E <span class="comment">// 0.4342944819032518</span></div><div class="line"><span class="built_in">Math</span>.PI <span class="comment">// 3.141592653589793</span></div><div class="line"><span class="built_in">Math</span>.SQRT1_2 <span class="comment">// 0.7071067811865476</span></div><div class="line"><span class="built_in">Math</span>.SQRT2 <span class="comment">// 1.4142135623730951</span></div></pre></td></tr></table></figure>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>Math对象提供以下一些数学方法。</p>
+<h3 id="round方法"><a href="#round方法" class="headerlink" title="round方法"></a>round方法</h3><p>round方法用于四舍五入。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">0.1</span>) <span class="comment">// 0</span></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">0.5</span>) <span class="comment">// 1</span></div></pre></td></tr></table></figure>
+<p>它对于负值的运算结果与正值略有不同，主要体现在对.5的处理。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">-1.1</span>) <span class="comment">// -1</span></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">-1.5</span>) <span class="comment">// -1</span></div></pre></td></tr></table></figure>
+<h3 id="abs方法，max方法，min方法"><a href="#abs方法，max方法，min方法" class="headerlink" title="abs方法，max方法，min方法"></a>abs方法，max方法，min方法</h3><p>abs方法返回参数值的绝对值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.abs(<span class="number">1</span>) <span class="comment">// 1</span></div><div class="line"><span class="built_in">Math</span>.abs(<span class="number">-1</span>) <span class="comment">// 1</span></div></pre></td></tr></table></figure>
+<p>max方法返回最大的参数，min方法返回最小的参数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.max(<span class="number">2</span>, <span class="number">-1</span>, <span class="number">5</span>) <span class="comment">// 5</span></div><div class="line"><span class="built_in">Math</span>.min(<span class="number">2</span>, <span class="number">-1</span>, <span class="number">5</span>) <span class="comment">// -1</span></div></pre></td></tr></table></figure>
+<h3 id="floor方法，ceil方法"><a href="#floor方法，ceil方法" class="headerlink" title="floor方法，ceil方法"></a>floor方法，ceil方法</h3><p>floor方法返回小于参数值的最大整数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.floor(<span class="number">3.2</span>) <span class="comment">// 3</span></div><div class="line"><span class="built_in">Math</span>.floor(<span class="number">-3.2</span>) <span class="comment">// -4</span></div></pre></td></tr></table></figure>
+<p>ceil方法返回大于参数值的最小整数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.ceil(<span class="number">3.2</span>) <span class="comment">// 4</span></div><div class="line"><span class="built_in">Math</span>.ceil(<span class="number">-3.2</span>) <span class="comment">// -3</span></div></pre></td></tr></table></figure>
+<h3 id="pow方法，sqrt方法"><a href="#pow方法，sqrt方法" class="headerlink" title="pow方法，sqrt方法"></a>pow方法，sqrt方法</h3><p>power方法返回以第一个参数为底数、第二个参数为幂的指数值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">2</span>) <span class="comment">// 4</span></div><div class="line"><span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">3</span>) <span class="comment">// 8</span></div></pre></td></tr></table></figure>
+<p>sqrt方法法返回参数值的平方根。如果参数是一个负值，则返回NaN。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.sqrt(<span class="number">4</span>) <span class="comment">// 2</span></div><div class="line"><span class="built_in">Math</span>.sqrt(<span class="number">-4</span>) <span class="comment">// NaN</span></div></pre></td></tr></table></figure>
+<h3 id="log方法，exp方法"><a href="#log方法，exp方法" class="headerlink" title="log方法，exp方法"></a>log方法，exp方法</h3><p>log方法返回以e为底的自然对数值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.log(<span class="built_in">Math</span>.E) <span class="comment">// 1</span></div><div class="line"><span class="built_in">Math</span>.log(<span class="number">10</span>) <span class="comment">// 2.302585092994046</span></div></pre></td></tr></table></figure>
+<p>求以10为底的对数，可以除以Math.LN10；求以2为底的对数，可以除以Math.LN2。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.log(<span class="number">100</span>)/<span class="built_in">Math</span>.LN10 <span class="comment">// 2</span></div><div class="line"><span class="built_in">Math</span>.log(<span class="number">8</span>)/<span class="built_in">Math</span>.LN2 <span class="comment">// 3</span></div></pre></td></tr></table></figure>
+<p>exp方法返回常数e的参数次方。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.exp(<span class="number">1</span>) <span class="comment">// 2.718281828459045</span></div><div class="line"><span class="built_in">Math</span>.exp(<span class="number">3</span>) <span class="comment">// 20.085536923187668</span></div></pre></td></tr></table></figure>
+<h3 id="random方法"><a href="#random方法" class="headerlink" title="random方法"></a>random方法</h3><p>该方法返回0到1之间的一个伪随机数，可能等于0，但是一定小于1。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.random() <span class="comment">// 0.7151307314634323</span></div><div class="line"></div><div class="line"><span class="comment">// 返回给定范围内的随机数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRandomArbitrary</span>(<span class="params">min, max</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.random() * (max - min) + min;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 返回给定范围内的随机整数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRandomInt</span>(<span class="params">min, max</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (max - min + <span class="number">1</span>)) + min;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="三角函数方法"><a href="#三角函数方法" class="headerlink" title="三角函数方法"></a>三角函数方法</h3><p>sin方法返回参数的正弦，cos方法返回参数的余弦，tan方法返回参数的正切。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.sin(<span class="number">0</span>) <span class="comment">// 0</span></div><div class="line"><span class="built_in">Math</span>.cos(<span class="number">0</span>) <span class="comment">// 1</span></div><div class="line"><span class="built_in">Math</span>.tan(<span class="number">0</span>) <span class="comment">// 0</span></div></pre></td></tr></table></figure>
+<p>asin方法返回参数的反正弦，acos方法返回参数的反余弦，atan方法返回参数的反正切。这个三个方法的返回值都是弧度值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.asin(<span class="number">1</span>) <span class="comment">// 1.5707963267948966</span></div><div class="line"><span class="built_in">Math</span>.acos(<span class="number">1</span>) <span class="comment">// 0</span></div><div class="line"><span class="built_in">Math</span>.atan(<span class="number">1</span>) <span class="comment">// 0.7853981633974483</span></div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Math对象是JavaScript的内置对象，提供一系列数学常数和数学方法。&lt;/p&gt;
+&lt;p&gt;该对象不是构造函数，所以不能生成实例，所有的属性和方法都必须在Math对象上调用。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://blog.houfeng.net/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>JavaScript 之 “Array对象”</title>
-    <link href="http://blog.houfeng.net/2015/07/15/2014-12-15-javascript-array/"/>
-    <id>http://blog.houfeng.net/2015/07/15/2014-12-15-javascript-array/</id>
-    <published>2015-07-15T07:30:58.000Z</published>
-    <updated>2016-08-27T03:34:26.000Z</updated>
+    <link href="http://blog.houfeng.net/2016/08/27/2014-12-15-javascript-array/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2014-12-15-javascript-array/</id>
+    <published>2016-08-27T03:53:40.000Z</published>
+    <updated>2016-08-27T03:53:40.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Array是JavaScript的内置对象，同时也是一个构造函数，可以用它生成新的数组。</p>
 <p>作为构造函数时，Array可以接受参数，但是不同的参数，会使得Array产生不同的行为。</p>
@@ -358,78 +998,11 @@
   </entry>
   
   <entry>
-    <title>JavaScript 之 “Math对象”</title>
-    <link href="http://blog.houfeng.net/2015/07/15/2014-07-15-javascript-math/"/>
-    <id>http://blog.houfeng.net/2015/07/15/2014-07-15-javascript-math/</id>
-    <published>2015-07-15T07:29:16.000Z</published>
-    <updated>2016-08-27T03:34:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Math对象是JavaScript的内置对象，提供一系列数学常数和数学方法。</p>
-<p>该对象不是构造函数，所以不能生成实例，所有的属性和方法都必须在Math对象上调用。</p>
-<a id="more"></a>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">new</span> <span class="built_in">Math</span>()</div><div class="line"><span class="comment">// TypeError: object is not a function</span></div></pre></td></tr></table></figure>
-<p>上面代码表示，Math不能当作构造函数用。</p>
-<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>Math对象提供以下一些只读的数学常数。</p>
-<ul>
-<li>E：常数e。</li>
-<li>LN2：2的自然对数。</li>
-<li>LN10：10的自然对数。</li>
-<li>LOG2E：以2为底的e的对数。</li>
-<li>LOG10E：以10为底的e的对数。</li>
-<li>PI：常数Pi。</li>
-<li>SQRT1_2：0.5的平方根。</li>
-<li>SQRT2：2的平方根。</li>
-</ul>
-<p>这些常数的值如下。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.E <span class="comment">// 2.718281828459045</span></div><div class="line"><span class="built_in">Math</span>.LN2 <span class="comment">// 0.6931471805599453</span></div><div class="line"><span class="built_in">Math</span>.LN10 <span class="comment">// 2.302585092994046</span></div><div class="line"><span class="built_in">Math</span>.LOG2E <span class="comment">// 1.4426950408889634</span></div><div class="line"><span class="built_in">Math</span>.LOG10E <span class="comment">// 0.4342944819032518</span></div><div class="line"><span class="built_in">Math</span>.PI <span class="comment">// 3.141592653589793</span></div><div class="line"><span class="built_in">Math</span>.SQRT1_2 <span class="comment">// 0.7071067811865476</span></div><div class="line"><span class="built_in">Math</span>.SQRT2 <span class="comment">// 1.4142135623730951</span></div></pre></td></tr></table></figure>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>Math对象提供以下一些数学方法。</p>
-<h3 id="round方法"><a href="#round方法" class="headerlink" title="round方法"></a>round方法</h3><p>round方法用于四舍五入。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">0.1</span>) <span class="comment">// 0</span></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">0.5</span>) <span class="comment">// 1</span></div></pre></td></tr></table></figure>
-<p>它对于负值的运算结果与正值略有不同，主要体现在对.5的处理。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">-1.1</span>) <span class="comment">// -1</span></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">-1.5</span>) <span class="comment">// -1</span></div></pre></td></tr></table></figure>
-<h3 id="abs方法，max方法，min方法"><a href="#abs方法，max方法，min方法" class="headerlink" title="abs方法，max方法，min方法"></a>abs方法，max方法，min方法</h3><p>abs方法返回参数值的绝对值。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.abs(<span class="number">1</span>) <span class="comment">// 1</span></div><div class="line"><span class="built_in">Math</span>.abs(<span class="number">-1</span>) <span class="comment">// 1</span></div></pre></td></tr></table></figure>
-<p>max方法返回最大的参数，min方法返回最小的参数。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.max(<span class="number">2</span>, <span class="number">-1</span>, <span class="number">5</span>) <span class="comment">// 5</span></div><div class="line"><span class="built_in">Math</span>.min(<span class="number">2</span>, <span class="number">-1</span>, <span class="number">5</span>) <span class="comment">// -1</span></div></pre></td></tr></table></figure>
-<h3 id="floor方法，ceil方法"><a href="#floor方法，ceil方法" class="headerlink" title="floor方法，ceil方法"></a>floor方法，ceil方法</h3><p>floor方法返回小于参数值的最大整数。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.floor(<span class="number">3.2</span>) <span class="comment">// 3</span></div><div class="line"><span class="built_in">Math</span>.floor(<span class="number">-3.2</span>) <span class="comment">// -4</span></div></pre></td></tr></table></figure>
-<p>ceil方法返回大于参数值的最小整数。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.ceil(<span class="number">3.2</span>) <span class="comment">// 4</span></div><div class="line"><span class="built_in">Math</span>.ceil(<span class="number">-3.2</span>) <span class="comment">// -3</span></div></pre></td></tr></table></figure>
-<h3 id="pow方法，sqrt方法"><a href="#pow方法，sqrt方法" class="headerlink" title="pow方法，sqrt方法"></a>pow方法，sqrt方法</h3><p>power方法返回以第一个参数为底数、第二个参数为幂的指数值。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">2</span>) <span class="comment">// 4</span></div><div class="line"><span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">3</span>) <span class="comment">// 8</span></div></pre></td></tr></table></figure>
-<p>sqrt方法法返回参数值的平方根。如果参数是一个负值，则返回NaN。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.sqrt(<span class="number">4</span>) <span class="comment">// 2</span></div><div class="line"><span class="built_in">Math</span>.sqrt(<span class="number">-4</span>) <span class="comment">// NaN</span></div></pre></td></tr></table></figure>
-<h3 id="log方法，exp方法"><a href="#log方法，exp方法" class="headerlink" title="log方法，exp方法"></a>log方法，exp方法</h3><p>log方法返回以e为底的自然对数值。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.log(<span class="built_in">Math</span>.E) <span class="comment">// 1</span></div><div class="line"><span class="built_in">Math</span>.log(<span class="number">10</span>) <span class="comment">// 2.302585092994046</span></div></pre></td></tr></table></figure>
-<p>求以10为底的对数，可以除以Math.LN10；求以2为底的对数，可以除以Math.LN2。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.log(<span class="number">100</span>)/<span class="built_in">Math</span>.LN10 <span class="comment">// 2</span></div><div class="line"><span class="built_in">Math</span>.log(<span class="number">8</span>)/<span class="built_in">Math</span>.LN2 <span class="comment">// 3</span></div></pre></td></tr></table></figure>
-<p>exp方法返回常数e的参数次方。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.exp(<span class="number">1</span>) <span class="comment">// 2.718281828459045</span></div><div class="line"><span class="built_in">Math</span>.exp(<span class="number">3</span>) <span class="comment">// 20.085536923187668</span></div></pre></td></tr></table></figure>
-<h3 id="random方法"><a href="#random方法" class="headerlink" title="random方法"></a>random方法</h3><p>该方法返回0到1之间的一个伪随机数，可能等于0，但是一定小于1。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.random() <span class="comment">// 0.7151307314634323</span></div><div class="line"></div><div class="line"><span class="comment">// 返回给定范围内的随机数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRandomArbitrary</span>(<span class="params">min, max</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.random() * (max - min) + min;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 返回给定范围内的随机整数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRandomInt</span>(<span class="params">min, max</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (max - min + <span class="number">1</span>)) + min;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="三角函数方法"><a href="#三角函数方法" class="headerlink" title="三角函数方法"></a>三角函数方法</h3><p>sin方法返回参数的正弦，cos方法返回参数的余弦，tan方法返回参数的正切。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.sin(<span class="number">0</span>) <span class="comment">// 0</span></div><div class="line"><span class="built_in">Math</span>.cos(<span class="number">0</span>) <span class="comment">// 1</span></div><div class="line"><span class="built_in">Math</span>.tan(<span class="number">0</span>) <span class="comment">// 0</span></div></pre></td></tr></table></figure>
-<p>asin方法返回参数的反正弦，acos方法返回参数的反余弦，atan方法返回参数的反正切。这个三个方法的返回值都是弧度值。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.asin(<span class="number">1</span>) <span class="comment">// 1.5707963267948966</span></div><div class="line"><span class="built_in">Math</span>.acos(<span class="number">1</span>) <span class="comment">// 0</span></div><div class="line"><span class="built_in">Math</span>.atan(<span class="number">1</span>) <span class="comment">// 0.7853981633974483</span></div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Math对象是JavaScript的内置对象，提供一系列数学常数和数学方法。&lt;/p&gt;
-&lt;p&gt;该对象不是构造函数，所以不能生成实例，所有的属性和方法都必须在Math对象上调用。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="http://blog.houfeng.net/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>JavaScript 之 “包装器对象”</title>
-    <link href="http://blog.houfeng.net/2015/07/15/2015-03-15-javascript-wraper/"/>
-    <id>http://blog.houfeng.net/2015/07/15/2015-03-15-javascript-wraper/</id>
-    <published>2015-07-15T07:24:14.000Z</published>
-    <updated>2016-08-27T03:34:31.000Z</updated>
+    <link href="http://blog.houfeng.net/2016/08/27/2015-03-15-javascript-wraper/"/>
+    <id>http://blog.houfeng.net/2016/08/27/2015-03-15-javascript-wraper/</id>
+    <published>2016-08-27T03:53:40.000Z</published>
+    <updated>2016-08-27T03:53:40.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="包装对象"><a href="#包装对象" class="headerlink" title="包装对象"></a>包装对象</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>在JavaScript中，“一切皆对象”，数组和函数本质上都是对象，就连三种原始类型的值——数值、字符串、布尔值——在一定条件下，也会自动转为对象，也就是原始类型的“包装对象”。</p>
 <p>所谓“包装对象”，就是分别与数值、字符串、布尔值相对应的Number、String、Boolean三个原生对象。这三个原生对象可以把原始类型的值变成（包装成）对象。</p>
@@ -492,579 +1065,6 @@
     </summary>
     
       <category term="前端" scheme="http://blog.houfeng.net/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>MongoDB 高可用群集简单配置</title>
-    <link href="http://blog.houfeng.net/2013/10/26/2013-10-26-mongodb-replica-set/"/>
-    <id>http://blog.houfeng.net/2013/10/26/2013-10-26-mongodb-replica-set/</id>
-    <published>2013-10-26T15:22:59.000Z</published>
-    <updated>2016-08-27T03:35:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Replica-Set-节点类型分为三种："><a href="#Replica-Set-节点类型分为三种：" class="headerlink" title="Replica Set 节点类型分为三种："></a>Replica Set 节点类型分为三种：</h3><pre><code>standard：常规节点，它存储一份完整的数据副本，参与选举投票，有可能成为primary节点。
-passive：存储了完整的数据副本，参与投票，不能成为primary节点。 
-arbiter：仲裁节点，只参与投票，不接收复制的数据，也不能成为primary节点。
-</code></pre><a id="more"></a>
-<p>###节点规划<br>仅做的测试而已，所以所有节点仅是同一台服务器上的三个不同端口的 MongoDB 实例，本文配置使用2个常规节点和一个arbiter节点，arbiter节点由于不同步数据，所以负载会很小，部署对硬件没有太大的要求，<br>因为 MongoDB Replica Set 不允许添加两个 “本地（localhost或127.0.01）节点”，所有首先在系统的 hosts 文件中添加:</p>
-<p>  127.0.0.1 mongodb27021<br>  127.0.0.1 mongodb27022<br>    127.0.0.1 mongodb27023</p>
-<p>节点规划如下:</p>
-<pre><code>mongodb27021:27021 主节点(Primary)
-mongodb27022:27022  从节点(Secondary)
-mongodb27023:27023 仲裁节点(Arbiter)
-</code></pre><p>###启动三个节点<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongod.exe --port=27021 --replSet=rs_test --dbpath=&quot;..\27021\data&quot; --logpath=&quot;..\27021\log\mongodb.log&quot; --smallfiles</div></pre></td></tr></table></figure></p>
-<p>其它两个节点用同样的命令，将端口替换为指定的端口，及指定合适的数据库文件及日志存储目录，生产环境，可将 mongodb 安装到系统服务中（很简单 google 一下吧）。</p>
-<p>###配置群集<br>mongo -port 27021 连接到其中一个节点。</p>
-<p>#####初始化群集:<br>rs.initiate()<br>这个命令可以接收参数，直接配置群集中的各节点，这里简单点直接初始化，27021将成为 Primary 节点。</p>
-<p>#####添加从节点<br>rs.add(“mongodb27022:27022”)<br>默认从节点的数据不可 “读写” ，连接到从节点，执行 “rs.salveOk()” 可以使从节点只读，以减少主节点的读压力。</p>
-<p>####添加仲裁节点<br>rs.addArb(“mongodb27022:27023”)<br>仲裁节点，不存储数据，只在主节点发生故障时，参与主节点的 “推举”。</p>
-<p>至此一个最简单的 Replica Set 高可用群集配置完成。</p>
-<p>###检查群集</p>
-<ol>
-<li>在主节点接入数据，在从节点即可到刚刚接入的数据。</li>
-<li>结束到主节点，再连接到从节点用 “rs.isMaster()” 可以看到从节点，已被“推举”为主节点了。</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Replica-Set-节点类型分为三种：&quot;&gt;&lt;a href=&quot;#Replica-Set-节点类型分为三种：&quot; class=&quot;headerlink&quot; title=&quot;Replica Set 节点类型分为三种：&quot;&gt;&lt;/a&gt;Replica Set 节点类型分为三种：&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;standard：常规节点，它存储一份完整的数据副本，参与选举投票，有可能成为primary节点。
-passive：存储了完整的数据副本，参与投票，不能成为primary节点。 
-arbiter：仲裁节点，只参与投票，不接收复制的数据，也不能成为primary节点。
-&lt;/code&gt;&lt;/pre&gt;
-    
-    </summary>
-    
-      <category term="数据库" scheme="http://blog.houfeng.net/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>模块的封装与解耦</title>
-    <link href="http://blog.houfeng.net/2013/03/17/2013-03-16-module-encapsulation-decoupling/"/>
-    <id>http://blog.houfeng.net/2013/03/17/2013-03-16-module-encapsulation-decoupling/</id>
-    <published>2013-03-17T05:35:44.000Z</published>
-    <updated>2016-08-27T03:34:03.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>###话题起因<br>回头看自已写过东西，常会感觉到不满意，总有重构冲动（其实这种冲动通常是好事，因为只有发现了不足才有重构想法，只有重构才能改进，只有改进才能完善）。</p>
-<a id="more"></a>
-<p>最近，准备重构<a href="http://houfeng/mokit" target="_blank" rel="external">mokit</a>，因为这前的mokit虽然有将不同的“模块”分离在不同的文件中，并有“命名空间”概念，但其实现在版本的mokit模块甚至不能称为真正的模块，因为它没有完整“封装”的概念，并且虽有“命名空间”，但还是会创建一部分全局变量，只能依靠开发人员制定好的“契约”，既“非强制约束”的开发规范。</p>
-<p>因为现有mokit存在的各种不足，在重构之前一直在思考mokit更合适的结构：</p>
-<ol>
-<li>更加清析的、真正的模块化的结构；</li>
-<li>模块的真正封装；</li>
-<li>模块间的最大化解耦；</li>
-<li>更加清析的MVC或MVP模式；</li>
-</ol>
-<p>第一步先实现真的模块封装，及模块中的解耦，第二步实现简洁易用的MVC或MVP的架构及开框架。MVC稍后再谈，这篇博文将就模块化、封装、解耦做一些控讨。</p>
-<p>###模块的封装</p>
-<p>#####百度百科:<br>模块化是指解决一个复杂问题时自顶向下逐层把系统划分成若干模块的过程，有多种属性，分别反映其内部特性<br>模块化是一种处理复杂系统分解为更好的可管理模块的方式。</p>
-<p>模块化用来分割，组织和打包软件。每个模块完成一个特定的子功能，所有的模块按某种方法组装起来，成为一个整体，完成整个系统所要求的功能。<br>模块具有以下几种基本属性：接口、功能、逻辑、状态，功能、状态与接口反映模块的外部特性，逻辑反映它的内部特性。<br>在系统的结构中，模块是可组合、分解和更换的单元。模块化是一种处理复杂系统分解成为更好的可管理模块的方式。它可以通过在不同组件设定不同的功能，把一个问题分解成多个小的独立、互相作用的组件，来处理复杂、大型的软件。</p>
-<p>#####实现模块封装:<br>在完整面向对象的语言中可能是一个类，封装作为OOP三大特性：封装、多态、继承之一，在这些有完整OOP机制的语言实现模块的封装非常容易</p>
-<p>如在C#中</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">User</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">string</span> Ident&#123;<span class="keyword">get</span>;<span class="keyword">set</span>;&#125;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">string</span> Name&#123;<span class="keyword">get</span>;<span class="keyword">set</span>;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>在C#中，一个类（模块）可以方便的声明“私有成员”，实现封装特性；</p>
-<p>而在JavaScript中实现就稍显“麻烦”，而且写法是各种各样，如下：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Module1=(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> ident=<span class="string">""</span>;</div><div class="line">	<span class="keyword">var</span> name=<span class="string">""</span>;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">    	getName:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        	<span class="keyword">return</span> name;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
-<p>上边在JavaScript的自执行函数中，通过var定议的变量，在函数外部不能被访问也实现了封装。<br>事实上，JavaScript的有很多模块化的库，能够实现更加完整的模块定义，如RequireJS、EmsJs。</p>
-<p>###模块的依赖<br>当程序采用模块化的结构后，不同的功能都分布在不同的模块中，必然存在模块相互调用的问题，这时就需要管理好模块之间的依赖关系；</p>
-<p>依赖常常表直观的表现为：</p>
-<ol>
-<li>在一个包中import另一个包；</li>
-<li>在一个类中调用另一个类或存在加一个类的引用；</li>
-<li>在一个js文件中用别一个js文件中定议的对象或函数；</li>
-</ol>
-<p>如在C#中：</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> calss A</div><div class="line">&#123;</div><div class="line">	<span class="keyword">public</span> <span class="keyword">string</span> Name &#123;<span class="keyword">get</span>;<span class="keyword">set</span>;&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">B</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">private</span> A _a=<span class="keyword">new</span> A();</div><div class="line">	<span class="keyword">public</span> A a</div><div class="line">    &#123;</div><div class="line">    	<span class="keyword">get</span></div><div class="line">        &#123;</div><div class="line">        	<span class="keyword">return</span> _a;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">string</span> Name &#123;<span class="keyword">get</span>;<span class="keyword">set</span>;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>如上代码类“B”事实上对类“A”存在“依赖”，在没有A的时候，B是不完整的，是无法使用的；当要替换A的时候需重新编写B，这样其实A、B之间的“耦合”非常高。</p>
-<p>这里是假设每一个类就是一个模块，其实，上有时模块的粒度不能到一个类一个模块，我们也不需要每一个类都要“解耦”，但是上边的示例代码，却能“高耦合”的代码带的的问题；</p>
-<p>我曾见过一定情况下很“二”的写法：</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">IA</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">string</span> Name&#123;<span class="keyword">get</span>;<span class="keyword">set</span>;&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">A</span> : <span class="title">IA</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">string</span> Name&#123;<span class="keyword">get</span>;<span class="keyword">set</span>;&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">B</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">private</span> IA _a=<span class="keyword">new</span> A();</div><div class="line">	<span class="keyword">public</span> IA a</div><div class="line">    &#123;</div><div class="line">    	<span class="keyword">get</span></div><div class="line">        &#123;</div><div class="line">        	<span class="keyword">return</span> _a;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">set</span>&#123;</div><div class="line">        	_a=<span class="keyword">value</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">string</span> Name &#123;<span class="keyword">get</span>;<span class="keyword">set</span>;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>如上，或许写代码的人一定是想用interface实现A、B间的“解耦”，实际上还不到位，B对A的依赖依然存在，没有任何意义；</p>
-<p>###模块间的解耦</p>
-<p>#####依赖反转:<br>在面向对象编程领域中，依赖反转原则（Dependency inversion principle）指代了一种特定的解耦（传统的依赖关系建立在高层次上，而具体的策略设置则应用在低层次的模块上）形式。在这种形势下，为了使得高层次的模块不依赖于低层次的模块的实现细节的目的，依赖模块被颠倒了（例如：反转）。该原则规定：<br>高层次的模块不应该依赖于低层次的模块，两者都应该依赖于抽象接口。<br>抽象接口不应该依赖于具体实现。而具体实现则应该依赖于抽象接口。<br>该原则颠倒了一部分人对于面向对象设计的认识方式，比如高层次和低层次对象都应该应该依赖于相同的抽象接口</p>
-<p>改掉这很“二”的写法，如下：</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">IA</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">string</span> Name&#123;<span class="keyword">get</span>;<span class="keyword">set</span>;&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">A</span> : <span class="title">IA</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">string</span> Name&#123;<span class="keyword">get</span>;<span class="keyword">set</span>;&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">B</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">private</span> IA _a=<span class="literal">null</span>;</div><div class="line">	<span class="keyword">public</span> IA a</div><div class="line">    &#123;</div><div class="line">    	<span class="keyword">get</span></div><div class="line">        &#123;</div><div class="line">        	<span class="keyword">if</span>(_a==<span class="literal">null</span>)</div><div class="line">            &#123;</div><div class="line">            	<span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"IA没有找到"</span>);</div><div class="line">            &#125;</div><div class="line">        	<span class="keyword">return</span> _a;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">set</span>&#123;</div><div class="line">        	_a=<span class="keyword">value</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">string</span> Name &#123;<span class="keyword">get</span>;<span class="keyword">set</span>;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这B、A没有强制依赖了，在更换A的时间，也无须动B中的代码，或许我们是用B前的某一个地主将IA的一个实现类实例传给了B，也有可能是基于配置文件及“反射”完成的。</p>
-<p>比如，一个插件式的应用程序！</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;###话题起因&lt;br&gt;回头看自已写过东西，常会感觉到不满意，总有重构冲动（其实这种冲动通常是好事，因为只有发现了不足才有重构想法，只有重构才能改进，只有改进才能完善）。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="编程" scheme="http://blog.houfeng.net/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>最快,最简洁的javascript模板引擎jtp</title>
-    <link href="http://blog.houfeng.net/2013/03/11/2012-10-13-fast-javascript-template-engine-jtp/"/>
-    <id>http://blog.houfeng.net/2013/03/11/2012-10-13-fast-javascript-template-engine-jtp/</id>
-    <published>2013-03-11T12:26:03.000Z</published>
-    <updated>2016-08-27T03:33:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="欢迎来到jtp的世界"><a href="#欢迎来到jtp的世界" class="headerlink" title="欢迎来到jtp的世界"></a>欢迎来到jtp的世界</h3><blockquote>
-<p>欢迎使用jtp! 最轻量，简洁，高效的javascript模板引擎！<br>如同“jtp”的名字，“轻量、简洁、高效”是jtp的哲学！</p>
-</blockquote>
-<a id="more"></a>
-<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">+ 轻量，jtp是目前能见到最轻量的javascript模板引擎，只有一个不足1.5k的文件。</div><div class="line">+ 简洁，jtp的语法非常简单，对于一个熟悉html、js的开发人员来说学习难度为0。</div><div class="line">+ 高效，jtp支持模板预编译，快于任何一个你所见过的javascript模板引擎。</div><div class="line">+ 另外，jtp同时支持在浏览器环境使用及服务端javascript环境(Node.js)使用。</div></pre></td></tr></table></figure>
-<h3 id="许可协议"><a href="#许可协议" class="headerlink" title="许可协议"></a>许可协议</h3><blockquote>
-<p><a href="http://www.gnu.org/licenses/lgpl.html" target="_blank" rel="external">使用jtp请您遵守LGPL协议，否则您将会被起诉。（点击可查看LGPL协议）</a></p>
-</blockquote>
-<h3 id="在线demo"><a href="#在线demo" class="headerlink" title="在线demo"></a>在线demo</h3><blockquote>
-<p><a href="http://code.houfeng.net/demos/jtp/" target="_blank" rel="external">体验在线demo</a></p>
-</blockquote>
-<h3 id="支持"><a href="#支持" class="headerlink" title="支持"></a>支持</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">+ 您可以发邮件到 admin@xhou.net</div><div class="line">+ 或者访问 http://www.houfeng.net</div><div class="line">+ 关注微博 http://weibo.com/houfeng</div></pre></td></tr></table></figure>
-<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><h5 id="如何使用？"><a href="#如何使用？" class="headerlink" title="如何使用？"></a>如何使用？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">+ 下载jtp</div><div class="line">+ 将jtp.js或jtp-min.js放到项目中合适的位置。</div><div class="line">+ 在相关页面用&lt;script src=&apos;jtp的url&apos;&gt;&lt;/script&gt;引入jtp。</div></pre></td></tr></table></figure>
-<h4 id="解析-jtp-parse"><a href="#解析-jtp-parse" class="headerlink" title="解析(jtp.parse)"></a>解析(jtp.parse)</h4><p>代码:</p>
-<pre><code>var html=&apos;&lt;div&gt;My name is &lt;@$(this.name)@&gt;&lt;/div&gt;&apos;;
-var rs=jtp.parse(html,{name:&apos;jtp&apos;});
-</code></pre><p>结果: </p>
-<pre><code>&lt;div&gt;My name is jtp&lt;/div&gt;
-</code></pre><h4 id="编译-jtp-complite"><a href="#编译-jtp-complite" class="headerlink" title="编译(jtp.complite)"></a>编译(jtp.complite)</h4><p>代码:</p>
-<pre><code>var html=&apos;&lt;div&gt;My name is &lt;@$(this.name)@&gt;&lt;/div&gt;&apos;;
-var fn=jtp.complite(html);
-var rs=fn({name:&apos;jtp&apos;});
-</code></pre><p>结果:</p>
-<pre><code>&lt;div&gt;My name is jtp&lt;/div&gt;
-</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;欢迎来到jtp的世界&quot;&gt;&lt;a href=&quot;#欢迎来到jtp的世界&quot; class=&quot;headerlink&quot; title=&quot;欢迎来到jtp的世界&quot;&gt;&lt;/a&gt;欢迎来到jtp的世界&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;欢迎使用jtp! 最轻量，简洁，高效的javascript模板引擎！&lt;br&gt;如同“jtp”的名字，“轻量、简洁、高效”是jtp的哲学！&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="编程" scheme="http://blog.houfeng.net/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>回忆“Adobe　Web创意训练营第一期”</title>
-    <link href="http://blog.houfeng.net/2013/01/28/2013-01-24-Adobe-Web-HTML5/"/>
-    <id>http://blog.houfeng.net/2013/01/28/2013-01-24-Adobe-Web-HTML5/</id>
-    <published>2013-01-28T14:23:17.000Z</published>
-    <updated>2016-08-27T03:33:52.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>###回忆“Adobe　Web创意训练营第一期”</p>
-<p>说是回忆，其实也就是昨天的事儿。</p>
-<p>过去一年，才是回忆，我、我所在的团队主要的工作，就是基于HTML5的移动App开发，我们为我们的两家客户基于HTML5分别开发两个完整的“差旅类”的App。</p>
-<ol>
-<li>CWT Online China</li>
-<li>差旅随行</li>
-</ol>
-<a id="more"></a>
-<hr>
-<p>对于HTML5的Webapp的开发从简单了解到较为深入的理解，这个过程我们遇到了不少的问题；我们尝试用巧秒的当然也拙劣的方式去试图解决遇到的每一个问题，实现我们认为很有趣儿、好玩的小创意或常规功能；</p>
-<p>当然还会有些问题，在一定条件下似乎是无解的或真的无解的，比如“安卓系统的HTMML5的性能问题”；带着疑问和中霏同学去了”Adobe Web 创意训练营第一期”；</p>
-<p>实话说，昨儿的讲座，并没有解决我的问题；</p>
-<p>但是，之前我现在所在的这团队，可以称之为”闭门造车”（不表示我们造的”车“不好，相反或许还挺棒）；但总有一种疑虑，去怀疑我们的做法是否正确？是否有更好的做法？</p>
-<p>所以，想去看看，别的团队是如何做的；去和其它做同样事儿的一群人，去交流，去切磋，去学习；</p>
-<p>我们或者我，也很乐于和对前端、前沿技术有兴趣的同志们，一道高讨论有趣、好玩的东西；</p>
-<p>这是本此活动对我来说比较重要的一个意义；也是我们继续参加接下来活动的重要的理由；</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;###回忆“Adobe　Web创意训练营第一期”&lt;/p&gt;
-&lt;p&gt;说是回忆，其实也就是昨天的事儿。&lt;/p&gt;
-&lt;p&gt;过去一年，才是回忆，我、我所在的团队主要的工作，就是基于HTML5的移动App开发，我们为我们的两家客户基于HTML5分别开发两个完整的“差旅类”的App。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;CWT Online China&lt;/li&gt;
-&lt;li&gt;差旅随行&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="闲谈" scheme="http://blog.houfeng.net/categories/%E9%97%B2%E8%B0%88/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>浏览器页面渲染之“reflow”</title>
-    <link href="http://blog.houfeng.net/2013/01/05/2012-12-27-browser-page-reflow/"/>
-    <id>http://blog.houfeng.net/2013/01/05/2012-12-27-browser-page-reflow/</id>
-    <published>2013-01-05T02:19:33.000Z</published>
-    <updated>2016-08-27T03:36:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a>
-<p>###基本概念<br>浏览器为了重新渲染部分或整个页面，重新计算页面元素位置和几何结构（geometries）的进程叫做 reflow（回流）。有时 reflow 页面中的一个元素会 reflow 它的祖先元素以及所有子元素。<br>由于 reflow 的开销非常之大，因此要尽可能的避免 reflow 的发生。</p>
-<p>###产生 reflow 的原因</p>
-<ol>
-<li>调整窗口大小；</li>
-<li>改变字体；</li>
-<li>增加或者移除样式表；</li>
-<li>内容变化，比如用户在 input 框中输入文字；</li>
-<li>激活 CSS 伪类，比如 :hover (IE 中为兄弟结点伪类的激活)；</li>
-<li>操作 class 属性；</li>
-<li>脚本操作 DOM；</li>
-<li>计算 offsetWidth 和 offsetHeight 属性；</li>
-<li>设置 style 属性的值。</li>
-</ol>
-<p>###如何减少 reflow</p>
-<ol>
-<li>如果想设定元素的样式，通过改变元素的 class 名 (尽可能在 DOM 树的最里层)；</li>
-<li>避免设置多项内联样式；</li>
-<li>用于表现动画的元素，使用 position 属性的 fixed 值或 absolute 值（脱离文档流）；</li>
-<li>权衡平滑和速度（调大每帧间隔，减少 reflow 次数）；</li>
-<li>避免使用 table 布局；</li>
-<li>避免使用CSS的 JavaScript 表达式 (仅 IE 浏览器)；</li>
-<li>减少不必要的 DOM 层级，改变 DOM 树中的一级会导致所有层级的改变，上至根部，下至被改变节点的子节点；</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;###基本概念&lt;br&gt;浏览器为了重新渲染部分或整个页面，重新计算页面元素位置和几何结构（geometries）的进程叫做 reflow（回流）。有时 reflow 页面中的一个元素会 reflow 它的祖先元素以及所有子元素。&lt;br&gt;由于
-    
-    </summary>
-    
-      <category term="前端" scheme="http://blog.houfeng.net/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>mac系统如何显示和隐藏文件</title>
-    <link href="http://blog.houfeng.net/2013/01/05/2012-12-06-mac-show-all-files/"/>
-    <id>http://blog.houfeng.net/2013/01/05/2012-12-06-mac-show-all-files/</id>
-    <published>2013-01-05T02:19:33.000Z</published>
-    <updated>2016-08-27T03:33:31.000Z</updated>
-    
-    <content type="html"><![CDATA[<hr>
-<p>###mac系统如何显示和隐藏文件<br>苹果Mac OS X操作系统下，隐藏文件是否显示有很多种设置方法，最简单的要算在Mac终端输入命令。显示/隐藏Mac隐藏文件命令如下(注意其中的空格并且区分大小写)：   </p>
-<a id="more"></a>
-<p>显示Mac隐藏文件的命令：defaults write com.apple.finder AppleShowAllFiles -bool true</p>
-<p>隐藏Mac隐藏文件的命令：defaults write com.apple.finder AppleShowAllFiles -bool false</p>
-<p>或者</p>
-<p>显示Mac隐藏文件的命令：defaults write com.apple.finder AppleShowAllFiles  YES</p>
-<p>隐藏Mac隐藏文件的命令：defaults write com.apple.finder AppleShowAllFiles  NO</p>
-<p>输完单击Enter键，退出终端，重新启动Finder就可以了</p>
-<p>重启Finder：鼠标单击窗口左上角的苹果标志–&gt;强制退出–&gt;Finder–&gt;重新启动</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-&lt;p&gt;###mac系统如何显示和隐藏文件&lt;br&gt;苹果Mac OS X操作系统下，隐藏文件是否显示有很多种设置方法，最简单的要算在Mac终端输入命令。显示/隐藏Mac隐藏文件命令如下(注意其中的空格并且区分大小写)：   &lt;/p&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://blog.houfeng.net/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>如何制作越狱版本iOS软件</title>
-    <link href="http://blog.houfeng.net/2012/10/29/2012-10-20-How-to-make-escape-version-IOS-software/"/>
-    <id>http://blog.houfeng.net/2012/10/29/2012-10-20-How-to-make-escape-version-IOS-software/</id>
-    <published>2012-10-29T15:43:26.000Z</published>
-    <updated>2016-08-27T03:33:17.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>###如何制作一个越狱版本的ios应用？</p>
-<ol>
-<li>编译生成Distribution版本的程序</li>
-<li>右击生成的程序，选择显示包内容，选择Info.plist文件添加字段：SigerIdentity，字段值：Apple OS Application Signing</li>
-<li>创建Payload文件夹，将程序拖进，压缩并更改压缩后缀为*.ipa</li>
-<li>拖进生成的ipa文件于iTurns或通过同步工具安装即可</li>
-</ol>
-<a id="more"></a>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;###如何制作一个越狱版本的ios应用？&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;编译生成Distribution版本的程序&lt;/li&gt;
-&lt;li&gt;右击生成的程序，选择显示包内容，选择Info.plist文件添加字段：SigerIdentity，字段值：Apple OS Application Signing&lt;/li&gt;
-&lt;li&gt;创建Payload文件夹，将程序拖进，压缩并更改压缩后缀为*.ipa&lt;/li&gt;
-&lt;li&gt;拖进生成的ipa文件于iTurns或通过同步工具安装即可&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://blog.houfeng.net/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>移动web开发局部区域滚动问题</title>
-    <link href="http://blog.houfeng.net/2012/10/13/2012-09-29-mobile-dev-overflow-scroll/"/>
-    <id>http://blog.houfeng.net/2012/10/13/2012-09-29-mobile-dev-overflow-scroll/</id>
-    <published>2012-10-13T11:37:59.000Z</published>
-    <updated>2016-08-27T03:33:03.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>###问题<br>开发一个针对pc的web应用时，在需要不随内容滚动的页头或面页脚时，通常的做法是如下样式：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.ui-head</span>&#123; <span class="attribute">position</span>:fixed; &#125;</div></pre></td></tr></table></figure></p>
-<p>但是如上的样式放到手机上，我测试过android2.x、android4.x、ios4.x皆不支持position:fixed;</p>
-<a id="more"></a>
-<p>但经过测试，发现ios5.x已经支持position:fiexd,但通过position:fiexd一般只能实现页整的整体滚动时页头或页脚的固定，在实现页面某一小区域的滚动效果还是不太方便。</p>
-<p>另外一种方式，是指定一个元素（通常是DIV）的高度或宽度，然后使定义如下样式：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.ui-content</span> &#123;<span class="attribute">height</span>:<span class="number">300px</span>;<span class="attribute">overflow</span>:auto;&#125;</div></pre></td></tr></table></figure></p>
-<p>但经过测试，目前的主流的设备均不支持 overflow 样式。</p>
-<p>###通过webkit特有的样式实现<br>经测试ios5.1已支持如下样式定义：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">-webkit-overflow-scrolling</span>: <span class="selector-tag">touch</span>;</div></pre></td></tr></table></figure></p>
-<p>通过如上定义，ios5.x可以样式（不用js）实现局部区域滚动；但目前我试过android2.x及android4.x发现依然不支持些样式。</p>
-<p>###通过javascript实现<br>为了实现兼容主流平台及浏览器，常见的做法（很多web开发框架就是依赖javascript实现），如轻量易用的优秀开源组件 iScroll 4 </p>
-<p>而通过js实现局部滚动，一般如下几种方式：</p>
-<ol>
-<li>定义样式 overflow:hidden， 然后处理touchstart、touchmove、touchend事件，控制scrollTop完成滚动功能，此种方式较为简洁，并易于实现。</li>
-<li>定义样式 overflow:hidden，并且要求容器内的元素必须有一个内层嵌套外层单一元素比如：<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui-scroll"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui-scroll-inner"</span>&gt;</span> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>然后去控制内层元素的margin-top或margin-left。此种方式稍现麻烦，但可以使用css3的transform2d 控制内层元素translate来实现（此种方法在某些设备上能获得较好的性能）。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;###问题&lt;br&gt;开发一个针对pc的web应用时，在需要不随内容滚动的页头或面页脚时，通常的做法是如下样式：&lt;br&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.ui-head&lt;/span&gt;&amp;#123; &lt;span class=&quot;attribute&quot;&gt;position&lt;/span&gt;:fixed; &amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;但是如上的样式放到手机上，我测试过android2.x、android4.x、ios4.x皆不支持position:fixed;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="编程" scheme="http://blog.houfeng.net/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>最易于使用的asp.net ajax框架</title>
-    <link href="http://blog.houfeng.net/2012/10/13/2012-02-10-ajaxengine-dotnet/"/>
-    <id>http://blog.houfeng.net/2012/10/13/2012-02-10-ajaxengine-dotnet/</id>
-    <published>2012-10-13T11:37:59.000Z</published>
-    <updated>2016-08-27T03:37:31.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>项目地址: <a href="http://www.houfeng.net/page/AjaxEngine.aspx" target="_blank" rel="external">http://www.houfeng.net/page/AjaxEngine.aspx</a></p>
-<a id="more"></a>
-<p>###2009年中<br>工作之余写了一个简单非常方便使用Ajax框架（应该还称不是框架）！并用一个小仓库管理项目<br>2009年末，确实是年末2009-12-29，写了一篇文章，介如年中所写的“框架”;<br>文章地址：<a href="http://www.cnblogs.com/houfeng/archive/2009/12/29/1635350.html" target="_blank" rel="external">http://www.cnblogs.com/houfeng/archive/2009/12/29/1635350.html</a></p>
-<p>###2010年初<br>移植了一个java版本，并送于一个朋友，java版本之后我没维护，java版本被朋友用于了几个政府项目！具说现在他还在用着，但我已不知道“它”长成什么样了！<br>还是2010年，用于了当时参与的一个OA项目，及一个短信平台项目，此时AjaxEngine已添加很多功能：<br>可以让所有微软官方asp.net控件具备Ajax能力。<br>可以轻松在前端页面调用页面中服务端方法，并异步更新页面呈现。<br>可以在服务端轻松调用客户端脚本。</p>
-<p>###2011年<br>AjaxEngine被用于国内某大型证券企业OA的部分模块！<br>还是2011年，优化了性能，增加了快速编写JsonHandler相关功能！</p>
-<p>###2012年<br>正式开源！</p>
-<p>###为什么开源？<br>本来不是什么高深的东西，为什么如数家珍呢？不如分享！<br>因为AjaxEngine虽实现了相关功能，使用也非常简单方便！但也一直想着好好优化一下，但总不知是真没时间还是偷懒，以致于到现在AjaxEngine中还有09年我刚毕业时写的较为拙劣的代码！希望更多的人参于，优化AjaxEngine<br>AjaxEngine的思路还是较为巧妙的！<br>希望让更多的coder快速完成ajax开发！<br>希望更多的人提出议见以改进AjaxEngine！</p>
-<p>###AjaxEngine的使用不用任何配置，使用步骤如下：</p>
-<ol>
-<li>添加对AjaxEngine的引用</li>
-<li>页面继承AjaxPageBase，或实现IAjaxPage 即可</li>
-<li>JsonHandler继承JsonHandlerBase即可</li>
-<li>用AjaxMethod标记相关法！</li>
-</ol>
-<p>###DEMO</p>
-<p>页面使用Demo:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">using System;</div><div class="line">using AjaxEngines;</div><div class="line">namespace AjaxEngine.Demo</div><div class="line">&#123;</div><div class="line">   	public partial class _Default : AjaxPageBase</div><div class="line">   	&#123;</div><div class="line">       	protected void Page_Load(object sender, EventArgs e)</div><div class="line">       	&#123;</div><div class="line">       	&#125;</div><div class="line">       	protected void Button1_Click(object sender, EventArgs e)</div><div class="line">       	&#123;</div><div class="line">           	this.AjaxEngine.ShowMessageBox("houfeng");</div><div class="line">       	&#125;</div><div class="line">       	/// &lt;summary&gt;</div><div class="line">       	/// 参数和返回值都必须是string类型</div><div class="line">       	/// &lt;/summary&gt;</div><div class="line">       	/// &lt;param name="x"&gt;&lt;/param&gt;</div><div class="line">       	/// &lt;param name="y"&gt;&lt;/param&gt;</div><div class="line">       	/// &lt;returns&gt;&lt;/returns&gt;</div><div class="line">       	[AjaxMethod]</div><div class="line">       	public string  Add(string x, string y)</div><div class="line">       	&#123;</div><div class="line">           	return (x + y).ToString();</div><div class="line">       	&#125;</div><div class="line">   	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Handler使用Demo:</p>
-<p>服务端:<br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">using</span> AjaxEngines;</div><div class="line"><span class="keyword">using</span> AjaxEngines.JsonHandlers;</div><div class="line"><span class="keyword">namespace</span> <span class="title">AjaxEngine.Demo</span></div><div class="line">&#123;</div><div class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></div><div class="line">    <span class="comment"><span class="doctag">///</span> Handler1 的摘要说明</span></div><div class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></div><div class="line">  <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Handler1</span> : <span class="title">JsonHandlerBase</span></div><div class="line">  &#123;</div><div class="line">      [AjaxMethod]</div><div class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">add</span>(<span class="params"><span class="keyword">int</span> x, <span class="keyword">int</span> y</span>)</span></div><div class="line">      &#123;</div><div class="line">          <span class="keyword">return</span> x + y;</div><div class="line">      &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>客户端:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$.getJSON(<span class="string">"Handler1.ashx"</span>, &#123; method: <span class="string">"add"</span>, x: <span class="number">1</span>, y: <span class="number">2</span> &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">dt</span>) </span>&#123;</div><div class="line">      alert(dt);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;项目地址: &lt;a href=&quot;http://www.houfeng.net/page/AjaxEngine.aspx&quot;&gt;http://www.houfeng.net/page/AjaxEngine.aspx&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="编程" scheme="http://blog.houfeng.net/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>禁用CentOS Linux系统的图形界面</title>
-    <link href="http://blog.houfeng.net/2012/09/16/2012-09-15-linux-centos-disabled-gui-start/"/>
-    <id>http://blog.houfeng.net/2012/09/16/2012-09-15-linux-centos-disabled-gui-start/</id>
-    <published>2012-09-15T17:04:26.000Z</published>
-    <updated>2016-08-27T03:32:31.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>如何禁用Centos GUI图形界面？</p>
-<a id="more"></a>
-<p>vi /etc/inittab</p>
-<p>把默认的</p>
-<p>id:5:initdefault:</p>
-<p>改成</p>
-<p>id:3:initdefault:</p>
-<p>这样登录的默认界面就是字符界面了， 需要gui时， startx 即可。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;如何禁用Centos GUI图形界面？&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://blog.houfeng.net/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>linux系统防火墙简单设置</title>
-    <link href="http://blog.houfeng.net/2012/09/16/2012-09-15-linux-firewall/"/>
-    <id>http://blog.houfeng.net/2012/09/16/2012-09-15-linux-firewall/</id>
-    <published>2012-09-15T17:03:07.000Z</published>
-    <updated>2016-08-27T03:32:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Linux还是比较常用的，于是我研究了一下Linux关闭防火墙命令，在这里拿出来和大家分享一下，希望你能学会Linux关闭防火墙命令 。</p>
-<a id="more"></a>
-<p>###永久性生效，重启后不会复原</p>
-<p>开启： chkconfig iptables on</p>
-<p>关闭： chkconfig iptables off</p>
-<p>###即时生效，重启后复原</p>
-<p>开启： service iptables start</p>
-<p>关闭： service iptables stop</p>
-<hr>
-<p>需要说明的是对于Linux下的其它服务都可以用以上命令执行开启和关闭操作。</p>
-<p>在开启了防火墙时，做如下设置，开启相关端口，</p>
-<p>修改/etc/sysconfig/iptables 文件，添加以下内容：<br>-A RH-Firewall-1-INPUT -m state –state NEW -m tcp -p tcp –dport 80 -j ACCEPT<br>-A RH-Firewall-1-INPUT -m state –state NEW -m tcp -p tcp –dport 22 -j ACCEPT</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Linux还是比较常用的，于是我研究了一下Linux关闭防火墙命令，在这里拿出来和大家分享一下，希望你能学会Linux关闭防火墙命令 。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://blog.houfeng.net/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>.net编写的外挂式绿色五笔</title>
-    <link href="http://blog.houfeng.net/2012/09/14/2009-10-29-input-green-wubi/"/>
-    <id>http://blog.houfeng.net/2012/09/14/2009-10-29-input-green-wubi/</id>
-    <published>2012-09-14T05:04:19.000Z</published>
-    <updated>2016-08-27T03:30:59.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="绿色五笔概述"><a href="#绿色五笔概述" class="headerlink" title="绿色五笔概述:"></a>绿色五笔概述:</h3><p>绿色五笔,名字瞎起的.采用.net开发(不知道是不是第一个,呵呵),目前仅一个beta版,好几个月前这样了,最近没有更新.<br>其中部分词库来自万能五笔.<br>无需安装,只需运行GreenWb.exe即可.第一次运行会自动加入自启动.可在设置中取消自启动.</p>
-<a id="more"></a>
-<p>###截图</p>
-<p>输入窗口:</p>
-<p><img src="http://images.cnblogs.com/cnblogs_com/houfeng/20091029122614_1.jpg" alt=""></p>
-<p>设置窗口:</p>
-<p><img src="http://images.cnblogs.com/cnblogs_com/houfeng/20091029122615_2.jpg" alt=""></p>
-<p>字词编辑器:</p>
-<p><img src="http://images.cnblogs.com/cnblogs_com/houfeng/20091029122615_3.jpg" alt=""></p>
-<p>###一些设置:</p>
-<ol>
-<li>单击输入法窗口 中/英 按钮,切换中英文(Shift 中英文切换).</li>
-<li>单击输入法窗口 半/全 按钮,切换全半角.</li>
-<li>单击输入法窗口 简/繁 按钮,切换简繁输入.</li>
-<li>单击输入法窗口 词 按钮,将当前选中文字加入新词.</li>
-<li>单击输入法窗口 关 按钮,最小化输入窗口.</li>
-<li>单击输入法窗口 ./。 按钮,切换中英文标点(暂不输入中文标点).</li>
-<li>右击任务栏图标，字词库 管理用户词库.</li>
-<li>右击任务栏图标，设置 进行软件基本设置.</li>
-</ol>
-<p>###下载:</p>
-<p>单击这里下载试用</p>
-<hr>
-<p>欢迎各位建义.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;绿色五笔概述&quot;&gt;&lt;a href=&quot;#绿色五笔概述&quot; class=&quot;headerlink&quot; title=&quot;绿色五笔概述:&quot;&gt;&lt;/a&gt;绿色五笔概述:&lt;/h3&gt;&lt;p&gt;绿色五笔,名字瞎起的.采用.net开发(不知道是不是第一个,呵呵),目前仅一个beta版,好几个月前这样了,最近没有更新.&lt;br&gt;其中部分词库来自万能五笔.&lt;br&gt;无需安装,只需运行GreenWb.exe即可.第一次运行会自动加入自启动.可在设置中取消自启动.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="编程" scheme="http://blog.houfeng.net/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>新博客第一篇文章</title>
-    <link href="http://blog.houfeng.net/2012/09/14/2012-09-10-first-blog/"/>
-    <id>http://blog.houfeng.net/2012/09/14/2012-09-10-first-blog/</id>
-    <published>2012-09-14T05:04:19.000Z</published>
-    <updated>2016-08-27T03:31:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a>
-<p>###基于Github Pages搭建的轻型博客<br>最近一直在找一个简洁高效的博客程序，也想动手写一个符合自己的博客程序，实话说：不只是想了，已经基于node.js开始写了，但因为最近工作较忙，一直没有时间将其完全开发完成。</p>
-<p>Githab Pages一直以来也在用，比如我的几个开源项目的相关页面，今天开始用Githab Pages构建我的静态博客。特记！</p>
-<p>###在此之前的博文<br>在些之前的文章一直发表在博客园，之前文章将不会特意导入到在的博客中，部分导过来文章，因为日期早于此篇文章，将在出现在“新博客第一篇文章”之前的时间。阅读以前的文章请访问:<a href="http://houfeng.cnblogs.com" target="_blank" rel="external">http://houfeng.cnblogs.com</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;###基于Github Pages搭建的轻型博客&lt;br&gt;最近一直在找一个简洁高效的博客程序，也想动手写一个符合自己的博客程序，实话说：不只是想了，已经基于node.js开始写了，但因为最近工作较忙，一直没有时间将其完全开发完成。&lt;/p&gt;
-
-    
-    </summary>
-    
-      <category term="闲谈" scheme="http://blog.houfeng.net/categories/%E9%97%B2%E8%B0%88/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>图象处理常用特效算法</title>
-    <link href="http://blog.houfeng.net/2012/09/14/2009-07-23-image-handle/"/>
-    <id>http://blog.houfeng.net/2012/09/14/2009-07-23-image-handle/</id>
-    <published>2012-09-14T05:04:19.000Z</published>
-    <updated>2016-08-27T03:38:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>介绍几个图像处理常用算法</p>
-<a id="more"></a>
-<p>###图像的逆反处理算法<br>逆反处理的算法如下：<br>设r，g，b分别为源图像像素f（i，j）的红，绿，蓝分量值，rr，gg，bb分别为处理后像素g（i，j）的红，绿，蓝分量值。则<br>rr=255-r<br>gg=255-g<br>bb=255-b</p>
-<p>###图像的平滑处理<br>算法如下：<br>平滑处理是指将源图像的每一个像素的颜色值由其相邻n X n个像素的平均值来代替。<br>例如，对于3*3点阵而言，设原图像某像素的值为f（i，j），平滑处理后该像素的值为g（i，j），则：<br>g(i,j)=(f(i,j)+f(i-1,j)+f(i+1,j)+f(i-1,j-1)+f(i,j-1)+f(i+1,j-1)+<br>f(i-1,j+1)+f(i,j+1)+f(i+1,j+1))/9<br>注意：该算法不能平滑图像边界的像素。</p>
-<p>###图象的霓虹处理<br>算法：<br>对于3 X 3点阵，首先计算原图象像素f(i,j)的红，绿，蓝分量与相同行f（i+1，j）及同列f(i,j+1)相邻象素的梯度，即差的平方之和的平方根，然后将梯度值作为处理后的象素g(i,j)的红，绿，蓝分量值。<br>设 r1,g1,b1分别为原图象象素f(i,j)的红，绿，蓝分量值，r2,g2,b2分别为相同行相邻象素f(i+1,j)的红，绿，蓝分量值，r3,g3,b3分别为同列相邻象素f(i,j+1)的红，绿，蓝分量值，rr,gg,bb为处理后象素g(i,j)的红，绿，蓝分量值，则：<br>rr1=(r1-r2)^2  rr2=(r1-r3)^2<br>gg1=(g1-g2)^2  gg2=(g1-g3)^2<br>bb1=(b1-b2)^2  bb2(b1-b3)^2<br>rr=2 X (rr1+rr2)^0.5<br>gg=2 X (gg1+gg2)^0.5<br>bb=2 X (bb1+bb2)^0.5</p>
-<p>###图象的锐化处理<br>锐化处理的算法：<br>计算原图像像素f(i,j)的像素值与该像素与相邻像素f(i-1,j-1)像素值之差的绝对值得百分比之和，作为处理后图像像素g(i,j)的像素值。例如，设r1,g1,b1分别为f(i,j)的红、绿、蓝分量值，r2,g2,b2分别为f(i-1,j-1)的红、绿、蓝分量值，rr,gg,bb分别为g(i,j)的红、绿、蓝分量值，则：<br>rr=r1+0.25 X abs(r1-r2)<br>gg=g1+0.25 Ｘ abs(g1-g2)<br>bb=b1+0.25 Ｘabs(b1-b2)</p>
-<p>###图像的浮雕处理<br>算法：<br>位图图像的浮雕处理的算法是：<br>g(i,j)=f(i,j)-f(i-1,j)+常数<br>式中，g(i,j)为处理后图像的像素值，f(i,j)为原图像的像素值，f(i-1,j)为前一个相邻像素的值。常数一般取128，即<br>rr=r1-r2+128<br>gg=g1-g2+128<br>bb=b1-b2+128<br>式中，r1,g1,b1分别为原图像的像素f(i,j)的红、绿、蓝分量值；r2,g2,b2分别为前一个相邻像素f(i-1,j)的红、绿、蓝分量值，rr,gg,bb,分别为处理后图像的像素g(i,j)的红、绿、蓝分量值.<br>６.图像的镶嵌处理<br>镶嵌处理算法如下：<br>镶嵌处理后的图像每一小矩阵内的所有像素值都取此矩阵内原图像各像素值之和的平均值。例如，对于3*3的子域：<br>g(i,j)=(f(i,j)+f(i-1,j)+f(i+1,j)+f(i-1,j-1)+f(i+1,j-1)+f(i-1,j+1)+f(i,j+1)+f(i+1,j+1))/9<br>则取：<br>g(i-1,j)=g(i,j)<br>g(i+1,j)=g(i,j)<br>g（i,j-1）=g(i,j)<br>g(i,j+1)=g(i,j)<br>g(i,j+1)=g(i,j)<br>g(i-1,j-1)=g(i,j)<br>g(i-1,j+1)=g(i,j)<br>g(i+1,j-1)=g(i,j)<br>g(i+1,j+1)=g(i,j)</p>
-<p>###图像的灰度处理<br>彩色图像灰度处理的算法如下：<br>c=tuxing.GetPixel(i,j)<br>r=c.R<br>g=c.G<br>b=c.B<br>rr=g(r 64)X64<br>gg=(g 64)X64<br>bb=(b 64)X64</p>
-<p>###图像缩小处理<br>以坐标原点为中心，将图像个像素坐标的X分量和Y分量分别乘以Sx，Sy，则可使图像进行整体放大和缩小。这时，<br>X’=X x Sx<br>Y’=Y x Sy<br>当Sx=Sy时，作相似变换;<br>当Sx!=Sy时，产生变形。<br>９.图像的平移处理<br>图像的平移变换是将图形上的点（x,y)在x方向（水平方向）和y方向（垂直方向）<br>分别移动dx和dy,则变换后点(x’,y’)坐标值为：<br>x’=x+dx<br>y’=y+dy</p>
-<p>###图像的旋转变换<br>二维图像的旋转变换是以原点为中心，将点（x,y）旋转a角度而得到新的坐标（x’,y’）的变换称为旋转变换。其数学表达式为：<br>x’=x x cosa-y x sina<br>y’=x x sina+y x cosa<br>１１.二维图像的对称变换<br>二维图像对称变换有以下几种情况.<br>1.以x轴为对称得对称变换。<br>以x轴为对称得点(x,y)的对称点(x’,y’)坐标为：<br>x’=x<br>y’=-y<br>2.以y轴为对称得对称变换。<br>以y轴为对称的点（x,y）的对称点(x’,y’)坐标为：<br>x’=-x<br>y’=y<br>3.以原点为对称的对称变换。<br>以原点为对称得点（x,y）的对称点（x’,y’）坐标为：<br>x’=-x<br>y’=-y<br>对图像的每一个像素依据二维图形几何变换公式进行计算后，在进行图像显示，则可得到图像的几何变换。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;介绍几个图像处理常用算法&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="算法" scheme="http://blog.houfeng.net/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>eclipse+tomcat web工程引用其它工程</title>
-    <link href="http://blog.houfeng.net/2012/09/12/2012-09-11-eclipse-tomcat-webproject/"/>
-    <id>http://blog.houfeng.net/2012/09/12/2012-09-11-eclipse-tomcat-webproject/</id>
-    <published>2012-09-12T05:03:13.000Z</published>
-    <updated>2016-08-27T03:31:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>之前用eclipse做android开发的时候，一个工程项目引用的方式引用另一个工程，一直没有问题。今天为一个web工程引用另一个工程的时候，编译运行发生找不到“类”的错误。</p>
-</blockquote>
-<a id="more"></a>
-<p>###解决方法</p>
-<ol>
-<li>选中web工程</li>
-<li>按下alt键</li>
-<li>按下enter键</li>
-<li>在Deployment Assembly中添加要引用的项目即可。</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;之前用eclipse做android开发的时候，一个工程项目引用的方式引用另一个工程，一直没有问题。今天为一个web工程引用另一个工程的时候，编译运行发生找不到“类”的错误。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://blog.houfeng.net/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
   </entry>
