@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.houfeng.net/2016/09/27/node-process-lock/</loc>
+    
+    <lastmod>2016-09-26T23:53:59.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.houfeng.net/2016/07/29/confman/</loc>
     
     <lastmod>2016-08-27T04:58:19.000Z</lastmod>
@@ -191,14 +198,14 @@
   </url>
   
   <url>
-    <loc>http://blog.houfeng.net/tags/index.html</loc>
+    <loc>http://blog.houfeng.net/categories/index.html</loc>
     
     <lastmod>2016-08-27T03:53:40.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.houfeng.net/categories/index.html</loc>
+    <loc>http://blog.houfeng.net/tags/index.html</loc>
     
     <lastmod>2016-08-27T03:53:40.000Z</lastmod>
     
