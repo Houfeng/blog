@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.houfeng.net/"/>
-  <updated>2016-09-28T17:27:16.000Z</updated>
+  <updated>2016-09-28T17:29:13.000Z</updated>
   <id>http://blog.houfeng.net/</id>
   
   <author>
@@ -20,10 +20,11 @@
     <link href="http://blog.houfeng.net/2016/09/28/smache/"/>
     <id>http://blog.houfeng.net/2016/09/28/smache/</id>
     <published>2016-09-27T16:00:00.000Z</published>
-    <updated>2016-09-28T17:27:16.000Z</updated>
+    <updated>2016-09-28T17:29:13.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>Smache 是一个方便的内存缓存模块，可以通过一些简单缓存策略避免无限占用更多的内存，同时确保最常用最应该被缓存的对象被缓存。</p>
 <a id="more"></a>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install smache --save</div></pre></td></tr></table></figure>
 <h1 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> Cache = <span class="built_in">require</span>(<span class="string">'smache'</span>);</div><div class="line"></div><div class="line"><span class="comment">//创建实例</span></div><div class="line"><span class="keyword">var</span> cache = <span class="keyword">new</span> Cache(&#123;</div><div class="line">  <span class="comment">//最多缓存的对象数量，省略时表示不做数量限制</span></div><div class="line">  <span class="comment">//在达到最大数量时，会移除「最久没用到的」的缓存项</span></div><div class="line">  max: <span class="number">1000</span>, </div><div class="line">  <span class="comment">//最长缓存生命周期，单位毫秒，省略时表示永久</span></div><div class="line">  <span class="comment">//到期时自动移除</span></div><div class="line">  ttl: <span class="number">1000</span> * <span class="number">60</span> </div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//添加</span></div><div class="line">cache.set(key,value);</div><div class="line">cache.set(key,value,ttl); <span class="comment">//可以单设定某项的 ttl</span></div><div class="line"></div><div class="line"><span class="comment">//获取</span></div><div class="line"><span class="keyword">var</span> value = cache.get(key);</div><div class="line"></div><div class="line"><span class="comment">//移除</span></div><div class="line">cache.remove(key);</div><div class="line"></div><div class="line"><span class="comment">//清空</span></div><div class="line">cache.clear();</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
