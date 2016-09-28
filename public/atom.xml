@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.houfeng.net/"/>
-  <updated>2016-09-27T01:13:07.000Z</updated>
+  <updated>2016-09-28T14:31:29.000Z</updated>
   <id>http://blog.houfeng.net/</id>
   
   <author>
@@ -16,21 +16,45 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Smache 简单的内存缓存模块</title>
+    <link href="http://blog.houfeng.net/2016/09/28/smache/"/>
+    <id>http://blog.houfeng.net/2016/09/28/smache/</id>
+    <published>2016-09-27T16:00:00.000Z</published>
+    <updated>2016-09-28T14:31:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>Smache 是一个方便的内存缓存模块，可以通过一些简单缓存策略避免无限占用更多的内存，同时确保最常用最应该被缓存的对象被缓存。</p>
+<a id="more"></a>
+<h1 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> Cache = <span class="built_in">require</span>(<span class="string">'smache'</span>);</div><div class="line"></div><div class="line"><span class="comment">//创建实例</span></div><div class="line"><span class="keyword">var</span> cache = <span class="keyword">new</span> Cache(&#123;</div><div class="line">  max: <span class="number">1000</span>, <span class="comment">//最多缓存的对象数量，省略时表示不做数量限制</span></div><div class="line">  ttl: <span class="number">1000</span> * <span class="number">60</span> <span class="comment">//最长缓存生命周期，省略时表示永久</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//添加</span></div><div class="line">cache.set(key,value);</div><div class="line">cache.set(key,value,ttl); <span class="comment">//可以单设定某项的 ttl</span></div><div class="line"></div><div class="line"><span class="comment">//获取</span></div><div class="line"><span class="keyword">var</span> value = cache.get(key);</div><div class="line"></div><div class="line"><span class="comment">//移除</span></div><div class="line">cache.remove(key);</div><div class="line"></div><div class="line"><span class="comment">//清空</span></div><div class="line">cache.clear();</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;p&gt;Smache 是一个方便的内存缓存模块，可以通过一些简单缓存策略避免无限占用更多的内存，同时确保最常用最应该被缓存的对象被缓存。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="编程" scheme="http://blog.houfeng.net/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Node 多进程并发控制小模块 - lockman</title>
     <link href="http://blog.houfeng.net/2016/09/27/node-process-lock/"/>
     <id>http://blog.houfeng.net/2016/09/27/node-process-lock/</id>
     <published>2016-09-26T16:00:00.000Z</published>
-    <updated>2016-09-27T01:13:07.000Z</updated>
+    <updated>2016-09-28T14:27:22.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>lockman 是一个用于多进程的并发控制锁， 类似一些语言中（比如 C#）的 lock 关键字可以用来确保代码块完成运行，而不会被其他进程「影响」。<br>它可以把一段代码定义为互斥段（critical section），互斥段在一个时刻内只允许一个进程进入执行，<br>而其他进程必须等待。</p>
 <p>不同之处，C# 的 lock 关键字作用在「线程间」，lockman 作用在 Node 的进程间。</p>
+<a id="more"></a>
 <p><a href="http://badge.fury.io/js/lockman" target="_blank" rel="external"><img src="https://badge.fury.io/js/lockman.svg" alt="npm version"></a> <a href="https://travis-ci.org/Houfeng/lockman" target="_blank" rel="external"><img src="https://travis-ci.org/Houfeng/lockman.svg?branch=master" alt="Build Status"></a></p>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install lockman --save</div></pre></td></tr></table></figure>
 <h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> Locker = <span class="built_in">require</span>(<span class="string">'lockman'</span>);</div><div class="line"></div><div class="line"><span class="keyword">let</span> locker = <span class="keyword">new</span> Locker(<span class="string">'demo'</span>);</div><div class="line"></div><div class="line">locker.acquire(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="comment">//此处代码在同一时刻只允许一个进程进入执行</span></div><div class="line">  locker.release();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h3&gt;&lt;p&gt;lockman 是一个用于多进程的并发控制锁， 类似一些语言中（比如 C#）的 lock 关键字可以用来确保代码块完成运行，而不会被其他进程
+      &lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h3&gt;&lt;p&gt;lockman 是一个用于多进程的并发控制锁， 类似一些语言中（比如 C#）的 lock 关键字可以用来确保代码块完成运行，而不会被其他进程「影响」。&lt;br&gt;它可以把一段代码定义为互斥段（critical section），互斥段在一个时刻内只允许一个进程进入执行，&lt;br&gt;而其他进程必须等待。&lt;/p&gt;
+&lt;p&gt;不同之处，C# 的 lock 关键字作用在「线程间」，lockman 作用在 Node 的进程间。&lt;/p&gt;
     
     </summary>
     
@@ -1191,36 +1215,6 @@ var rs=fn({name:&apos;jtp&apos;});
     </summary>
     
       <category term="编程" scheme="http://blog.houfeng.net/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>linux系统防火墙简单设置</title>
-    <link href="http://blog.houfeng.net/2012/09/16/linux-firewall/"/>
-    <id>http://blog.houfeng.net/2012/09/16/linux-firewall/</id>
-    <published>2012-09-15T16:00:00.000Z</published>
-    <updated>2016-08-27T04:30:53.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Linux还是比较常用的，于是我研究了一下Linux关闭防火墙命令，在这里拿出来和大家分享一下，希望你能学会Linux关闭防火墙命令 。</p>
-<a id="more"></a>
-<h3 id="永久性生效，重启后不会复原"><a href="#永久性生效，重启后不会复原" class="headerlink" title="永久性生效，重启后不会复原"></a>永久性生效，重启后不会复原</h3><p>开启： chkconfig iptables on</p>
-<p>关闭： chkconfig iptables off</p>
-<h3 id="即时生效，重启后复原"><a href="#即时生效，重启后复原" class="headerlink" title="即时生效，重启后复原"></a>即时生效，重启后复原</h3><p>开启： service iptables start</p>
-<p>关闭： service iptables stop</p>
-<hr>
-<p>需要说明的是对于Linux下的其它服务都可以用以上命令执行开启和关闭操作。</p>
-<p>在开启了防火墙时，做如下设置，开启相关端口，</p>
-<p>修改/etc/sysconfig/iptables 文件，添加以下内容：<br>-A RH-Firewall-1-INPUT -m state –state NEW -m tcp -p tcp –dport 80 -j ACCEPT<br>-A RH-Firewall-1-INPUT -m state –state NEW -m tcp -p tcp –dport 22 -j ACCEPT</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Linux还是比较常用的，于是我研究了一下Linux关闭防火墙命令，在这里拿出来和大家分享一下，希望你能学会Linux关闭防火墙命令 。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://blog.houfeng.net/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
   </entry>
