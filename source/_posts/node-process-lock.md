@@ -14,6 +14,8 @@ lockman 是一个用于多进程的并发控制锁， 类似一些语言中（�
 
 不同之处，C# 的 lock 关键字作用在「线程间」，lockman 作用在 Node 的进程间。
 
+GitHub: [https://github.com/Houfeng/lockman](https://github.com/Houfeng/lockman)
+
 <!--more-->
 
 [![npm version](https://badge.fury.io/js/lockman.svg)](http://badge.fury.io/js/lockman) [![Build Status](https://travis-ci.org/Houfeng/lockman.svg?branch=master)](https://travis-ci.org/Houfeng/lockman)

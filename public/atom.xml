@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.houfeng.net/"/>
-  <updated>2016-09-28T14:31:29.000Z</updated>
+  <updated>2016-09-28T17:31:25.000Z</updated>
   <id>http://blog.houfeng.net/</id>
   
   <author>
@@ -16,19 +16,24 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Smache 简单的内存缓存模块</title>
+    <title>简单的内存缓存模块 - Smache</title>
     <link href="http://blog.houfeng.net/2016/09/28/smache/"/>
     <id>http://blog.houfeng.net/2016/09/28/smache/</id>
     <published>2016-09-27T16:00:00.000Z</published>
-    <updated>2016-09-28T14:31:29.000Z</updated>
+    <updated>2016-09-28T17:31:25.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>Smache 是一个方便的内存缓存模块，可以通过一些简单缓存策略避免无限占用更多的内存，同时确保最常用最应该被缓存的对象被缓存。</p>
+    <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>[sm]art + c[ache] = smache   </p>
+<p>Smache 是一个方便的内存缓存模块，可以通过一些简单缓存策略避免无限占用更多的内存，同时确保最常用最应该被缓存的对象被缓存。</p>
+<p>GitHub: <a href="https://github.com/Houfeng/smache" target="_blank" rel="external">https://github.com/Houfeng/smache</a></p>
 <a id="more"></a>
-<h1 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> Cache = <span class="built_in">require</span>(<span class="string">'smache'</span>);</div><div class="line"></div><div class="line"><span class="comment">//创建实例</span></div><div class="line"><span class="keyword">var</span> cache = <span class="keyword">new</span> Cache(&#123;</div><div class="line">  max: <span class="number">1000</span>, <span class="comment">//最多缓存的对象数量，省略时表示不做数量限制</span></div><div class="line">  ttl: <span class="number">1000</span> * <span class="number">60</span> <span class="comment">//最长缓存生命周期，省略时表示永久</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//添加</span></div><div class="line">cache.set(key,value);</div><div class="line">cache.set(key,value,ttl); <span class="comment">//可以单设定某项的 ttl</span></div><div class="line"></div><div class="line"><span class="comment">//获取</span></div><div class="line"><span class="keyword">var</span> value = cache.get(key);</div><div class="line"></div><div class="line"><span class="comment">//移除</span></div><div class="line">cache.remove(key);</div><div class="line"></div><div class="line"><span class="comment">//清空</span></div><div class="line">cache.clear();</div></pre></td></tr></table></figure>]]></content>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install smache --save</div></pre></td></tr></table></figure>
+<h1 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> Cache = <span class="built_in">require</span>(<span class="string">'smache'</span>);</div><div class="line"></div><div class="line"><span class="comment">//创建实例</span></div><div class="line"><span class="keyword">var</span> cache = <span class="keyword">new</span> Cache(&#123;</div><div class="line">  <span class="comment">//最多缓存的对象数量，省略时表示不做数量限制</span></div><div class="line">  <span class="comment">//在达到最大数量时，会移除「最久没用到的」的缓存项</span></div><div class="line">  max: <span class="number">1000</span>, </div><div class="line">  <span class="comment">//最长缓存生命周期，单位毫秒，省略时表示永久</span></div><div class="line">  <span class="comment">//到期时自动移除</span></div><div class="line">  ttl: <span class="number">1000</span> * <span class="number">60</span> </div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//添加</span></div><div class="line">cache.set(key,value);</div><div class="line">cache.set(key,value,ttl); <span class="comment">//可以单设定某项的 ttl</span></div><div class="line"></div><div class="line"><span class="comment">//获取</span></div><div class="line"><span class="keyword">var</span> value = cache.get(key);</div><div class="line"></div><div class="line"><span class="comment">//移除</span></div><div class="line">cache.remove(key);</div><div class="line"></div><div class="line"><span class="comment">//清空</span></div><div class="line">cache.clear();</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;p&gt;Smache 是一个方便的内存缓存模块，可以通过一些简单缓存策略避免无限占用更多的内存，同时确保最常用最应该被缓存的对象被缓存。&lt;/p&gt;
+      &lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;p&gt;[sm]art + c[ache] = smache   &lt;/p&gt;
+&lt;p&gt;Smache 是一个方便的内存缓存模块，可以通过一些简单缓存策略避免无限占用更多的内存，同时确保最常用最应该被缓存的对象被缓存。&lt;/p&gt;
+&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/Houfeng/smache&quot;&gt;https://github.com/Houfeng/smache&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
@@ -42,10 +47,11 @@
     <link href="http://blog.houfeng.net/2016/09/27/node-process-lock/"/>
     <id>http://blog.houfeng.net/2016/09/27/node-process-lock/</id>
     <published>2016-09-26T16:00:00.000Z</published>
-    <updated>2016-09-28T14:27:22.000Z</updated>
+    <updated>2016-09-28T17:35:51.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>lockman 是一个用于多进程的并发控制锁， 类似一些语言中（比如 C#）的 lock 关键字可以用来确保代码块完成运行，而不会被其他进程「影响」。<br>它可以把一段代码定义为互斥段（critical section），互斥段在一个时刻内只允许一个进程进入执行，<br>而其他进程必须等待。</p>
 <p>不同之处，C# 的 lock 关键字作用在「线程间」，lockman 作用在 Node 的进程间。</p>
+<p>GitHub: <a href="https://github.com/Houfeng/lockman" target="_blank" rel="external">https://github.com/Houfeng/lockman</a></p>
 <a id="more"></a>
 <p><a href="http://badge.fury.io/js/lockman" target="_blank" rel="external"><img src="https://badge.fury.io/js/lockman.svg" alt="npm version"></a> <a href="https://travis-ci.org/Houfeng/lockman" target="_blank" rel="external"><img src="https://travis-ci.org/Houfeng/lockman.svg?branch=master" alt="Build Status"></a></p>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install lockman --save</div></pre></td></tr></table></figure>
@@ -55,6 +61,7 @@
     
       &lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h3&gt;&lt;p&gt;lockman 是一个用于多进程的并发控制锁， 类似一些语言中（比如 C#）的 lock 关键字可以用来确保代码块完成运行，而不会被其他进程「影响」。&lt;br&gt;它可以把一段代码定义为互斥段（critical section），互斥段在一个时刻内只允许一个进程进入执行，&lt;br&gt;而其他进程必须等待。&lt;/p&gt;
 &lt;p&gt;不同之处，C# 的 lock 关键字作用在「线程间」，lockman 作用在 Node 的进程间。&lt;/p&gt;
+&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/Houfeng/lockman&quot;&gt;https://github.com/Houfeng/lockman&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
