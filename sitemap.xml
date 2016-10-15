@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.houfeng.net/2016/10/15/oneport/</loc>
+    
+    <lastmod>2016-10-15T09:23:38.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.houfeng.net/2016/09/27/node-process-lock/</loc>
     
     <lastmod>2016-09-28T17:35:51.000Z</lastmod>
@@ -198,13 +205,6 @@
   </url>
   
   <url>
-    <loc>http://blog.houfeng.net/README.html</loc>
-    
-    <lastmod>2016-08-27T03:53:40.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.houfeng.net/about/index.html</loc>
     
     <lastmod>2016-08-27T03:53:40.000Z</lastmod>
@@ -213,6 +213,13 @@
   
   <url>
     <loc>http://blog.houfeng.net/categories/index.html</loc>
+    
+    <lastmod>2016-08-27T03:53:40.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.houfeng.net/README.html</loc>
     
     <lastmod>2016-08-27T03:53:40.000Z</lastmod>
     
