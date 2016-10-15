@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Node 多进程并发控制小模块 - lockman
+title: Node 多进程并发控制小模块 - Lockman
 category: 随笔
 published: true
 date: 2016-09-27

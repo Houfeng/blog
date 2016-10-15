@@ -1,6 +1,6 @@
 ---
 layout: post
-title: .net编写的外挂式绿色五笔
+title: .Net 编写的五笔型输入法
 category: 编程
 published: true
 date: 2009-10-29

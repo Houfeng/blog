@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.houfeng.net/"/>
-  <updated>2016-09-28T17:31:25.000Z</updated>
+  <updated>2016-10-15T09:33:04.000Z</updated>
   <id>http://blog.houfeng.net/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Oneport 一个用于获取空闲端口的小模块</title>
+    <link href="http://blog.houfeng.net/2016/10/15/oneport/"/>
+    <id>http://blog.houfeng.net/2016/10/15/oneport/</id>
+    <published>2016-10-14T16:00:00.000Z</published>
+    <updated>2016-10-15T09:33:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>一个用于获取空闲端口的小模块</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install oneport --save</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//获取一个空闲的端口</span></div><div class="line">oneport.acquire(<span class="function"><span class="keyword">function</span> (<span class="params">err, port</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (err) <span class="keyword">return</span> <span class="built_in">console</span>.error(err);</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'port:'</span>, port);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">let</span> guid = <span class="string">'3aac50f1-bdb2-44c0-3eb0-228aa48bbf3a'</span>;</div><div class="line"></div><div class="line"><span class="comment">//获取一个端口，并指定一个「名称」</span></div><div class="line">oneport.acquire(guid, <span class="function"><span class="keyword">function</span> (<span class="params">err, port</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (err) <span class="keyword">return</span> <span class="built_in">console</span>.error(err);</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'port:'</span>, port);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//通过名称查询最后一次成功获取的端口</span></div><div class="line">oneport.last(guid, <span class="function"><span class="keyword">function</span> (<span class="params">err, port</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (err) <span class="keyword">return</span> <span class="built_in">console</span>.error(err);</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'port:'</span>, port);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;一个用于获取空闲端口的小模块&lt;/p&gt;
+&lt;h1 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h1&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;npm install oneport --save&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://blog.houfeng.net/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>简单的内存缓存模块 - Smache</title>
@@ -43,11 +68,11 @@
   </entry>
   
   <entry>
-    <title>Node 多进程并发控制小模块 - lockman</title>
-    <link href="http://blog.houfeng.net/2016/09/27/node-process-lock/"/>
-    <id>http://blog.houfeng.net/2016/09/27/node-process-lock/</id>
+    <title>Node 多进程并发控制小模块 - Lockman</title>
+    <link href="http://blog.houfeng.net/2016/09/27/lockman/"/>
+    <id>http://blog.houfeng.net/2016/09/27/lockman/</id>
     <published>2016-09-26T16:00:00.000Z</published>
-    <updated>2016-09-28T17:35:51.000Z</updated>
+    <updated>2016-10-15T09:29:57.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>lockman 是一个用于多进程的并发控制锁， 类似一些语言中（比如 C#）的 lock 关键字可以用来确保代码块完成运行，而不会被其他进程「影响」。<br>它可以把一段代码定义为互斥段（critical section），互斥段在一个时刻内只允许一个进程进入执行，<br>而其他进程必须等待。</p>
 <p>不同之处，C# 的 lock 关键字作用在「线程间」，lockman 作用在 Node 的进程间。</p>
@@ -1181,43 +1206,6 @@ var rs=fn({name:&apos;jtp&apos;});
       &lt;h3 id=&quot;欢迎来到jtp的世界&quot;&gt;&lt;a href=&quot;#欢迎来到jtp的世界&quot; class=&quot;headerlink&quot; title=&quot;欢迎来到jtp的世界&quot;&gt;&lt;/a&gt;欢迎来到jtp的世界&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;欢迎使用jtp! 最轻量，简洁，高效的javascript模板引擎！&lt;br&gt;如同“jtp”的名字，“轻量、简洁、高效”是jtp的哲学！&lt;/p&gt;
 &lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="编程" scheme="http://blog.houfeng.net/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>移动web开发局部区域滚动问题</title>
-    <link href="http://blog.houfeng.net/2012/09/29/mobile-dev-overflow-scroll/"/>
-    <id>http://blog.houfeng.net/2012/09/29/mobile-dev-overflow-scroll/</id>
-    <published>2012-09-28T16:00:00.000Z</published>
-    <updated>2016-08-27T04:30:45.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>开发一个针对pc的web应用时，在需要不随内容滚动的页头或面页脚时，通常的做法是如下样式：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.ui-head</span>&#123; <span class="attribute">position</span>:fixed; &#125;</div></pre></td></tr></table></figure></p>
-<p>但是如上的样式放到手机上，我测试过android2.x、android4.x、ios4.x皆不支持position:fixed;</p>
-<a id="more"></a>
-<p>但经过测试，发现ios5.x已经支持position:fiexd,但通过position:fiexd一般只能实现页整的整体滚动时页头或页脚的固定，在实现页面某一小区域的滚动效果还是不太方便。</p>
-<p>另外一种方式，是指定一个元素（通常是DIV）的高度或宽度，然后使定义如下样式：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.ui-content</span> &#123;<span class="attribute">height</span>:<span class="number">300px</span>;<span class="attribute">overflow</span>:auto;&#125;</div></pre></td></tr></table></figure></p>
-<p>但经过测试，目前的主流的设备均不支持 overflow 样式。</p>
-<h3 id="通过webkit特有的样式实现"><a href="#通过webkit特有的样式实现" class="headerlink" title="通过webkit特有的样式实现"></a>通过webkit特有的样式实现</h3><p>经测试ios5.1已支持如下样式定义：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">-webkit-overflow-scrolling</span>: <span class="selector-tag">touch</span>;</div></pre></td></tr></table></figure></p>
-<p>通过如上定义，ios5.x可以样式（不用js）实现局部区域滚动；但目前我试过android2.x及android4.x发现依然不支持些样式。</p>
-<h3 id="通过javascript实现"><a href="#通过javascript实现" class="headerlink" title="通过javascript实现"></a>通过javascript实现</h3><p>为了实现兼容主流平台及浏览器，常见的做法（很多web开发框架就是依赖javascript实现），如轻量易用的优秀开源组件 iScroll 4 </p>
-<p>而通过js实现局部滚动，一般如下几种方式：</p>
-<ol>
-<li>定义样式 overflow:hidden， 然后处理touchstart、touchmove、touchend事件，控制scrollTop完成滚动功能，此种方式较为简洁，并易于实现。</li>
-<li>定义样式 overflow:hidden，并且要求容器内的元素必须有一个内层嵌套外层单一元素比如：<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui-scroll"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ui-scroll-inner"</span>&gt;</span> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>然后去控制内层元素的margin-top或margin-left。此种方式稍现麻烦，但可以使用css3的transform2d 控制内层元素translate来实现（此种方法在某些设备上能获得较好的性能）。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h3&gt;&lt;p&gt;开发一个针对pc的web应用时，在需要不随内容滚动的页头或面页脚时，通常的做法是如下样式：&lt;br&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.ui-head&lt;/span&gt;&amp;#123; &lt;span class=&quot;attribute&quot;&gt;position&lt;/span&gt;:fixed; &amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;但是如上的样式放到手机上，我测试过android2.x、android4.x、ios4.x皆不支持position:fixed;&lt;/p&gt;
     
     </summary>
     

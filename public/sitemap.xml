@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.houfeng.net/2016/09/27/node-process-lock/</loc>
+    <loc>http://blog.houfeng.net/2016/10/15/oneport/</loc>
     
-    <lastmod>2016-09-28T17:35:51.000Z</lastmod>
+    <lastmod>2016-10-15T09:33:04.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.houfeng.net/2016/09/27/lockman/</loc>
+    
+    <lastmod>2016-10-15T09:29:57.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.houfeng.net/2009/10/29/input-green-wubi/</loc>
+    
+    <lastmod>2016-10-15T09:29:04.000Z</lastmod>
     
   </url>
   
@@ -152,13 +166,6 @@
     <loc>http://blog.houfeng.net/2013/01/24/adobe-web-html5/</loc>
     
     <lastmod>2016-08-27T04:29:18.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.houfeng.net/2009/10/29/input-green-wubi/</loc>
-    
-    <lastmod>2016-08-27T04:29:11.000Z</lastmod>
     
   </url>
   
