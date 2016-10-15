@@ -5,7 +5,7 @@
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-</script></head><body><div style="display:none;"><img src="/favicons/300x300.png"></div><div id="main"><header><a href="/." class="logo">Houfeng's Blog</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">首页</a></li><li class="nav-link"><a href="/archives/" target="_self">归档</a></li><li class="nav-link"><a href="/about/" target="_self">关于</a></li></ul></header><section id="container"><article class="post"><h1 class="post-title">禁用CentOS Linux系统的图形界面</h1><span class="post-time">Sep 15, 2012</span><div class="post-content"><p>如何禁用Centos GUI图形界面？</p>
+</script></head><body><div style="display:none;"><img src="/favicons/300x300.png"></div><div id="main"><header><a href="/." class="logo">Houfeng's Blog</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">Home</a></li><li class="nav-link"><a href="/archives/" target="_self">Archives</a></li><li class="nav-link"><a href="/about/" target="_self">About</a></li></ul></header><section id="container"><article class="post"><h1 class="post-title">禁用CentOS Linux系统的图形界面</h1><span class="post-time">Sep 15, 2012</span><div class="post-content"><p>如何禁用Centos GUI图形界面？</p>
 <a id="more"></a>
 <p>vi /etc/inittab</p>
 <p>把默认的</p>
@@ -13,7 +13,7 @@
 <p>改成</p>
 <p>id:3:initdefault:</p>
 <p>这样登录的默认界面就是字符界面了， 需要gui时， startx 即可。</p>
-</div></article><div class="tags"></div><div class="paginator"><a href="/2012/09/16/linux-firewall/" class="prev"><i class="iconfont icon-left"></i><span> 上一页</span></a><a href="/2012/09/11/eclipse-tomcat-webproject/" class="next"><span>下一页</span><i class="iconfont icon-right"></i></a></div><section id="comments"><div data-thread-key="http://blog.houfeng.net/2012/09/15/linux-centos-disabled-gui-start/index.html" data-title="禁用CentOS Linux系统的图形界面" data-url="http://blog.houfeng.net/2012/09/15/linux-centos-disabled-gui-start/index.html" class="ds-thread"></div><script type="text/javascript">var duoshuoQuery = {short_name: "houfeng" };
+</div></article><div class="tags"></div><div class="paginator"><a href="/2012/09/16/linux-firewall/" class="prev"><i class="iconfont icon-left"></i><span> Prev</span></a><a href="/2012/09/11/eclipse-tomcat-webproject/" class="next"><span>Next</span><i class="iconfont icon-right"></i></a></div><section id="comments"><div data-thread-key="http://blog.houfeng.net/2012/09/15/linux-centos-disabled-gui-start/index.html" data-title="禁用CentOS Linux系统的图形界面" data-url="http://blog.houfeng.net/2012/09/15/linux-centos-disabled-gui-start/index.html" class="ds-thread"></div><script type="text/javascript">var duoshuoQuery = {short_name: "houfeng" };
 (function() {
     var ds = document.createElement('script');
     ds.type = 'text/javascript';ds.async = true;
