@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.houfeng.net/2016/10/15/oneport/</loc>
+    
+    <lastmod>2016-10-15T09:33:04.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.houfeng.net/2016/09/27/lockman/</loc>
     
     <lastmod>2016-10-15T09:29:57.000Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://blog.houfeng.net/2009/10/29/input-green-wubi/</loc>
     
     <lastmod>2016-10-15T09:29:04.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.houfeng.net/2016/10/15/oneport/</loc>
-    
-    <lastmod>2016-10-15T09:27:54.000Z</lastmod>
     
   </url>
   
@@ -205,6 +205,13 @@
   </url>
   
   <url>
+    <loc>http://blog.houfeng.net/README.html</loc>
+    
+    <lastmod>2016-08-27T03:53:40.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.houfeng.net/about/index.html</loc>
     
     <lastmod>2016-08-27T03:53:40.000Z</lastmod>
@@ -213,13 +220,6 @@
   
   <url>
     <loc>http://blog.houfeng.net/categories/index.html</loc>
-    
-    <lastmod>2016-08-27T03:53:40.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.houfeng.net/README.html</loc>
     
     <lastmod>2016-08-27T03:53:40.000Z</lastmod>
     
