@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.houfeng.net/"/>
-  <updated>2016-10-15T09:33:04.000Z</updated>
+  <updated>2016-12-06T06:16:40.000Z</updated>
   <id>http://blog.houfeng.net/</id>
   
   <author>
@@ -14,6 +14,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一个 MVC 框架以 MVVM 之「魂」复活了！</title>
+    <link href="http://blog.houfeng.net/2016/12/06/mokit/"/>
+    <id>http://blog.houfeng.net/2016/12/06/mokit/</id>
+    <published>2016-12-05T16:00:00.000Z</published>
+    <updated>2016-12-06T06:16:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Mokit 最初编写于 2012 年，是一个面向移动应用的前端 mvc 框架，v3 版本进行了大量的重构或重写，并尽可能的保持了和之前版本类似的 API，<br>v3 是一个「极轻量」的 MVVM 框架，相较目前主流的类似的框架(react/vue/angular)，mokit v3 更为「轻量」，希望为开发人员提供多一种的选择。</p>
+<a id="more"></a>
+<h2 id="相较-v2-主要变化"><a href="#相较-v2-主要变化" class="headerlink" title="相较 v2 主要变化"></a>相较 v2 主要变化</h2><ul>
+<li>MVC -&gt; MVVM</li>
+<li>重写模板引擎（由字符模板改为 DOM 模板），新增支持双向绑定</li>
+<li>原来的 View 类改为 Component，同时取消了 Controller 类</li>
+<li>options 选项改为 properties，并支持计算属性</li>
+<li>onRender 生命周期函数改为 onReady</li>
+<li>新增支持 data 选项</li>
+<li>新增支持 watches 选项</li>
+<li>分拆 template 选项功能，不再自动检查是否为 Element，同时新增 element 选项</li>
+<li>指令默认前缀由 <strong>data-</strong> 改为 <strong>m:</strong>，同时自定义指令</li>
+</ul>
+<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ul>
+<li>面向移动设备，内置支持常用「手势事件」并可以轻松添加自定义事件。  </li>
+<li>极其轻量「核心 + 手势 API + Router」仅 <strong>13k</strong> (uglify+gzip)  </li>
+<li>提供类 WebCompoents 的支持，并支持「组件继承」  </li>
+</ul>
+<h1 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h1><p>HTML:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">m:model</span>=<span class="string">"name"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">m:on:tap</span>=<span class="string">"say(name)"</span>&gt;</span>click me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>JavaScript:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//启动应用</span></div><div class="line">mokit(&#123;</div><div class="line">  element: <span class="built_in">document</span>.getElementById(<span class="string">'app'</span>),</div><div class="line">  data:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      name: <span class="string">'世界'</span></div><div class="line">    &#125;;</div><div class="line">  &#125;,</div><div class="line">  say: <span class="function"><span class="keyword">function</span> (<span class="params">name</span>) </span>&#123;</div><div class="line">    alert(<span class="string">'hello '</span>+ name);</div><div class="line">  &#125;</div><div class="line">&#125;).start();</div></pre></td></tr></table></figure>
+<h1 id="定义组件"><a href="#定义组件" class="headerlink" title="定义组件"></a>定义组件</h1><p>编写组件:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//定义一个 hello 组件</span></div><div class="line"><span class="keyword">var</span> Hello = <span class="keyword">new</span> mokit.Component(&#123;</div><div class="line">  template: <span class="string">'&lt;button m:on:tap="say(name)" m:content&gt;&lt;/button&gt;'</span>,</div><div class="line">  properties: &#123; name: <span class="literal">null</span>&#125;,</div><div class="line">  say: <span class="function"><span class="keyword">function</span> (<span class="params">name</span>) </span>&#123;</div><div class="line">    alert(<span class="string">'hello '</span>+ name);</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>HTML:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">m:hello</span> <span class="attr">m:prop:name</span>=<span class="string">"name"</span>&gt;</span>click me<span class="tag">&lt;/<span class="name">m:hello</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>JavaScript:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//启动应用</span></div><div class="line">mokit(&#123;</div><div class="line">  element: <span class="built_in">document</span>.getElementById(<span class="string">'app'</span>),</div><div class="line">  components:&#123; Hello: Hello &#125;</div><div class="line">  data:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      name: <span class="string">'世界'</span></div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line">&#125;).start();</div></pre></td></tr></table></figure>
+<h1 id="在线示例"><a href="#在线示例" class="headerlink" title="在线示例"></a>在线示例</h1><ul>
+<li><a href="http://houfeng.net/mokit/examples/todo" target="_blank" rel="external">Todo</a></li>
+<li><a href="http://houfeng.net/mokit/examples/route" target="_blank" rel="external">Route</a></li>
+<li><a href="http://houfeng.net/mokit/examples/transition" target="_blank" rel="external">Transition</a></li>
+</ul>
+<h1 id="规划"><a href="#规划" class="headerlink" title="规划"></a>规划</h1><ul>
+<li>支持服务端渲染</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Mokit 最初编写于 2012 年，是一个面向移动应用的前端 mvc 框架，v3 版本进行了大量的重构或重写，并尽可能的保持了和之前版本类似的 API，&lt;br&gt;v3 是一个「极轻量」的 MVVM 框架，相较目前主流的类似的框架(react/vue/angular)，mokit v3 更为「轻量」，希望为开发人员提供多一种的选择。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://blog.houfeng.net/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Oneport 一个用于获取空闲端口的小模块</title>
@@ -1164,52 +1220,6 @@
     </summary>
     
       <category term="随笔" scheme="http://blog.houfeng.net/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>最快,最简洁的javascript模板引擎jtp</title>
-    <link href="http://blog.houfeng.net/2012/10/13/fast-javascript-template-engine-jtp/"/>
-    <id>http://blog.houfeng.net/2012/10/13/fast-javascript-template-engine-jtp/</id>
-    <published>2012-10-12T16:00:00.000Z</published>
-    <updated>2016-08-27T04:30:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="欢迎来到jtp的世界"><a href="#欢迎来到jtp的世界" class="headerlink" title="欢迎来到jtp的世界"></a>欢迎来到jtp的世界</h3><blockquote>
-<p>欢迎使用jtp! 最轻量，简洁，高效的javascript模板引擎！<br>如同“jtp”的名字，“轻量、简洁、高效”是jtp的哲学！</p>
-</blockquote>
-<a id="more"></a>
-<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">+ 轻量，jtp是目前能见到最轻量的javascript模板引擎，只有一个不足1.5k的文件。</div><div class="line">+ 简洁，jtp的语法非常简单，对于一个熟悉html、js的开发人员来说学习难度为0。</div><div class="line">+ 高效，jtp支持模板预编译，快于任何一个你所见过的javascript模板引擎。</div><div class="line">+ 另外，jtp同时支持在浏览器环境使用及服务端javascript环境(Node.js)使用。</div></pre></td></tr></table></figure>
-<h3 id="许可协议"><a href="#许可协议" class="headerlink" title="许可协议"></a>许可协议</h3><blockquote>
-<p><a href="http://www.gnu.org/licenses/lgpl.html" target="_blank" rel="external">使用jtp请您遵守LGPL协议，否则您将会被起诉。（点击可查看LGPL协议）</a></p>
-</blockquote>
-<h3 id="在线demo"><a href="#在线demo" class="headerlink" title="在线demo"></a>在线demo</h3><blockquote>
-<p><a href="http://code.houfeng.net/demos/jtp/" target="_blank" rel="external">体验在线demo</a></p>
-</blockquote>
-<h3 id="支持"><a href="#支持" class="headerlink" title="支持"></a>支持</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">+ 您可以发邮件到 admin@xhou.net</div><div class="line">+ 或者访问 http://www.houfeng.net</div><div class="line">+ 关注微博 http://weibo.com/houfeng</div></pre></td></tr></table></figure>
-<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><h5 id="如何使用？"><a href="#如何使用？" class="headerlink" title="如何使用？"></a>如何使用？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">+ 下载jtp</div><div class="line">+ 将jtp.js或jtp-min.js放到项目中合适的位置。</div><div class="line">+ 在相关页面用&lt;script src=&apos;jtp的url&apos;&gt;&lt;/script&gt;引入jtp。</div></pre></td></tr></table></figure>
-<h4 id="解析-jtp-parse"><a href="#解析-jtp-parse" class="headerlink" title="解析(jtp.parse)"></a>解析(jtp.parse)</h4><p>代码:</p>
-<pre><code>var html=&apos;&lt;div&gt;My name is &lt;@$(this.name)@&gt;&lt;/div&gt;&apos;;
-var rs=jtp.parse(html,{name:&apos;jtp&apos;});
-</code></pre><p>结果: </p>
-<pre><code>&lt;div&gt;My name is jtp&lt;/div&gt;
-</code></pre><h4 id="编译-jtp-complite"><a href="#编译-jtp-complite" class="headerlink" title="编译(jtp.complite)"></a>编译(jtp.complite)</h4><p>代码:</p>
-<pre><code>var html=&apos;&lt;div&gt;My name is &lt;@$(this.name)@&gt;&lt;/div&gt;&apos;;
-var fn=jtp.complite(html);
-var rs=fn({name:&apos;jtp&apos;});
-</code></pre><p>结果:</p>
-<pre><code>&lt;div&gt;My name is jtp&lt;/div&gt;
-</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;欢迎来到jtp的世界&quot;&gt;&lt;a href=&quot;#欢迎来到jtp的世界&quot; class=&quot;headerlink&quot; title=&quot;欢迎来到jtp的世界&quot;&gt;&lt;/a&gt;欢迎来到jtp的世界&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;欢迎使用jtp! 最轻量，简洁，高效的javascript模板引擎！&lt;br&gt;如同“jtp”的名字，“轻量、简洁、高效”是jtp的哲学！&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="编程" scheme="http://blog.houfeng.net/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
   </entry>
