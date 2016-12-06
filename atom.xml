@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.houfeng.net/"/>
-  <updated>2016-12-06T06:12:21.000Z</updated>
+  <updated>2016-12-06T06:16:40.000Z</updated>
   <id>http://blog.houfeng.net/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.houfeng.net/2016/12/06/mokit/"/>
     <id>http://blog.houfeng.net/2016/12/06/mokit/</id>
     <published>2016-12-05T16:00:00.000Z</published>
-    <updated>2016-12-06T06:12:21.000Z</updated>
+    <updated>2016-12-06T06:16:40.000Z</updated>
     
     <content type="html"><![CDATA[<p>Mokit 最初编写于 2012 年，是一个面向移动应用的前端 mvc 框架，v3 版本进行了大量的重构或重写，并尽可能的保持了和之前版本类似的 API，<br>v3 是一个「极轻量」的 MVVM 框架，相较目前主流的类似的框架(react/vue/angular)，mokit v3 更为「轻量」，希望为开发人员提供多一种的选择。</p>
 <a id="more"></a>
@@ -33,8 +33,15 @@
 <li>新增支持 data 选项</li>
 <li>新增支持 watches 选项</li>
 <li>分拆 template 选项功能，不再自动检查是否为 Element，同时新增 element 选项</li>
-<li>指令默认前缀由 <figure class="highlight plain"><figcaption><span>改为 ```m:```，同时自定义指令</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## 特性</div><div class="line">- 面向移动设备，内置支持常用「手势事件」并可以轻松添加自定义事件。</div><div class="line">- 极其轻量「核心 + 手势 API + Router」仅 ```13k``` (uglify+gzip)</div><div class="line">- 提供类 WebCompoents 的支持，并支持「组件继承」</div><div class="line"></div><div class="line"></div><div class="line"># Hello world</div><div class="line">HTML:</div><div class="line"></div><div class="line">```HTML</div><div class="line">&lt;div id=&quot;app&quot;&gt;</div><div class="line">  &lt;input type=&quot;text&quot; m:model=&quot;name&quot; /&gt;</div><div class="line">  &lt;button m:on:tap=&quot;say(name)&quot;&gt;click me&lt;/button&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></li>
+<li>指令默认前缀由 <strong>data-</strong> 改为 <strong>m:</strong>，同时自定义指令</li>
 </ul>
+<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ul>
+<li>面向移动设备，内置支持常用「手势事件」并可以轻松添加自定义事件。  </li>
+<li>极其轻量「核心 + 手势 API + Router」仅 <strong>13k</strong> (uglify+gzip)  </li>
+<li>提供类 WebCompoents 的支持，并支持「组件继承」  </li>
+</ul>
+<h1 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h1><p>HTML:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">m:model</span>=<span class="string">"name"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">m:on:tap</span>=<span class="string">"say(name)"</span>&gt;</span>click me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>JavaScript:</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//启动应用</span></div><div class="line">mokit(&#123;</div><div class="line">  element: <span class="built_in">document</span>.getElementById(<span class="string">'app'</span>),</div><div class="line">  data:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      name: <span class="string">'世界'</span></div><div class="line">    &#125;;</div><div class="line">  &#125;,</div><div class="line">  say: <span class="function"><span class="keyword">function</span> (<span class="params">name</span>) </span>&#123;</div><div class="line">    alert(<span class="string">'hello '</span>+ name);</div><div class="line">  &#125;</div><div class="line">&#125;).start();</div></pre></td></tr></table></figure>
 <h1 id="定义组件"><a href="#定义组件" class="headerlink" title="定义组件"></a>定义组件</h1><p>编写组件:</p>
